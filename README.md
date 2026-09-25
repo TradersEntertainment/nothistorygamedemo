@@ -11,6 +11,8 @@ Tolga, Fatih'e risk tablosu sunuyor, Urban'ın topunu yanlışlıkla havaya uçu
 
 ## ⬇️ İndir
 
+🎬 **Fragman:** https://www.youtube.com/watch?v=gSqSRNaB8FE
+
 🌐 **Tanıtım sitesi:** https://tradersentertainment.github.io/nothistorygamedemo/
 
 **[En yeni sürümü indir](https://github.com/TradersEntertainment/nothistorygamedemo/releases/latest)**
