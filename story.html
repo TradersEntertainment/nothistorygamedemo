@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hikâye Haritası — Gerçek Tarih Bu Değil</title>
+<meta name="description" content="Gerçek Tarih Bu Değil'in bütün dalları: 16 bölüm, her karar, her sonuç ve 23 final tek bir etkileşimli haritada. / Every branch of Not a History Game in one interactive map.">
+<meta property="og:title" content="Story map — Not a History Game">
+<meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#23253a;--deep:#191a2c;--ink:#f4ecd8;--muted:#b9b3a3;--red:#c8262e;--red2:#e0444b;--gold:#e3b245;--line:#3b3f63;--card:#2a2d47;
+  --paper:#efe6cf;--paper2:#e6dbbf;--pink:#2a2622;--pmuted:#6f6553;--stamp:#c8262f;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy);color:var(--ink);font:16px/1.5 Nunito,system-ui,sans-serif;overflow-x:hidden}
+a{color:var(--gold)}
+h1,h2,h3,h4{font-family:Fredoka,Nunito,system-ui,sans-serif;line-height:1.15;margin:0}
+[data-en]{display:none}
+html[lang=en] [data-tr]{display:none}
+html[lang=en] [data-en]{display:revert}
+
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px;padding:10px 20px;background:rgba(25,26,44,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav img{height:32px;display:block}
+.nav .sp{flex:1}
+.nav a.lnk{color:var(--ink);text-decoration:none;font:700 14px Nunito,system-ui,sans-serif;white-space:nowrap}
+.nav a.lnk:hover{color:var(--gold)}
+.lang{display:flex;gap:6px}
+.lang button{background:rgba(0,0,0,.35);color:var(--ink);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 12px;font:800 13px Nunito,system-ui,sans-serif;cursor:pointer}
+.lang button.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+
+.intro{max-width:1100px;margin:0 auto;padding:36px 20px 18px}
+.kicker{font:800 13px Nunito,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.intro h1{font-size:clamp(30px,5vw,48px);margin:6px 0 10px}
+.intro p{max-width:780px;margin:0 0 8px;font-size:clamp(16px,2vw,19px)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 4px}
+.stats > span{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px;font-size:14px;color:var(--muted)}
+.stats b{font:700 22px Fredoka,Nunito,system-ui,sans-serif;color:var(--gold);margin-right:6px}
+
+.tools{position:sticky;top:53px;z-index:40;background:rgba(35,37,58,.96);backdrop-filter:blur(6px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tools .in{display:flex;align-items:center;gap:8px;padding:8px 20px;overflow-x:auto;scrollbar-width:none}
+.tools .in::-webkit-scrollbar{display:none}
+.jump{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:9px;min-width:36px;height:32px;padding:0 9px;font:700 14px Fredoka,Nunito,system-ui,sans-serif;cursor:pointer;flex:none}
+.jump:hover{border-color:var(--gold);color:var(--gold)}
+.jump.fin{background:var(--red);border-color:var(--red);color:#fff}
+.tools .sep{flex:1;min-width:10px}
+.toggle{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);white-space:nowrap;cursor:pointer;flex:none;user-select:none}
+.toggle input{accent-color:var(--gold);width:16px;height:16px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;max-width:1100px;margin:0 auto;padding:12px 20px 0;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;vertical-align:-2px;margin-right:6px}
+.lg-choice{width:14px;height:14px;border:2px solid var(--pmuted);transform:rotate(45deg) scale(.8);background:var(--paper)}
+.lg-out{width:22px;height:14px;border-radius:4px;background:var(--paper);border-left:4px solid var(--stamp)}
+.lg-fin{width:16px;height:16px;border-radius:50%;background:var(--red)}
+.lg-line{width:26px;height:0;border-top:2px solid var(--gold)}
+.hint{color:var(--muted);font-size:13px}
+
+/* harita */
+.wrap{position:relative;overflow-x:auto;overflow-y:hidden;cursor:grab;padding:22px 0 40px;scrollbar-color:var(--line) transparent}
+.wrap.drag{cursor:grabbing;user-select:none}
+.map{position:relative;display:flex;align-items:flex-start;gap:64px;padding:0 40px;width:max-content}
+#lines{position:absolute;left:0;top:0;pointer-events:none;overflow:visible;z-index:0}
+#lines path{fill:none;stroke:rgba(227,178,69,.38);stroke-width:2;transition:stroke .2s,stroke-width .2s,opacity .2s}
+#lines path.hl{stroke:var(--red2);stroke-width:3.2;opacity:1}
+#lines path.fin{stroke:rgba(224,68,75,.9);stroke-width:2.4;stroke-dasharray:6 5}
+.map.sel #lines path:not(.hl){opacity:.18}
+.col{display:flex;flex-direction:column;gap:22px;width:250px;position:relative;z-index:1}
+.colhead{font:800 12px Nunito,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-left:4px}
+.card{background:var(--paper);color:var(--pink);border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.35);border:2px solid transparent;transition:border-color .2s,transform .2s,opacity .2s;scroll-margin:120px}
+.card.hl{border-color:var(--red)}
+.map.sel .card:not(.hl):not(.on){opacity:.45}
+.card.on{border-color:var(--gold)}
+.cov{position:relative;aspect-ratio:16/9;background:#1d1f33}
+.cov img{width:100%;height:100%;object-fit:cover;display:block}
+.cov .num{position:absolute;left:8px;top:8px;background:var(--pink);color:var(--paper);font:700 13px Fredoka,Nunito,system-ui,sans-serif;border-radius:7px;padding:2px 8px}
+.card .body{padding:10px 12px 12px}
+.card h3{font-size:19px;color:var(--pink)}
+.card .sub{font-size:12px;color:var(--pmuted);margin:2px 0 0}
+.card .note{font-size:12px;margin:6px 0 0;padding:4px 8px;background:var(--paper2);border-radius:7px;color:#5b4a2e}
+.nodes{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:5px}
+.nodes li{font-size:13px;line-height:1.3;border-radius:7px;cursor:pointer;transition:background .15s,color .15s}
+.nodes li.choice{padding:4px 6px 4px 22px;position:relative;color:#4a4237}
+.nodes li.choice::before{content:"";position:absolute;left:6px;top:8px;width:8px;height:8px;border:2px solid var(--pmuted);transform:rotate(45deg)}
+.nodes li.out{padding:6px 8px;background:#fbf6e8;border-left:4px solid var(--stamp);box-shadow:0 1px 0 rgba(0,0,0,.06)}
+.nodes li.out b{color:var(--stamp);font:700 12px Fredoka,Nunito,system-ui,sans-serif;margin-right:4px}
+.nodes li.early{border-left-color:#8a1f24;background:#f4e1dc}
+.nodes li:hover{background:#fff}
+.nodes li.path{background:#ffe9b8}
+.nodes li.path.choice::before{border-color:var(--stamp);background:var(--stamp)}
+.nodes li.cur{background:var(--stamp);color:#fff}
+.nodes li.cur b{color:#fff}
+.nodes li.cur.choice::before{border-color:#fff}
+
+.finals .col{width:280px}
+.final{background:linear-gradient(160deg,#3a1e2e,#2a2d47);border:2px solid var(--line);border-radius:14px;padding:12px 14px;cursor:pointer;transition:border-color .2s,opacity .2s;position:relative;scroll-margin:120px}
+.final:hover{border-color:var(--gold)}
+.final.hl,.final.on{border-color:var(--red2)}
+.map.sel .final:not(.hl):not(.on){opacity:.4}
+.final .rank{position:absolute;right:10px;top:10px;font:700 12px Fredoka,Nunito,system-ui,sans-serif;color:var(--muted)}
+.final h4{font-size:17px;color:var(--ink);padding-right:30px}
+.final .cond{font-size:13px;color:var(--gold);margin:4px 0 0}
+.final .spoil{font-size:13px;color:var(--muted);margin:6px 0 0;font-style:italic;transition:filter .25s}
+body.hide .final .spoil:not(.show),body.hide .panel .spoil:not(.show){filter:blur(5px);user-select:none}
+
+/* ayrıntı paneli */
+.panel{position:fixed;right:18px;bottom:18px;width:min(380px,calc(100vw - 36px));max-height:min(70vh,560px);overflow:auto;background:var(--deep);border:1px solid var(--line);border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.55);padding:18px 18px 16px;z-index:60;transform:translateY(20px);opacity:0;pointer-events:none;transition:transform .25s,opacity .25s}
+.panel.open{transform:none;opacity:1;pointer-events:auto}
+.panel .x{position:absolute;right:10px;top:8px;background:none;border:0;color:var(--muted);font:700 24px Fredoka,system-ui,sans-serif;cursor:pointer}
+.panel .ch{font:800 12px Nunito,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.panel h3{font-size:21px;margin:4px 30px 10px 0}
+.panel h5{font:800 12px Nunito,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.panel ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.panel li{font-size:14px}
+.panel .go{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:7px 10px;text-align:left;width:100%;font:600 14px Nunito,system-ui,sans-serif;cursor:pointer}
+.panel .go:hover{border-color:var(--gold)}
+.panel .go small{display:block;color:var(--muted);font-size:12px}
+.panel .eff{background:rgba(227,178,69,.1);border-left:3px solid var(--gold);padding:8px 10px;border-radius:0 10px 10px 0;font-size:14px}
+.panel .none{color:var(--muted);font-size:14px}
+
+footer{padding:30px 20px 60px;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:760px){
+  .col{width:228px}.finals .col{width:250px}.map{gap:44px;padding:0 20px}
+  .panel{right:10px;left:10px;bottom:10px;width:auto;max-height:62vh}
+  .tools{top:53px}
+}
+@media (max-width:520px){.nav a.lnk{display:none}}
+</style>
+</head>
+<body class="hide">
+
+<nav class="nav">
+  <a href="./"><img src="img/logo.png" data-logo alt="Gerçek Tarih Bu Değil"></a>
+  <span class="sp"></span>
+  <a class="lnk" href="./"><span data-tr>Ana sayfa</span><span data-en>Home</span></a>
+  <a class="lnk" href="presskit.html"><span data-tr>Basın kiti</span><span data-en>Press kit</span></a>
+  <div class="lang" role="group" aria-label="Dil / Language">
+    <button type="button" data-l="tr">TR</button>
+    <button type="button" data-l="en">EN</button>
+  </div>
+</nav>
+
+<header class="intro">
+  <div class="kicker"><span data-tr>Zaman Bürosu · Resmî akış şeması</span><span data-en>Time Bureau · Official flowchart</span></div>
+  <h1><span data-tr>Hikâye Haritası</span><span data-en>Story Map</span></h1>
+  <p data-tr>Oyunun bütün dalları tek bir haritada: her bölüm, her karar, her sonuç ve 23 final. Bir <b>karara</b> ya da <b>sonuca</b> tıkla, oraya nasıl gelindiğini ve neye yol açtığını gör. Bir <b>finale</b> tıkla, hangi seçimlerin oraya götürdüğünü gör.</p>
+  <p data-en>Every branch of the game in one map: each chapter, each decision, each outcome and all 23 endings. Click a <b>decision</b> or an <b>outcome</b> to see how you get there and what it leads to. Click an <b>ending</b> to see which choices lead to it.</p>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="tools">
+  <div class="in" id="jumps">
+    <span class="sep"></span>
+    <label class="toggle"><input type="checkbox" id="spoil"> <span data-tr>Final sahnelerini göster (spoiler)</span><span data-en>Show ending scenes (spoilers)</span></label>
+  </div>
+</div>
+<div class="legend">
+  <span><i class="lg-choice"></i><span data-tr>karar / sahne</span><span data-en>decision / scene</span></span>
+  <span><i class="lg-out"></i><span data-tr>bölüm sonucu</span><span data-en>chapter outcome</span></span>
+  <span><i class="lg-line"></i><span data-tr>sonraki bölüme geçiş</span><span data-en>leads to the next chapter</span></span>
+  <span><i class="lg-fin"></i><span data-tr>final</span><span data-en>ending</span></span>
+  <span class="hint"><span data-tr>Haritayı sürükleyerek ya da yatay kaydırarak gez.</span><span data-en>Drag the map or scroll sideways to explore.</span></span>
+</div>
+
+<div class="wrap" id="wrap">
+  <div class="map" id="map">
+    <svg id="lines"></svg>
+  </div>
+</div>
+
+<aside class="panel" id="panel" aria-live="polite">
+  <button class="x" type="button" aria-label="Close" id="px">×</button>
+  <div id="pbody"></div>
+</aside>
+
+<footer>
+  <p><span data-tr>Harita, oyunun kendi kodundan ve metinlerinden otomatik üretilir.</span><span data-en>This map is generated automatically from the game's own code and script.</span></p>
+  <p>© TradersEntertainment · <a href="./"><span data-tr>Ana sayfa</span><span data-en>Home</span></a> · <a href="https://github.com/TradersEntertainment/nothistorygamedemo/releases/latest"><span data-tr>Oyunu indir</span><span data-en>Get the game</span></a></p>
+</footer>
+
+<script>
+let D = null, lang = "tr", selected = null;
+const $ = s => document.querySelector(s);
+const map = $("#map"), wrap = $("#wrap"), svg = $("#lines"), panel = $("#panel"), pbody = $("#pbody");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const bi = o => o ? `<span data-tr>${esc(o.tr)}</span><span data-en>${esc(o.en)}</span>` : "";
+const L = (tr, en) => lang === "en" ? en : tr;
+
+// ------------------------------------------------------------------ dil
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.title = l === "en" ? "Story Map — Not a History Game" : "Hikâye Haritası — Gerçek Tarih Bu Değil";
+  document.querySelectorAll("[data-logo]").forEach(i => i.src = l === "en" ? "img/logo_en.png" : "img/logo.png");
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.l === l));
+  try { localStorage.setItem("lang", l); } catch (e) {}
+  try { const u = new URL(location.href); u.searchParams.set("lang", l); history.replaceState(null, "", u); } catch (e) {}
+  if (D) { requestAnimationFrame(drawLines); if (selected) showPanel(); }
+}
+let initial = new URLSearchParams(location.search).get("lang");
+if (!initial) { try { initial = localStorage.getItem("lang"); } catch (e) {} }
+if (!initial) initial = (navigator.language || "en").slice(0, 2);
+setLang(initial === "tr" ? "tr" : "en");
+document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.l));
+
+// ------------------------------------------------------------------ yardımcılar
+const chById = id => D.chapters.find(c => c.id === id);
+const nodeOf = (ch, id) => ch.nodes.find(n => n.id === id);
+function targetsOf(ch, nodeId){
+  const nx = ch.next || {};
+  return nx[nodeId] || nx.default || [];
+}
+function preds(ch, id){      // karar zinciri: bu düğüme gelen bütün düğümler
+  const out = new Set(), st = [id];
+  while (st.length){ const x = st.pop(); for (const [a, b] of ch.edges) if (b === x && !out.has(a)){ out.add(a); st.push(a); } }
+  return out;
+}
+function succs(ch, id){
+  const out = new Set(), st = [id];
+  while (st.length){ const x = st.pop(); for (const [a, b] of ch.edges) if (a === x && !out.has(b)){ out.add(b); st.push(b); } }
+  return out;
+}
+const finalsFor = (ch, id) => D.finals.filter(f => f.from.includes(id) || (f.from.includes(ch.id) && nodeOf(ch, id)?.outcome));
+const chLabel = ch => `${L("Bölüm", "Chapter")} ${ch.num}`;
+function nameOfTarget(t){
+  if (t === "early") return {tr: "Erken son: garaja dönüş", en: "Early ending: back to the garage"};
+  if (t === "final") return {tr: "Bölüm 15 · Pazartesi: final", en: "Chapter 15 · Monday: the ending"};
+  const c = chById(t); return {tr: `Bölüm ${c.num} · ${c.title.tr}`, en: `Chapter ${c.num} · ${c.title.en}`};
+}
+
+// ------------------------------------------------------------------ çizim
+function build(){
+  const cols = {};
+  D.chapters.forEach(c => (cols[c.col] = cols[c.col] || []).push(c));
+  const jumps = $("#jumps"), sep = jumps.querySelector(".sep");
+  Object.keys(cols).map(Number).sort((a, b) => a - b).forEach(n => {
+    const col = document.createElement("div");
+    col.className = "col"; col.id = "col-" + n;
+    col.innerHTML = `<div class="colhead">${bi({tr: "Bölüm " + n, en: "Chapter " + n})}</div>` + cols[n].map(card).join("");
+    map.appendChild(col);
+    const b = document.createElement("button");
+    b.className = "jump"; b.textContent = n; b.onclick = () => scrollToEl(col);
+    jumps.insertBefore(b, sep);
+  });
+  const fc = document.createElement("div");
+  fc.className = "finals";
+  fc.innerHTML = `<div class="col" id="col-final"><div class="colhead">${bi({tr: "Bölüm 15 · 23 final", en: "Chapter 15 · 23 endings"})}</div>` +
+    D.finals.map((f, i) => `<article class="final" id="f-${f.id}" data-f="${f.id}"><span class="rank">#${i + 1}</span><h4>${bi(f.name)}</h4><p class="cond">${bi(f.cond)}</p><p class="spoil">${bi(f.sub)}</p></article>`).join("") + "</div>";
+  map.appendChild(fc);
+  const fb = document.createElement("button");
+  fb.className = "jump fin"; fb.innerHTML = bi({tr: "Finaller", en: "Endings"}); fb.onclick = () => scrollToEl($("#col-final"));
+  jumps.insertBefore(fb, sep);
+
+  const nOut = D.chapters.reduce((s, c) => s + c.nodes.filter(n => n.outcome).length, 0);
+  const nChoice = D.chapters.reduce((s, c) => s + c.nodes.filter(n => !n.outcome).length, 0);
+  $("#stats").innerHTML = [[16, "bölüm", "chapters"], [D.chapters.length, "bölüm sürümü", "chapter variants"], [nChoice, "karar ve sahne", "decisions & scenes"], [nOut, "bölüm sonucu", "chapter outcomes"], [D.finals.length, "final", "endings"]]
+    .map(s => `<span><b>${s[0]}</b>${bi({tr: s[1], en: s[2]})}</span>`).join("");
+}
+function card(c){
+  const nodes = c.nodes.map(n => {
+    const early = n.outcome && targetsOf(c, n.id).includes("early");
+    return n.outcome
+      ? `<li class="out${early ? " early" : ""}" data-n="${c.id}|${esc(n.id)}"><b>${esc(n.id)}</b>${bi(stripId(n.label, n.id))}</li>`
+      : `<li class="choice" data-n="${c.id}|${esc(n.id)}">${bi(n.label)}</li>`;
+  }).join("");
+  return `<article class="card" id="c-${c.id}" data-ch="${c.id}">
+    <div class="cov"><img loading="lazy" src="${c.cover}" alt=""><span class="num">${c.num}</span></div>
+    <div class="body"><h3>${bi(c.title)}</h3><p class="sub">${bi(c.sub)}</p>${c.note ? `<p class="note">↳ ${bi(c.note)}</p>` : ""}
+    <ul class="nodes">${nodes}</ul></div></article>`;
+}
+function stripId(label, id){      // "10B.3 Büyük Patlama" -> "Büyük Patlama"
+  const f = s => s.startsWith(id + " ") ? s.slice(id.length + 1) : s;
+  return {tr: f(label.tr), en: f(label.en)};
+}
+
+function rel(el){
+  const m = map.getBoundingClientRect(), r = el.getBoundingClientRect();
+  return {l: r.left - m.left, r: r.right - m.left, t: r.top - m.top, b: r.bottom - m.top, cy: (r.top + r.bottom) / 2 - m.top};
+}
+function curve(a, b){
+  const dx = Math.max(36, (b.x - a.x) * 0.45);
+  return `M${a.x},${a.y} C${a.x + dx},${a.y} ${b.x - dx},${b.y} ${b.x},${b.y}`;
+}
+let hlLines = new Set(), finLines = [];
+function drawLines(){
+  svg.setAttribute("width", map.scrollWidth); svg.setAttribute("height", map.scrollHeight);
+  const paths = [];
+  for (const c of D.chapters){
+    const cardEl = document.getElementById("c-" + c.id);
+    const head = rel(cardEl.querySelector(".cov"));
+    const nx = c.next || {};
+    const specific = Object.keys(nx).filter(k => k !== "default");
+    // Varsayılan geçiş: kartın başlığından (tek çizgi); özel geçişler: kendi sonucundan
+    const sources = [];
+    if (nx.default) sources.push([null, nx.default, {x: head.r, y: head.cy}]);
+    for (const k of specific){
+      const li = cardEl.querySelector(`li[data-n="${c.id}|${CSS.escape(k)}"]`);
+      if (!li) continue;
+      const p = rel(li);
+      sources.push([k, nx[k], {x: p.r, y: p.cy}]);
+    }
+    for (const [k, ts, a] of sources){
+      for (const t of ts){
+        let tEl = t === "final" ? document.querySelector("#col-final .colhead") : (t === "early" ? null : document.querySelector(`#c-${t} .cov`));
+        if (!tEl) continue;
+        const q = rel(tEl);
+        const key = `${c.id}|${k || "*"}>${t}`;
+        paths.push(`<path data-k="${key}" class="${hlLines.has(key) ? "hl" : ""}" d="${curve(a, {x: q.l, y: t === "final" ? q.cy : q.cy})}"/>`);
+      }
+    }
+  }
+  // Seçili final/sonuç bağlantıları (kesik kırmızı)
+  for (const [src, fid] of finLines){
+    const f = document.getElementById("f-" + fid); if (!f || !src) continue;
+    const a = rel(src), b = rel(f);
+    paths.push(`<path class="fin hl" d="${curve({x: a.r, y: a.cy}, {x: b.l, y: b.cy})}"/>`);
+  }
+  svg.innerHTML = paths.join("");
+}
+
+// ------------------------------------------------------------------ seçim
+function clearSel(){
+  document.querySelectorAll(".path,.cur,.hl,.on").forEach(e => e.classList.remove("path", "cur", "hl", "on"));
+  hlLines = new Set(); finLines = [];
+  map.classList.remove("sel");
+}
+function selectNode(chId, id){
+  clearSel();
+  const ch = chById(chId), n = nodeOf(ch, id);
+  selected = {type: "node", ch: chId, id};
+  map.classList.add("sel");
+  const cardEl = document.getElementById("c-" + chId);
+  cardEl.classList.add("on");
+  const li = cardEl.querySelector(`li[data-n="${chId}|${CSS.escape(id)}"]`);
+  li.classList.add("cur");
+  const pre = preds(ch, id), suc = succs(ch, id);
+  for (const x of [...pre, ...suc]) cardEl.querySelector(`li[data-n="${chId}|${CSS.escape(x)}"]`)?.classList.add("path");
+  // Bölümden çıkış: bu sonuç (ya da seçimin ulaşabildiği sonuçlar)
+  const outs = n.outcome ? [id] : [...suc].filter(x => nodeOf(ch, x)?.outcome);
+  const nx = ch.next || {};
+  for (const o of outs){
+    const k = nx[o] ? o : "*";
+    for (const t of targetsOf(ch, o)){
+      hlLines.add(`${chId}|${k}>${t}`);
+      document.getElementById("c-" + t)?.classList.add("hl");
+    }
+    for (const f of finalsFor(ch, o)){
+      document.getElementById("f-" + f.id).classList.add("hl");
+      finLines.push([cardEl.querySelector(`li[data-n="${chId}|${CSS.escape(o)}"]`), f.id]);
+    }
+  }
+  // Bu bölüme gelen geçişler
+  for (const c of D.chapters) for (const [k, ts] of Object.entries(c.next || {})) if (ts.includes(chId)){
+    hlLines.add(`${c.id}|${k === "default" ? "*" : k}>${chId}`);
+    document.getElementById("c-" + c.id).classList.add("hl");
+  }
+  drawLines(); showPanel();
+}
+function selectFinal(fid){
+  clearSel();
+  selected = {type: "final", id: fid};
+  map.classList.add("sel");
+  document.getElementById("f-" + fid).classList.add("on");
+  const f = D.finals.find(x => x.id === fid);
+  for (const src of f.from){
+    const c = chById(src);
+    if (c){ const el = document.getElementById("c-" + src); el.classList.add("hl"); finLines.push([el.querySelector(".cov"), fid]); continue; }
+    for (const ch of D.chapters){
+      const li = document.querySelector(`li[data-n="${ch.id}|${CSS.escape(src)}"]`);
+      if (li){ li.classList.add("cur"); document.getElementById("c-" + ch.id).classList.add("hl"); finLines.push([li, fid]); }
+    }
+  }
+  drawLines(); showPanel();
+}
+
+function goBtn(label, sub, act){
+  return `<li><button class="go" type="button" data-act="${esc(act)}">${label}${sub ? `<small>${sub}</small>` : ""}</button></li>`;
+}
+function showPanel(){
+  if (!selected){ panel.classList.remove("open"); return; }
+  let h = "";
+  if (selected.type === "node"){
+    const ch = chById(selected.ch), n = nodeOf(ch, selected.id);
+    const lab = n.outcome ? stripId(n.label, n.id) : n.label;
+    h += `<div class="ch">${chLabel(ch)} · ${esc(L(ch.title.tr, ch.title.en))}${n.outcome ? " · " + esc(n.id) : ""}</div><h3>${esc(L(lab.tr, lab.en))}</h3>`;
+    const pids = preds(ch, selected.id);
+    const pre = ch.nodes.filter(x => pids.has(x.id));   // bölümdeki sırasıyla
+    h += `<h5>${L("Buraya nasıl gelinir", "How you get here")}</h5>`;
+    h += pre.length ? `<ul>${pre.map(p => `<li>◇ ${esc(L(p.label.tr, p.label.en))}</li>`).join("")}</ul>` : `<p class="none">${L("Bölümün başlangıcı.", "The start of the chapter.")}</p>`;
+    if (ch.note) h += `<p class="none" style="margin-top:6px">↳ ${esc(L(ch.note.tr, ch.note.en))}</p>`;
+    if (n.outcome){
+      const eff = D.effects[n.id];
+      if (eff) h += `<h5>${L("Sonrası", "What it changes")}</h5><p class="eff">${esc(L(eff.tr, eff.en))}</p>`;
+      const ts = targetsOf(ch, n.id);
+      if (ts.length){
+        h += `<h5>${L("Sonraki bölüm", "Next chapter")}</h5><ul>` + ts.map(t => {
+          const nm = nameOfTarget(t), c2 = chById(t);
+          return goBtn(esc(L(nm.tr, nm.en)), c2 && c2.note ? esc(L(c2.note.tr, c2.note.en)) : "", t);
+        }).join("") + "</ul>";
+      }
+      const fs = finalsFor(ch, n.id);
+      if (fs.length) h += `<h5>${L("Açabileceği finaller", "Endings it can unlock")}</h5><ul>` + fs.map(f => goBtn("🏁 " + esc(L(f.name.tr, f.name.en)), esc(L(f.cond.tr, f.cond.en)), "f:" + f.id)).join("") + "</ul>";
+    } else {
+      const outs = [...succs(ch, selected.id)].map(x => nodeOf(ch, x)).filter(x => x && x.outcome);
+      h += `<h5>${L("Bu karardan sonra olabilecekler", "Where this can lead")}</h5>`;
+      h += outs.length ? `<ul>${outs.map(o => goBtn(`<b style="color:var(--gold)">${esc(o.id)}</b> ${esc(L(stripId(o.label, o.id).tr, stripId(o.label, o.id).en))}`, "", "n:" + ch.id + "|" + o.id)).join("")}</ul>` : `<p class="none">—</p>`;
+    }
+  } else {
+    const f = D.finals.find(x => x.id === selected.id), i = D.finals.indexOf(f) + 1;
+    h += `<div class="ch">${L("Final", "Ending")} #${i} / ${D.finals.length}</div><h3>${esc(L(f.name.tr, f.name.en))}</h3>`;
+    h += `<h5>${L("Koşul", "Condition")}</h5><p class="eff">${esc(L(f.cond.tr, f.cond.en))}</p>`;
+    h += `<h5>${L("Oraya götüren sonuçlar", "Outcomes that lead here")}</h5><ul>` + f.from.map(src => {
+      const c = chById(src);
+      if (c) return goBtn(esc(L(`Bölüm ${c.num} · ${c.title.tr}`, `Chapter ${c.num} · ${c.title.en}`)), "", c.id);
+      const ch = D.chapters.find(x => nodeOf(x, src)); if (!ch) return "";
+      const lab = stripId(nodeOf(ch, src).label, src);
+      return goBtn(`<b style="color:var(--gold)">${esc(src)}</b> ${esc(L(lab.tr, lab.en))}`, esc(L(`Bölüm ${ch.num} · ${ch.title.tr}`, `Chapter ${ch.num} · ${ch.title.en}`)), "n:" + ch.id + "|" + src);
+    }).join("") + "</ul>";
+    h += `<h5>${L("Final sahnesi", "The ending scene")}</h5><p class="none"><span class="spoil${document.body.classList.contains("hide") ? "" : " show"}" onclick="this.classList.add('show')" style="cursor:pointer">${esc(L(f.sub.tr, f.sub.en))}</span></p>`;
+    h += `<p class="none" style="margin-top:10px;font-size:12px">${L("Birden fazla finalin koşulu tutarsa listede üstte olan kazanır.", "If several endings qualify, the one higher in the list wins.")}</p>`;
+  }
+  pbody.innerHTML = h;
+  panel.classList.add("open");
+}
+pbody.addEventListener("click", e => {
+  const b = e.target.closest("button.go"); if (!b) return;
+  const a = b.dataset.act;
+  if (a.startsWith("f:")){ selectFinal(a.slice(2)); scrollToEl(document.getElementById("f-" + a.slice(2))); }
+  else if (a.startsWith("n:")){ const [c, id] = a.slice(2).split("|"); selectNode(c, id); scrollToEl(document.getElementById("c-" + c)); }
+  else { const el = document.getElementById("c-" + a); if (el) scrollToEl(el); else scrollToEl($("#col-final")); }
+});
+$("#px").onclick = () => { selected = null; clearSel(); drawLines(); panel.classList.remove("open"); };
+addEventListener("keydown", e => { if (e.key === "Escape") $("#px").click(); });
+
+function scrollToEl(el){
+  const m = map.getBoundingClientRect(), r = el.getBoundingClientRect();
+  wrap.scrollTo({left: Math.max(0, (r.left - m.left) - 40), behavior: "smooth"});
+  const y = r.top + scrollY - 130;
+  if (Math.abs(r.top - 150) > innerHeight * 0.5) window.scrollTo({top: Math.max(0, y), behavior: "smooth"});
+}
+
+// Tıklama (sürükleme değilse)
+let moved = false;
+map.addEventListener("click", e => {
+  if (moved) return;
+  const li = e.target.closest("li[data-n]");
+  if (li){ const [c, id] = li.dataset.n.split("|"); selectNode(c, id); return; }
+  const f = e.target.closest(".final");
+  if (f){ selectFinal(f.dataset.f); return; }
+});
+
+// Sürükleyerek gezme
+let dragX = null, dragY = null, sl = 0, st = 0;
+wrap.addEventListener("pointerdown", e => {
+  if (e.pointerType !== "mouse" || e.button !== 0) return;
+  dragX = e.clientX; dragY = e.clientY; sl = wrap.scrollLeft; st = scrollY; moved = false;
+});
+addEventListener("pointermove", e => {
+  if (dragX === null) return;
+  const dx = e.clientX - dragX, dy = e.clientY - dragY;
+  if (!moved && Math.hypot(dx, dy) > 6){ moved = true; wrap.classList.add("drag"); }
+  if (moved){ wrap.scrollLeft = sl - dx; window.scrollTo(0, st - dy); }
+});
+addEventListener("pointerup", () => { dragX = null; wrap.classList.remove("drag"); setTimeout(() => moved = false, 0); });
+
+$("#spoil").onchange = e => { document.body.classList.toggle("hide", !e.target.checked); if (selected) showPanel(); };
+document.addEventListener("click", e => { const s = e.target.closest(".final .spoil"); if (s) s.classList.add("show"); });
+
+let rt = 0;
+addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(drawLines, 120); });
+
+fetch("data/story.json").then(r => r.json()).then(d => {
+  D = d; build();
+  requestAnimationFrame(drawLines);
+  map.querySelectorAll("img").forEach(i => i.addEventListener("load", () => { clearTimeout(rt); rt = setTimeout(drawLines, 60); }));
+  const sp = new URLSearchParams(location.search).get("sel");   // ?sel=ch10b|10B.3 ya da ?sel=f:big_bang
+  if (sp) setTimeout(() => {
+    if (sp.startsWith("f:")) { selectFinal(sp.slice(2)); scrollToEl(document.getElementById("f-" + sp.slice(2))); }
+    else { const [c, id] = sp.split("|"); selectNode(c, id); scrollToEl(document.getElementById("c-" + c)); }
+  }, 300);
+  const h = location.hash.slice(1);
+  if (h.startsWith("f-")) setTimeout(() => { selectFinal(h.slice(2)); scrollToEl(document.getElementById(h)); }, 300);
+});
+</script>
+</body>
+</html>

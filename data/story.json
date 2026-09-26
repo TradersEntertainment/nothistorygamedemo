@@ -1,0 +1,3427 @@
+{
+ "chapters": [
+  {
+   "id": "ch1",
+   "col": 1,
+   "num": 1,
+   "title": {
+    "tr": "Zamanatör",
+    "en": "The Chrono-Matic"
+   },
+   "sub": {
+    "tr": "Tolga · Pazar gecesi, 03:12",
+    "en": "Tolga · Sunday night, 03:12"
+   },
+   "cover": "img/ch/ch1.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "garage",
+     "label": {
+      "tr": "Garaj",
+      "en": "Garage"
+     },
+     "outcome": false
+    },
+    {
+     "id": "costume",
+     "label": {
+      "tr": "Kostüm",
+      "en": "Costume"
+     },
+     "outcome": false
+    },
+    {
+     "id": "bag",
+     "label": {
+      "tr": "Çanta",
+      "en": "The bag"
+     },
+     "outcome": false
+    },
+    {
+     "id": "remote",
+     "label": {
+      "tr": "Telsiz-Kumanda",
+      "en": "The Radio-Remote"
+     },
+     "outcome": false
+    },
+    {
+     "id": "panel",
+     "label": {
+      "tr": "1453 → 14:53",
+      "en": "1453 → 14:53"
+     },
+     "outcome": false
+    },
+    {
+     "id": "1.1",
+     "label": {
+      "tr": "1.1 Hikmet tekmeyi attı",
+      "en": "1.1 Hikmet kicked it"
+     },
+     "outcome": true
+    },
+    {
+     "id": "1.2",
+     "label": {
+      "tr": "1.2 Tolga tekmeyi attı",
+      "en": "1.2 Tolga kicked it"
+     },
+     "outcome": true
+    },
+    {
+     "id": "1.3",
+     "label": {
+      "tr": "1.3 Kırmızı düğme",
+      "en": "1.3 The red button"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "garage",
+     "costume"
+    ],
+    [
+     "costume",
+     "bag"
+    ],
+    [
+     "bag",
+     "remote"
+    ],
+    [
+     "remote",
+     "panel"
+    ],
+    [
+     "panel",
+     "1.1"
+    ],
+    [
+     "panel",
+     "1.2"
+    ],
+    [
+     "remote",
+     "1.3"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch2"
+    ],
+    "1.3": [
+     "early"
+    ]
+   }
+  },
+  {
+   "id": "ch2",
+   "col": 2,
+   "num": 2,
+   "title": {
+    "tr": "Yağlı Kızaklar",
+    "en": "Greased Slipways"
+   },
+   "sub": {
+    "tr": "Tolga · 22 Nisan 1453, sabah",
+    "en": "Tolga · 22 April 1453, morning"
+   },
+   "cover": "img/ch/ch2.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "fall",
+     "label": {
+      "tr": "Gökten düşüş",
+      "en": "Falling from the sky"
+     },
+     "outcome": false
+    },
+    {
+     "id": "radio",
+     "label": {
+      "tr": "Telsiz",
+      "en": "The radio"
+     },
+     "outcome": false
+    },
+    {
+     "id": "clean",
+     "label": {
+      "tr": "Kusursuz kaçış",
+      "en": "A flawless escape"
+     },
+     "outcome": false
+    },
+    {
+     "id": "stumble",
+     "label": {
+      "tr": "Tökezleyerek kaçış",
+      "en": "A stumbling escape"
+     },
+     "outcome": false
+    },
+    {
+     "id": "2.5",
+     "label": {
+      "tr": "2.5 Kırmızı düğme",
+      "en": "2.5 The red button"
+     },
+     "outcome": true
+    },
+    {
+     "id": "horn",
+     "label": {
+      "tr": "Haliç",
+      "en": "The Golden Horn"
+     },
+     "outcome": false
+    },
+    {
+     "id": "2.1",
+     "label": {
+      "tr": "2.1 Kıyıda yakalandı",
+      "en": "2.1 Caught on the shore"
+     },
+     "outcome": true
+    },
+    {
+     "id": "2.2",
+     "label": {
+      "tr": "2.2 Kıyıya gizlice çıktı",
+      "en": "2.2 Sneaked ashore"
+     },
+     "outcome": true
+    },
+    {
+     "id": "2.3",
+     "label": {
+      "tr": "2.3 Zincire ulaştı",
+      "en": "2.3 Reached the chain"
+     },
+     "outcome": true
+    },
+    {
+     "id": "2.4",
+     "label": {
+      "tr": "2.4 Zincirden düştü",
+      "en": "2.4 Fell off the chain"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "fall",
+     "radio"
+    ],
+    [
+     "radio",
+     "clean"
+    ],
+    [
+     "radio",
+     "stumble"
+    ],
+    [
+     "radio",
+     "2.5"
+    ],
+    [
+     "clean",
+     "horn"
+    ],
+    [
+     "stumble",
+     "horn"
+    ],
+    [
+     "horn",
+     "2.1"
+    ],
+    [
+     "horn",
+     "2.2"
+    ],
+    [
+     "horn",
+     "2.3"
+    ],
+    [
+     "horn",
+     "2.4"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch3"
+    ],
+    "2.5": [
+     "early"
+    ]
+   }
+  },
+  {
+   "id": "ch3",
+   "col": 3,
+   "num": 3,
+   "title": {
+    "tr": "Vaka 1453-T",
+    "en": "Case 1453-T"
+   },
+   "sub": {
+    "tr": "Nihat · Zaman Bürosu, zamanın dışında",
+    "en": "Nihat · The Time Bureau, outside of time"
+   },
+   "cover": "img/ch/ch3.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "brief",
+     "label": {
+      "tr": "Büro: brifing + Form Z-1",
+      "en": "Bureau: briefing + Form Z-1"
+     },
+     "outcome": false
+    },
+    {
+     "id": "depot",
+     "label": {
+      "tr": "Kostüm deposu: fötr şapka",
+      "en": "Costume store: a fedora"
+     },
+     "outcome": false
+    },
+    {
+     "id": "trace",
+     "label": {
+      "tr": "Paradoks İzi tamamlandı",
+      "en": "Paradox Trace completed"
+     },
+     "outcome": false
+    },
+    {
+     "id": "skip",
+     "label": {
+      "tr": "İz atlandı",
+      "en": "Trace skipped"
+     },
+     "outcome": false
+    },
+    {
+     "id": "interro",
+     "label": {
+      "tr": "Hikmet'in sorgusu",
+      "en": "Questioning Hikmet"
+     },
+     "outcome": false
+    },
+    {
+     "id": "rule",
+     "label": {
+      "tr": "Yönetmelik: Hikmet savunmada",
+      "en": "Regulation: Hikmet defensive"
+     },
+     "outcome": false
+    },
+    {
+     "id": "kind",
+     "label": {
+      "tr": "Samimi: Hikmet açılıyor",
+      "en": "Friendly: Hikmet opens up"
+     },
+     "outcome": false
+    },
+    {
+     "id": "3.1",
+     "label": {
+      "tr": "3.1 El konuldu",
+      "en": "3.1 Confiscated"
+     },
+     "outcome": true
+    },
+    {
+     "id": "3.2",
+     "label": {
+      "tr": "3.2 Mühürlendi",
+      "en": "3.2 Sealed"
+     },
+     "outcome": true
+    },
+    {
+     "id": "3.4",
+     "label": {
+      "tr": "3.4 Kurutma makinesi",
+      "en": "3.4 A tumble dryer"
+     },
+     "outcome": true
+    },
+    {
+     "id": "3.3",
+     "label": {
+      "tr": "3.3 Bırakıldı, kartvizit",
+      "en": "3.3 Left, card given"
+     },
+     "outcome": true
+    },
+    {
+     "id": "3.5",
+     "label": {
+      "tr": "3.5 Çay içildi",
+      "en": "3.5 Tea was had"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "brief",
+     "depot"
+    ],
+    [
+     "depot",
+     "trace"
+    ],
+    [
+     "depot",
+     "skip"
+    ],
+    [
+     "trace",
+     "interro"
+    ],
+    [
+     "skip",
+     "interro"
+    ],
+    [
+     "interro",
+     "rule"
+    ],
+    [
+     "interro",
+     "kind"
+    ],
+    [
+     "interro",
+     "3.5"
+    ],
+    [
+     "rule",
+     "3.1"
+    ],
+    [
+     "rule",
+     "3.2"
+    ],
+    [
+     "rule",
+     "3.4"
+    ],
+    [
+     "kind",
+     "3.3"
+    ],
+    [
+     "kind",
+     "3.2"
+    ],
+    [
+     "kind",
+     "3.4"
+    ],
+    [
+     "rule",
+     "kind"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch4a",
+     "ch4b"
+    ]
+   }
+  },
+  {
+   "id": "ch4a",
+   "col": 4,
+   "num": 4,
+   "title": {
+    "tr": "İlk Gece",
+    "en": "The First Night"
+   },
+   "sub": {
+    "tr": "Tolga · 22 Nisan 1453, gece · Ordugâh",
+    "en": "Tolga · 22 April 1453, night · The Ottoman camp"
+   },
+   "cover": "img/ch/ch4a.jpg",
+   "note": {
+    "tr": "Bölüm 2'de kıyıya çıktıysan",
+    "en": "If you made it to the shore in Chapter 2"
+   },
+   "nodes": [
+    {
+     "id": "4a",
+     "label": {
+      "tr": "4a · Ordugâh",
+      "en": "4a · The camp"
+     },
+     "outcome": false
+    },
+    {
+     "id": "sneak",
+     "label": {
+      "tr": "Tartışmayı kolla",
+      "en": "Wait for the argument"
+     },
+     "outcome": false
+    },
+    {
+     "id": "confront",
+     "label": {
+      "tr": "Nöbetçilerle yüz yüze",
+      "en": "Face the guards"
+     },
+     "outcome": false
+    },
+    {
+     "id": "4a.1",
+     "label": {
+      "tr": "4a.1 Tartışırken kaçtı",
+      "en": "4a.1 Slipped out mid-argument"
+     },
+     "outcome": true
+    },
+    {
+     "id": "4a.2",
+     "label": {
+      "tr": "4a.2 Eşyayla atlattı",
+      "en": "4a.2 Outwitted them with an item"
+     },
+     "outcome": true
+    },
+    {
+     "id": "4a.3",
+     "label": {
+      "tr": "4a.3 Bulaşığa verildi",
+      "en": "4a.3 Put on washing-up"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "4a",
+     "sneak"
+    ],
+    [
+     "4a",
+     "confront"
+    ],
+    [
+     "sneak",
+     "4a.1"
+    ],
+    [
+     "confront",
+     "4a.2"
+    ],
+    [
+     "confront",
+     "4a.3"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch5"
+    ]
+   }
+  },
+  {
+   "id": "ch4b",
+   "col": 4,
+   "num": 4,
+   "title": {
+    "tr": "İlk Gece",
+    "en": "The First Night"
+   },
+   "sub": {
+    "tr": "Tolga · 22 Nisan 1453, gece · Deniz surları",
+    "en": "Tolga · 22 April 1453, night · The sea walls"
+   },
+   "cover": "img/ch/ch4b.jpg",
+   "note": {
+    "tr": "Bölüm 2'de zincire ulaştıysan (2.3)",
+    "en": "If you reached the chain in Chapter 2 (2.3)"
+   },
+   "nodes": [
+    {
+     "id": "4b",
+     "label": {
+      "tr": "4b · Deniz surları",
+      "en": "4b · The sea walls"
+     },
+     "outcome": false
+    },
+    {
+     "id": "chain",
+     "label": {
+      "tr": "Zincirde denge",
+      "en": "Balancing on the chain"
+     },
+     "outcome": false
+    },
+    {
+     "id": "niko",
+     "label": {
+      "tr": "Niko ve tavuklar",
+      "en": "Niko and the chickens"
+     },
+     "outcome": false
+    },
+    {
+     "id": "4b.3",
+     "label": {
+      "tr": "4b.3 Düştü, hücrede",
+      "en": "4b.3 Fell in, spent the night in a cell"
+     },
+     "outcome": true
+    },
+    {
+     "id": "4b.1",
+     "label": {
+      "tr": "4b.1 Türk casusu",
+      "en": "4b.1 'Turkish spy'"
+     },
+     "outcome": true
+    },
+    {
+     "id": "4b.2",
+     "label": {
+      "tr": "4b.2 Frenk tüccarı",
+      "en": "4b.2 'Frankish merchant'"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "4b",
+     "chain"
+    ],
+    [
+     "chain",
+     "4b.3"
+    ],
+    [
+     "chain",
+     "niko"
+    ],
+    [
+     "niko",
+     "4b.3"
+    ],
+    [
+     "niko",
+     "4b.1"
+    ],
+    [
+     "niko",
+     "4b.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch5"
+    ]
+   }
+  },
+  {
+   "id": "ch5",
+   "col": 5,
+   "num": 5,
+   "title": {
+    "tr": "Garajda Gece",
+    "en": "Night in the Garage"
+   },
+   "sub": {
+    "tr": "Hikmet · 2026, pazar gecesi 04:00",
+    "en": "Hikmet · 2026, Sunday night, 4 a.m."
+   },
+   "cover": "img/ch/ch5.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "van",
+     "label": {
+      "tr": "Kapıda gri minibüs",
+      "en": "A grey van at the door"
+     },
+     "outcome": false
+    },
+    {
+     "id": "hide",
+     "label": {
+      "tr": "Makineyi sök ve sakla",
+      "en": "Dismantle and hide the machine"
+     },
+     "outcome": false
+    },
+    {
+     "id": "backup",
+     "label": {
+      "tr": "Yedek kumandayı ara",
+      "en": "Look for the spare remote"
+     },
+     "outcome": false
+    },
+    {
+     "id": "radio",
+     "label": {
+      "tr": "⏱ Telsiz frekansı",
+      "en": "⏱ Radio frequency"
+     },
+     "outcome": false
+    },
+    {
+     "id": "confess",
+     "label": {
+      "tr": "1977",
+      "en": "1977"
+     },
+     "outcome": false
+    },
+    {
+     "id": "5.1",
+     "label": {
+      "tr": "5.1 Makine bodrumda",
+      "en": "5.1 Machine in the cellar"
+     },
+     "outcome": true
+    },
+    {
+     "id": "5.2",
+     "label": {
+      "tr": "5.2 Yedek kumanda bulundu",
+      "en": "5.2 Spare remote found"
+     },
+     "outcome": true
+    },
+    {
+     "id": "5.3",
+     "label": {
+      "tr": "5.3 Nihat arandı",
+      "en": "5.3 Called Nihat"
+     },
+     "outcome": true
+    },
+    {
+     "id": "5.4",
+     "label": {
+      "tr": "5.4 Tolga'ya ulaşılamadı",
+      "en": "5.4 Couldn't reach Tolga"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "van",
+     "hide"
+    ],
+    [
+     "van",
+     "backup"
+    ],
+    [
+     "hide",
+     "radio"
+    ],
+    [
+     "backup",
+     "radio"
+    ],
+    [
+     "radio",
+     "confess"
+    ],
+    [
+     "confess",
+     "5.1"
+    ],
+    [
+     "confess",
+     "5.2"
+    ],
+    [
+     "confess",
+     "5.3"
+    ],
+    [
+     "confess",
+     "5.4"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch6a",
+     "ch6b"
+    ]
+   }
+  },
+  {
+   "id": "ch6a",
+   "col": 6,
+   "num": 6,
+   "title": {
+    "tr": "Ordugâh",
+    "en": "The Camp"
+   },
+   "sub": {
+    "tr": "Tolga · 23 Nisan 1453, sabah",
+    "en": "Tolga · 23 April 1453, morning"
+   },
+   "cover": "img/ch/ch6a.jpg",
+   "note": {
+    "tr": "Ordugâh yolu (4a)",
+    "en": "The camp route (4a)"
+   },
+   "nodes": [
+    {
+     "id": "morning",
+     "label": {
+      "tr": "Ordugâhta sabah",
+      "en": "Morning in the camp"
+     },
+     "outcome": false
+    },
+    {
+     "id": "A",
+     "label": {
+      "tr": "A · Mutfak",
+      "en": "A · Kitchen"
+     },
+     "outcome": false
+    },
+    {
+     "id": "B",
+     "label": {
+      "tr": "B · Tercüman",
+      "en": "B · Interpreter"
+     },
+     "outcome": false
+    },
+    {
+     "id": "C",
+     "label": {
+      "tr": "C · Topçu",
+      "en": "C · Artillery"
+     },
+     "outcome": false
+    },
+    {
+     "id": "Y",
+     "label": {
+      "tr": "Y · Pazar",
+      "en": "Y · Market"
+     },
+     "outcome": false
+    },
+    {
+     "id": "6a.1",
+     "label": {
+      "tr": "6a.1 Aşçı yamağı",
+      "en": "6a.1 Kitchen boy"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6a.2",
+     "label": {
+      "tr": "6a.2 Frenk elçisi",
+      "en": "6a.2 Frankish envoy"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6a.3",
+     "label": {
+      "tr": "6a.3 Urban'ın çırağı",
+      "en": "6a.3 Urban's apprentice"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6a.4",
+     "label": {
+      "tr": "6a.4 Kaftanlı sigortacı",
+      "en": "6a.4 Insurance man in a kaftan"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6a.5",
+     "label": {
+      "tr": "6a.5 Çandarlı'nın mektubu",
+      "en": "6a.5 Çandarlı's letter"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "morning",
+     "A"
+    ],
+    [
+     "morning",
+     "B"
+    ],
+    [
+     "morning",
+     "C"
+    ],
+    [
+     "morning",
+     "Y"
+    ],
+    [
+     "A",
+     "6a.1"
+    ],
+    [
+     "B",
+     "6a.2"
+    ],
+    [
+     "C",
+     "6a.3"
+    ],
+    [
+     "Y",
+     "6a.4"
+    ],
+    [
+     "morning",
+     "6a.5"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch7"
+    ]
+   }
+  },
+  {
+   "id": "ch6b",
+   "col": 6,
+   "num": 6,
+   "title": {
+    "tr": "Surların İçi",
+    "en": "Inside the Walls"
+   },
+   "sub": {
+    "tr": "Tolga · 23 Nisan 1453, sabah · Konstantinopolis",
+    "en": "Tolga · 23 April 1453, morning · Constantinople"
+   },
+   "cover": "img/ch/ch6b.jpg",
+   "note": {
+    "tr": "Surlar yolu (4b)",
+    "en": "The walls route (4b)"
+   },
+   "nodes": [
+    {
+     "id": "maze",
+     "label": {
+      "tr": "Bizans Labirenti",
+      "en": "The Byzantine Maze"
+     },
+     "outcome": false
+    },
+    {
+     "id": "6b.1",
+     "label": {
+      "tr": "6b.1 Labirent kusursuz",
+      "en": "6b.1 Flawless maze"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6b.2",
+     "label": {
+      "tr": "6b.2 Labirent tamam",
+      "en": "6b.2 Maze completed"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6b.3",
+     "label": {
+      "tr": "6b.3 Zindan",
+      "en": "6b.3 The dungeon"
+     },
+     "outcome": true
+    },
+    {
+     "id": "giust",
+     "label": {
+      "tr": "Giustiniani",
+      "en": "Giustiniani"
+     },
+     "outcome": false
+    },
+    {
+     "id": "emperor",
+     "label": {
+      "tr": "İmparator",
+      "en": "The Emperor"
+     },
+     "outcome": false
+    },
+    {
+     "id": "6b.4",
+     "label": {
+      "tr": "6b.4 Niko dost",
+      "en": "6b.4 Niko's a friend"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6b.5",
+     "label": {
+      "tr": "6b.5 Giustiniani uyarıldı",
+      "en": "6b.5 Giustiniani warned"
+     },
+     "outcome": true
+    },
+    {
+     "id": "6b.6",
+     "label": {
+      "tr": "6b.6 Mektup açıldı",
+      "en": "6b.6 The letter opened"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "maze",
+     "6b.1"
+    ],
+    [
+     "maze",
+     "6b.2"
+    ],
+    [
+     "maze",
+     "6b.3"
+    ],
+    [
+     "6b.1",
+     "giust"
+    ],
+    [
+     "6b.2",
+     "giust"
+    ],
+    [
+     "giust",
+     "emperor"
+    ],
+    [
+     "giust",
+     "6b.5"
+    ],
+    [
+     "emperor",
+     "6b.4"
+    ],
+    [
+     "emperor",
+     "6b.6"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch7"
+    ]
+   }
+  },
+  {
+   "id": "ch7",
+   "col": 7,
+   "num": 7,
+   "title": {
+    "tr": "Saha Çalışması",
+    "en": "Fieldwork"
+   },
+   "sub": {
+    "tr": "Denetçi Nihat · 24 Nisan 1453, öğle",
+    "en": "Inspector Nihat · 24 April 1453, noon"
+   },
+   "cover": "img/ch/ch7.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "arrive",
+     "label": {
+      "tr": "Büro'nun saha kapısı",
+      "en": "The Bureau's field door"
+     },
+     "outcome": false
+    },
+    {
+     "id": "witness",
+     "label": {
+      "tr": "Ordugâhta izler ve tanıklar",
+      "en": "Traces and witnesses in the camp"
+     },
+     "outcome": false
+    },
+    {
+     "id": "report",
+     "label": {
+      "tr": "Saha raporu",
+      "en": "Field report"
+     },
+     "outcome": false
+    },
+    {
+     "id": "7.1",
+     "label": {
+      "tr": "7.1 Tolga'nın yeri bulundu",
+      "en": "7.1 Tolga located"
+     },
+     "outcome": true
+    },
+    {
+     "id": "7.2",
+     "label": {
+      "tr": "7.2 İz kaybedildi",
+      "en": "7.2 Trail lost"
+     },
+     "outcome": true
+    },
+    {
+     "id": "wall",
+     "label": {
+      "tr": "⏱ Yönetmelik Duvarı",
+      "en": "⏱ The Regulation Wall"
+     },
+     "outcome": false
+    },
+    {
+     "id": "7.5a",
+     "label": {
+      "tr": "7.5a Form yırtıldı: Kuralsız",
+      "en": "7.5a Form torn: Rule-free"
+     },
+     "outcome": true
+    },
+    {
+     "id": "7.5b",
+     "label": {
+      "tr": "7.5b Form yırtılmadı",
+      "en": "7.5b Form intact"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "arrive",
+     "witness"
+    ],
+    [
+     "witness",
+     "report"
+    ],
+    [
+     "report",
+     "7.1"
+    ],
+    [
+     "report",
+     "7.2"
+    ],
+    [
+     "7.1",
+     "wall"
+    ],
+    [
+     "wall",
+     "7.5a"
+    ],
+    [
+     "wall",
+     "7.5b"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch8"
+    ]
+   }
+  },
+  {
+   "id": "ch8",
+   "col": 8,
+   "num": 8,
+   "title": {
+    "tr": "Hırdavatçı",
+    "en": "The Hardware Shop"
+   },
+   "sub": {
+    "tr": "Hikmet · 2026, pazartesi 05:00 · servise iki buçuk saat",
+    "en": "Hikmet · 2026, Monday 05:00 · two and a half hours until opening time"
+   },
+   "cover": "img/ch/ch8.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "store",
+     "label": {
+      "tr": "Nöbetçi Hırdavat, 05:00",
+      "en": "The all-night hardware shop, 05:00"
+     },
+     "outcome": false
+    },
+    {
+     "id": "call",
+     "label": {
+      "tr": "Nihat'ı aradı",
+      "en": "Rang Nihat"
+     },
+     "outcome": false
+    },
+    {
+     "id": "parts",
+     "label": {
+      "tr": "Tamir listesi",
+      "en": "The repair list"
+     },
+     "outcome": false
+    },
+    {
+     "id": "heist",
+     "label": {
+      "tr": "Depo listesi",
+      "en": "The depot list"
+     },
+     "outcome": false
+    },
+    {
+     "id": "8.2",
+     "label": {
+      "tr": "8.2 Parça bulunamadı",
+      "en": "8.2 Parts not found"
+     },
+     "outcome": true
+    },
+    {
+     "id": "8.3",
+     "label": {
+      "tr": "8.3 Büro deposu planı",
+      "en": "8.3 The Bureau depot plan"
+     },
+     "outcome": true
+    },
+    {
+     "id": "garage",
+     "label": {
+      "tr": "⏱ Garaj: makineye bin?",
+      "en": "⏱ Garage: get in the machine?"
+     },
+     "outcome": false
+    },
+    {
+     "id": "8.1",
+     "label": {
+      "tr": "8.1 Makine tamir edildi",
+      "en": "8.1 Machine repaired"
+     },
+     "outcome": true
+    },
+    {
+     "id": "8.4",
+     "label": {
+      "tr": "8.4 Hikmet makineye bindi",
+      "en": "8.4 Hikmet got in the machine"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "store",
+     "call"
+    ],
+    [
+     "store",
+     "parts"
+    ],
+    [
+     "store",
+     "heist"
+    ],
+    [
+     "parts",
+     "8.2"
+    ],
+    [
+     "heist",
+     "8.2"
+    ],
+    [
+     "heist",
+     "8.3"
+    ],
+    [
+     "parts",
+     "garage"
+    ],
+    [
+     "garage",
+     "8.1"
+    ],
+    [
+     "garage",
+     "8.4"
+    ],
+    [
+     "8.1",
+     "8.4"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch9"
+    ]
+   }
+  },
+  {
+   "id": "ch9",
+   "col": 9,
+   "num": 9,
+   "title": {
+    "tr": "Teklifler",
+    "en": "Offers"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, sabah",
+    "en": "Tolga · 25 April 1453, morning"
+   },
+   "cover": "img/ch/ch9.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "morning",
+     "label": {
+      "tr": "25 Nisan sabahı",
+      "en": "The morning of 25 April"
+     },
+     "outcome": false
+    },
+    {
+     "id": "9.1",
+     "label": {
+      "tr": "9.1 Kadri: Ziyafet",
+      "en": "9.1 Kadri: The feast"
+     },
+     "outcome": true
+    },
+    {
+     "id": "9.2",
+     "label": {
+      "tr": "9.2 Urban: Büyük Atış",
+      "en": "9.2 Urban: The great shot"
+     },
+     "outcome": true
+    },
+    {
+     "id": "9.3",
+     "label": {
+      "tr": "9.3 Çandarlı: Galata",
+      "en": "9.3 Çandarlı: Galata"
+     },
+     "outcome": true
+    },
+    {
+     "id": "9.4",
+     "label": {
+      "tr": "9.4 Lütfi: Heyet",
+      "en": "9.4 Lütfi: The embassy"
+     },
+     "outcome": true
+    },
+    {
+     "id": "9.5",
+     "label": {
+      "tr": "9.5 Theodoros: Arşiv",
+      "en": "9.5 Theodoros: The archive"
+     },
+     "outcome": true
+    },
+    {
+     "id": "9.6",
+     "label": {
+      "tr": "9.6 Hepsi reddedildi: Otağ Kapısı",
+      "en": "9.6 All declined: the gate"
+     },
+     "outcome": true
+    },
+    {
+     "id": "9.7",
+     "label": {
+      "tr": "9.7 Dragan: Lağım",
+      "en": "9.7 Dragan: The Tunnel"
+     },
+     "outcome": true
+    },
+    {
+     "id": "fatih",
+     "label": {
+      "tr": "Mektup Fatih'e (Merak +1)",
+      "en": "The letter goes to Mehmed (Curiosity +1)"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "morning",
+     "9.1"
+    ],
+    [
+     "morning",
+     "9.2"
+    ],
+    [
+     "morning",
+     "9.3"
+    ],
+    [
+     "morning",
+     "9.4"
+    ],
+    [
+     "morning",
+     "9.5"
+    ],
+    [
+     "morning",
+     "9.6"
+    ],
+    [
+     "9.6",
+     "fatih"
+    ],
+    [
+     "morning",
+     "9.7"
+    ]
+   ],
+   "next": {
+    "9.1": [
+     "ch10z"
+    ],
+    "9.2": [
+     "ch10b"
+    ],
+    "9.3": [
+     "ch10g"
+    ],
+    "9.4": [
+     "ch10h"
+    ],
+    "9.5": [
+     "ch10a"
+    ],
+    "9.6": [
+     "ch10"
+    ],
+    "9.7": [
+     "ch10l"
+    ]
+   }
+  },
+  {
+   "id": "ch10z",
+   "col": 10,
+   "num": 10,
+   "title": {
+    "tr": "Ziyafet",
+    "en": "The Feast"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, ordugâh mutfağı",
+    "en": "Tolga · 25 April 1453, the camp kitchen"
+   },
+   "cover": "img/ch/ch10z.jpg",
+   "note": {
+    "tr": "Kadri'nin teklifi (9.1)",
+    "en": "Kadri's offer (9.1)"
+   },
+   "nodes": [
+    {
+     "id": "menu",
+     "label": {
+      "tr": "Menü (domates yok)",
+      "en": "The menu (no tomatoes)"
+     },
+     "outcome": false
+    },
+    {
+     "id": "stove",
+     "label": {
+      "tr": "Üç kazan",
+      "en": "Three pots"
+     },
+     "outcome": false
+    },
+    {
+     "id": "leb",
+     "label": {
+      "tr": "🥜 Gizli malzeme",
+      "en": "🥜 The secret ingredient"
+     },
+     "outcome": false
+    },
+    {
+     "id": "10Z.1",
+     "label": {
+      "tr": "10Z.1 Sultan'ın Sofrası",
+      "en": "10Z.1 The Sultan's Table"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10Z.2",
+     "label": {
+      "tr": "10Z.2 Mutfak yandı, leblebi yağdı",
+      "en": "10Z.2 Kitchen fire, raining leblebi"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "menu",
+     "stove"
+    ],
+    [
+     "stove",
+     "leb"
+    ],
+    [
+     "stove",
+     "10Z.1"
+    ],
+    [
+     "stove",
+     "10Z.2"
+    ],
+    [
+     "leb",
+     "10Z.1"
+    ]
+   ],
+   "next": {
+    "10Z.1": [
+     "ch11"
+    ],
+    "10Z.2": [
+     "ch11"
+    ]
+   }
+  },
+  {
+   "id": "ch10b",
+   "col": 10,
+   "num": 10,
+   "title": {
+    "tr": "Büyük Atış",
+    "en": "The Great Shot"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, topçu sahası",
+    "en": "Tolga · 25 April 1453, the artillery field"
+   },
+   "cover": "img/ch/ch10b.jpg",
+   "note": {
+    "tr": "Urban'ın teklifi (9.2)",
+    "en": "Urban's offer (9.2)"
+   },
+   "nodes": [
+    {
+     "id": "cast",
+     "label": {
+      "tr": "Döküm: üç kalıp",
+      "en": "Casting: three moulds"
+     },
+     "outcome": false
+    },
+    {
+     "id": "name",
+     "label": {
+      "tr": "Topun adı",
+      "en": "The cannon's name"
+     },
+     "outcome": false
+    },
+    {
+     "id": "tape",
+     "label": {
+      "tr": "📦 Çatlak bantlandı",
+      "en": "📦 Crack taped"
+     },
+     "outcome": false
+    },
+    {
+     "id": "powder",
+     "label": {
+      "tr": "Barut",
+      "en": "Powder"
+     },
+     "outcome": false
+    },
+    {
+     "id": "calc",
+     "label": {
+      "tr": "⏱ Açı hesabı",
+      "en": "⏱ The angle"
+     },
+     "outcome": false
+    },
+    {
+     "id": "10B.1",
+     "label": {
+      "tr": "10B.1 Gülle Galata'da, şarap fıçısında",
+      "en": "10B.1 The ball lands in Galata, in a wine barrel"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10B.2",
+     "label": {
+      "tr": "10B.2 Yirmi metre öteye",
+      "en": "10B.2 Twenty metres away"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10B.3",
+     "label": {
+      "tr": "10B.3 Büyük Patlama",
+      "en": "10B.3 The Big Bang"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "cast",
+     "name"
+    ],
+    [
+     "name",
+     "tape"
+    ],
+    [
+     "tape",
+     "powder"
+    ],
+    [
+     "powder",
+     "calc"
+    ],
+    [
+     "calc",
+     "10B.1"
+    ],
+    [
+     "calc",
+     "10B.2"
+    ],
+    [
+     "calc",
+     "10B.3"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch11"
+    ]
+   }
+  },
+  {
+   "id": "ch10g",
+   "col": 10,
+   "num": 10,
+   "title": {
+    "tr": "Galata",
+    "en": "Galata"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, Haliç'in öbür yakası",
+    "en": "Tolga · 25 April 1453, the far side of the Golden Horn"
+   },
+   "cover": "img/ch/ch10g.jpg",
+   "note": {
+    "tr": "Çandarlı'nın mektubu (9.3)",
+    "en": "Çandarlı's letter (9.3)"
+   },
+   "nodes": [
+    {
+     "id": "fish",
+     "label": {
+      "tr": "Balıkçı: 'Hangi Lomellino?'",
+      "en": "The fishmonger: 'Which Lomellino?'"
+     },
+     "outcome": false
+    },
+    {
+     "id": "wine",
+     "label": {
+      "tr": "Şarapçı: 'Önce şarap.'",
+      "en": "The wine merchant: 'Wine first.'"
+     },
+     "outcome": false
+    },
+    {
+     "id": "notary",
+     "label": {
+      "tr": "Noter: 'Bu mühür Venedik için.'",
+      "en": "The notary: 'This seal is for Venice.'"
+     },
+     "outcome": false
+    },
+    {
+     "id": "bell",
+     "label": {
+      "tr": "⏱ Gemi çanı",
+      "en": "⏱ The ship's bell"
+     },
+     "outcome": false
+    },
+    {
+     "id": "10G.1",
+     "label": {
+      "tr": "10G.1 Venedik'e Elçi",
+      "en": "10G.1 Envoy to Venice"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10G.2",
+     "label": {
+      "tr": "10G.2 Mektup Fatih'e",
+      "en": "10G.2 The letter goes to Mehmed"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "fish",
+     "wine"
+    ],
+    [
+     "wine",
+     "notary"
+    ],
+    [
+     "notary",
+     "bell"
+    ],
+    [
+     "bell",
+     "10G.1"
+    ],
+    [
+     "bell",
+     "10G.2"
+    ]
+   ],
+   "next": {
+    "10G.1": [
+     "ch13"
+    ],
+    "10G.2": [
+     "ch11"
+    ]
+   }
+  },
+  {
+   "id": "ch10h",
+   "col": 10,
+   "num": 10,
+   "title": {
+    "tr": "Heyet",
+    "en": "The Embassy"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, beyaz bayrak altında",
+    "en": "Tolga · 25 April 1453, under a white flag"
+   },
+   "cover": "img/ch/ch10h.jpg",
+   "note": {
+    "tr": "Lütfi'nin heyeti (9.4)",
+    "en": "Lütfi's embassy (9.4)"
+   },
+   "nodes": [
+    {
+     "id": "gate",
+     "label": {
+      "tr": "Beyaz bayrak altında",
+      "en": "Under the white flag"
+     },
+     "outcome": false
+    },
+    {
+     "id": "tr",
+     "label": {
+      "tr": "⏱ Lütfi'nin tercümeleri",
+      "en": "⏱ Lütfi's translations"
+     },
+     "outcome": false
+    },
+    {
+     "id": "10H.2",
+     "label": {
+      "tr": "10H.2 Heyet rezil oldu",
+      "en": "10H.2 The embassy disgraced"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10H.1",
+     "label": {
+      "tr": "10H.1 İmparator'un mektubu",
+      "en": "10H.1 The Emperor's letter"
+     },
+     "outcome": true
+    },
+    {
+     "id": "open",
+     "label": {
+      "tr": "Mühür kırıldı",
+      "en": "Seal broken"
+     },
+     "outcome": false
+    },
+    {
+     "id": "confess",
+     "label": {
+      "tr": "⏱ 'Gelecekten geliyorum.'",
+      "en": "⏱ 'I come from the future.'"
+     },
+     "outcome": false
+    },
+    {
+     "id": "cant",
+     "label": {
+      "tr": "'Bunu size söyleyemem.'",
+      "en": "'I can't tell you that.'"
+     },
+     "outcome": false
+    },
+    {
+     "id": "help",
+     "label": {
+      "tr": "Bizans'ı Kurtar",
+      "en": "Save Byzantium"
+     },
+     "outcome": false
+    },
+    {
+     "id": "gedik",
+     "label": {
+      "tr": "📦 Gedik bantlandı",
+      "en": "📦 The breach taped"
+     },
+     "outcome": false
+    },
+    {
+     "id": "giustiniani",
+     "label": {
+      "tr": "🔋 Giustiniani'nin omzu",
+      "en": "🔋 Giustiniani's shoulder"
+     },
+     "outcome": false
+    },
+    {
+     "id": "niko",
+     "label": {
+      "tr": "🥜 Zincir nöbetçileri",
+      "en": "🥜 The chain guards"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "gate",
+     "tr"
+    ],
+    [
+     "tr",
+     "10H.1"
+    ],
+    [
+     "tr",
+     "10H.2"
+    ],
+    [
+     "10H.1",
+     "open"
+    ],
+    [
+     "10H.1",
+     "confess"
+    ],
+    [
+     "confess",
+     "cant"
+    ],
+    [
+     "confess",
+     "help"
+    ],
+    [
+     "help",
+     "gedik"
+    ],
+    [
+     "help",
+     "giustiniani"
+    ],
+    [
+     "help",
+     "niko"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch11"
+    ]
+   }
+  },
+  {
+   "id": "ch10a",
+   "col": 10,
+   "num": 10,
+   "title": {
+    "tr": "Arşiv",
+    "en": "The Archive"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, Bizans arşivi",
+    "en": "Tolga · 25 April 1453, the Byzantine archive"
+   },
+   "cover": "img/ch/ch10a.jpg",
+   "note": {
+    "tr": "Theodoros'un arşivi (9.5)",
+    "en": "Theodoros's archive (9.5)"
+   },
+   "nodes": [
+    {
+     "id": "sort",
+     "label": {
+      "tr": "Renk kodu",
+      "en": "Colour coding"
+     },
+     "outcome": false
+    },
+    {
+     "id": "form",
+     "label": {
+      "tr": "Form Z-1'in aslı",
+      "en": "The original Form Z-1"
+     },
+     "outcome": false
+    },
+    {
+     "id": "otag",
+     "label": {
+      "tr": "Yerel makam onayı",
+      "en": "Local approval"
+     },
+     "outcome": false
+    },
+    {
+     "id": "10A.1",
+     "label": {
+      "tr": "10A.1 Büronun Kuruluşu",
+      "en": "10A.1 The Founding of the Bureau"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10A.2",
+     "label": {
+      "tr": "10A.2 'Ben sigortacıyım.'",
+      "en": "10A.2 'I'm in insurance.'"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "sort",
+     "form"
+    ],
+    [
+     "form",
+     "otag"
+    ],
+    [
+     "otag",
+     "10A.1"
+    ],
+    [
+     "otag",
+     "10A.2"
+    ]
+   ],
+   "next": {
+    "10A.1": [
+     "ch13"
+    ],
+    "10A.2": [
+     "ch11"
+    ]
+   }
+  },
+  {
+   "id": "ch10l",
+   "col": 10,
+   "num": 10,
+   "title": {
+    "tr": "Lağım",
+    "en": "The Tunnel"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, toprağın altında",
+    "en": "Tolga · 25 April 1453, underground"
+   },
+   "cover": "img/ch/ch10l.jpg",
+   "note": {
+    "tr": "Dragan'ın lağımı (9.7)",
+    "en": "Dragan's tunnel (9.7)"
+   },
+   "nodes": [
+    {
+     "id": "dig",
+     "label": {
+      "tr": "⛏ Kaz · 🪵 destekle",
+      "en": "⛏ Dig · 🪵 prop"
+     },
+     "outcome": false
+    },
+    {
+     "id": "listen",
+     "label": {
+      "tr": "👂 Karşı lağımı duy",
+      "en": "👂 Hear the countermine"
+     },
+     "outcome": false
+    },
+    {
+     "id": "meet",
+     "label": {
+      "tr": "Karanlıkta yüz yüze",
+      "en": "Face to face in the dark"
+     },
+     "outcome": false
+    },
+    {
+     "id": "10L.1",
+     "label": {
+      "tr": "10L.1 Tünel Sulhu",
+      "en": "10L.1 The Tunnel Truce"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10L.2",
+     "label": {
+      "tr": "10L.2 Sessizce geri",
+      "en": "10L.2 Quietly back"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10L.3",
+     "label": {
+      "tr": "10L.3 Tavan çöktü",
+      "en": "10L.3 The roof caved in"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "dig",
+     "listen"
+    ],
+    [
+     "listen",
+     "meet"
+    ],
+    [
+     "meet",
+     "10L.1"
+    ],
+    [
+     "meet",
+     "10L.2"
+    ],
+    [
+     "dig",
+     "10L.3"
+    ],
+    [
+     "dig",
+     "10L.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch11"
+    ]
+   }
+  },
+  {
+   "id": "ch10",
+   "col": 10,
+   "num": 10,
+   "title": {
+    "tr": "Otağ Kapısı",
+    "en": "The Imperial Gate"
+   },
+   "sub": {
+    "tr": "Tolga · 25 Nisan 1453, öğleden sonra",
+    "en": "Tolga · 25 April 1453, afternoon"
+   },
+   "cover": "img/ch/ch10.jpg",
+   "note": {
+    "tr": "Hepsini reddettiysen (9.6)",
+    "en": "If you turned everyone down (9.6)"
+   },
+   "nodes": [
+    {
+     "id": "queue",
+     "label": {
+      "tr": "Kapıdaki kuyruk",
+      "en": "The queue at the gate"
+     },
+     "outcome": false
+    },
+    {
+     "id": "envoy",
+     "label": {
+      "tr": "Elçi töreni (Bizans mektubu)",
+      "en": "Envoy ceremony (the Byzantine letter)"
+     },
+     "outcome": false
+    },
+    {
+     "id": "q",
+     "label": {
+      "tr": "Sorucu Ağa'nın üç sorusu",
+      "en": "The Questioning Agha's three questions"
+     },
+     "outcome": false
+    },
+    {
+     "id": "honest",
+     "label": {
+      "tr": "'Bilmiyorum' (Merak +1)",
+      "en": "'I don't know' (Curiosity +1)"
+     },
+     "outcome": false
+    },
+    {
+     "id": "10O.1",
+     "label": {
+      "tr": "10O.1 Kapı geçildi → Huzur",
+      "en": "10O.1 Through the gate → Audience"
+     },
+     "outcome": true
+    },
+    {
+     "id": "10O.2",
+     "label": {
+      "tr": "10O.2 Geçilemedi → Mutfak",
+      "en": "10O.2 Turned away → Kitchen"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "queue",
+     "q"
+    ],
+    [
+     "q",
+     "10O.1"
+    ],
+    [
+     "q",
+     "10O.2"
+    ],
+    [
+     "q",
+     "honest"
+    ],
+    [
+     "envoy",
+     "10O.1"
+    ],
+    [
+     "honest",
+     "10O.1"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch11"
+    ]
+   }
+  },
+  {
+   "id": "ch11",
+   "col": 11,
+   "num": 11,
+   "title": {
+    "tr": "Yüzleşme",
+    "en": "The Confrontation"
+   },
+   "sub": {
+    "tr": "Nihat ve Tolga · 25 Nisan 1453, gece",
+    "en": "Nihat and Tolga · 25 April 1453, night"
+   },
+   "cover": "img/ch/ch11.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "night",
+     "label": {
+      "tr": "Gece, saha kapısı",
+      "en": "Night, the field door"
+     },
+     "outcome": false
+    },
+    {
+     "id": "11.4",
+     "label": {
+      "tr": "11.4 İz kaybedildi",
+      "en": "11.4 Trail lost"
+     },
+     "outcome": true
+    },
+    {
+     "id": "face",
+     "label": {
+      "tr": "'Form Z-1453'ü doldurmadınız.'",
+      "en": "'You haven't filled in Form Z-1453.'"
+     },
+     "outcome": false
+    },
+    {
+     "id": "11.5",
+     "label": {
+      "tr": "11.5 Pijamalı Hikmet araya girdi",
+      "en": "11.5 Hikmet in pyjamas intervenes"
+     },
+     "outcome": true
+    },
+    {
+     "id": "11.6",
+     "label": {
+      "tr": "11.6 Niko araya girdi",
+      "en": "11.6 Niko intervenes"
+     },
+     "outcome": true
+    },
+    {
+     "id": "nihat",
+     "label": {
+      "tr": "⏱ Nihat'ın kararı",
+      "en": "⏱ Nihat's decision"
+     },
+     "outcome": false
+    },
+    {
+     "id": "tolga",
+     "label": {
+      "tr": "⏱ Tolga'nın cevabı",
+      "en": "⏱ Tolga's answer"
+     },
+     "outcome": false
+    },
+    {
+     "id": "11.1",
+     "label": {
+      "tr": "11.1 Tolga tutuklandı",
+      "en": "11.1 Tolga arrested"
+     },
+     "outcome": true
+    },
+    {
+     "id": "11.2",
+     "label": {
+      "tr": "11.2 Tolga serbest",
+      "en": "11.2 Tolga goes free"
+     },
+     "outcome": true
+    },
+    {
+     "id": "11.3",
+     "label": {
+      "tr": "11.3 Nihat Tolga'ya katıldı",
+      "en": "11.3 Nihat joins Tolga"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "night",
+     "face"
+    ],
+    [
+     "night",
+     "11.4"
+    ],
+    [
+     "face",
+     "11.5"
+    ],
+    [
+     "face",
+     "11.6"
+    ],
+    [
+     "face",
+     "nihat"
+    ],
+    [
+     "nihat",
+     "tolga"
+    ],
+    [
+     "nihat",
+     "11.3"
+    ],
+    [
+     "nihat",
+     "11.2"
+    ],
+    [
+     "tolga",
+     "11.1"
+    ],
+    [
+     "tolga",
+     "11.2"
+    ]
+   ],
+   "next": {
+    "11.1": [
+     "ch14"
+    ],
+    "default": [
+     "ch12",
+     "ch12b",
+     "ch13"
+    ]
+   }
+  },
+  {
+   "id": "ch12",
+   "col": 12,
+   "num": 12,
+   "title": {
+    "tr": "Huzur",
+    "en": "The Audience"
+   },
+   "sub": {
+    "tr": "Tolga · 26 Nisan 1453, sabah · Padişah'ın otağı",
+    "en": "Tolga · 26 April 1453, morning · The Sultan's tent"
+   },
+   "cover": "img/ch/ch12.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "enter",
+     "label": {
+      "tr": "Otağa giriş",
+      "en": "Entering the imperial tent"
+     },
+     "outcome": false
+    },
+    {
+     "id": "merak",
+     "label": {
+      "tr": "Merak: dürüstlük, eşyalar, top, mektup",
+      "en": "Curiosity: honesty, items, the cannon, the letter"
+     },
+     "outcome": false
+    },
+    {
+     "id": "key",
+     "label": {
+      "tr": "⏱ 'Bu şehir alınacak mı?'",
+      "en": "⏱ 'Will this city be taken?'"
+     },
+     "outcome": false
+    },
+    {
+     "id": "12.1",
+     "label": {
+      "tr": "12.1 Tarih Yerinde",
+      "en": "12.1 History Intact"
+     },
+     "outcome": true
+    },
+    {
+     "id": "12.2",
+     "label": {
+      "tr": "12.2 Leblebipolis",
+      "en": "12.2 Chickpeapolis"
+     },
+     "outcome": true
+    },
+    {
+     "id": "12.3",
+     "label": {
+      "tr": "12.3 İki Hükümdar",
+      "en": "12.3 Two Rulers"
+     },
+     "outcome": true
+    },
+    {
+     "id": "12.4",
+     "label": {
+      "tr": "12.4 Sultan'ın Tamiri",
+      "en": "12.4 The Sultan's Repair"
+     },
+     "outcome": true
+    },
+    {
+     "id": "12.6",
+     "label": {
+      "tr": "12.6 Mühendisler Meclisi",
+      "en": "12.6 Council of Engineers"
+     },
+     "outcome": true
+    },
+    {
+     "id": "12.5",
+     "label": {
+      "tr": "12.5 Mutfağa gönderildi",
+      "en": "12.5 Sent to the kitchen"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "enter",
+     "merak"
+    ],
+    [
+     "merak",
+     "key"
+    ],
+    [
+     "merak",
+     "12.5"
+    ],
+    [
+     "key",
+     "12.1"
+    ],
+    [
+     "key",
+     "12.2"
+    ],
+    [
+     "key",
+     "12.3"
+    ],
+    [
+     "key",
+     "12.4"
+    ],
+    [
+     "key",
+     "12.6"
+    ],
+    [
+     "key",
+     "12.5"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch13"
+    ]
+   }
+  },
+  {
+   "id": "ch12b",
+   "col": 12,
+   "num": 12,
+   "title": {
+    "tr": "Son Akşam",
+    "en": "The Last Evening"
+   },
+   "sub": {
+    "tr": "Tolga · 26 Nisan 1453, surlarda gün batımı",
+    "en": "Tolga · 26 April 1453, sunset on the walls"
+   },
+   "cover": "img/ch/ch12b.jpg",
+   "note": {
+    "tr": "Heyette Bizans'a yardım ettiysen",
+    "en": "If you helped Byzantium during the embassy"
+   },
+   "nodes": [
+    {
+     "id": "walls",
+     "label": {
+      "tr": "Surlarda, gün batımında",
+      "en": "On the walls, at sunset"
+     },
+     "outcome": false
+    },
+    {
+     "id": "12B.1",
+     "label": {
+      "tr": "12B.1 'Bunu size söyleyemem.'",
+      "en": "12B.1 'I can't tell you that.'"
+     },
+     "outcome": true
+    },
+    {
+     "id": "12B.2",
+     "label": {
+      "tr": "12B.2 İyi niyetli yalan",
+      "en": "12B.2 A kind lie"
+     },
+     "outcome": true
+    },
+    {
+     "id": "12B.3",
+     "label": {
+      "tr": "12B.3 'Belki bir yıl.'",
+      "en": "12B.3 'Perhaps a year.'"
+     },
+     "outcome": true
+    },
+    {
+     "id": "W10",
+     "label": {
+      "tr": "W10 · 1454",
+      "en": "W10 · 1454"
+     },
+     "outcome": false
+    },
+    {
+     "id": "W11",
+     "label": {
+      "tr": "W11 · 1455",
+      "en": "W11 · 1455"
+     },
+     "outcome": false
+    },
+    {
+     "id": "W12",
+     "label": {
+      "tr": "W12 · Ertelendi",
+      "en": "W12 · Postponed"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "walls",
+     "12B.1"
+    ],
+    [
+     "walls",
+     "12B.2"
+    ],
+    [
+     "walls",
+     "12B.3"
+    ],
+    [
+     "12B.1",
+     "W10"
+    ],
+    [
+     "12B.2",
+     "W11"
+    ],
+    [
+     "12B.3",
+     "W12"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch13"
+    ]
+   }
+  },
+  {
+   "id": "ch13",
+   "col": 13,
+   "num": 13,
+   "title": {
+    "tr": "Dönüş Penceresi",
+    "en": "The Return Window"
+   },
+   "sub": {
+    "tr": "Hikmet · 2026, pazartesi 07:15 · servise 15 dakika",
+    "en": "Hikmet · 2026, Monday 07:15 · 15 minutes until the bus"
+   },
+   "cover": "img/ch/ch13.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "garage",
+     "label": {
+      "tr": "Garaj",
+      "en": "The garage"
+     },
+     "outcome": false
+    },
+    {
+     "id": "depot",
+     "label": {
+      "tr": "Büro deposu",
+      "en": "The Bureau depot"
+     },
+     "outcome": false
+    },
+    {
+     "id": "1453",
+     "label": {
+      "tr": "Urban'ın atölyesi (1453)",
+      "en": "Urban's workshop (1453)"
+     },
+     "outcome": false
+    },
+    {
+     "id": "w4",
+     "label": {
+      "tr": "Fatih'in tamiri",
+      "en": "Mehmed's repair"
+     },
+     "outcome": false
+    },
+    {
+     "id": "window",
+     "label": {
+      "tr": "⏱ Frekans, kol, kırmızı düğme",
+      "en": "⏱ Frequency, lever, red button"
+     },
+     "outcome": false
+    },
+    {
+     "id": "13.1",
+     "label": {
+      "tr": "13.1 Tolga döndü",
+      "en": "13.1 Tolga returned"
+     },
+     "outcome": true
+    },
+    {
+     "id": "13.2",
+     "label": {
+      "tr": "13.2 Pencere kaçtı",
+      "en": "13.2 The window was missed"
+     },
+     "outcome": true
+    },
+    {
+     "id": "13.3",
+     "label": {
+      "tr": "13.3 Yanlış yıl",
+      "en": "13.3 Wrong year"
+     },
+     "outcome": true
+    },
+    {
+     "id": "13.4",
+     "label": {
+      "tr": "13.4 Hikmet ile birlikte döndü",
+      "en": "13.4 Returned with Hikmet"
+     },
+     "outcome": true
+    },
+    {
+     "id": "13.5",
+     "label": {
+      "tr": "13.5 Hikmet 1453'te kaldı",
+      "en": "13.5 Hikmet stayed in 1453"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "garage",
+     "window"
+    ],
+    [
+     "depot",
+     "window"
+    ],
+    [
+     "window",
+     "13.1"
+    ],
+    [
+     "window",
+     "13.2"
+    ],
+    [
+     "window",
+     "13.3"
+    ],
+    [
+     "1453",
+     "13.4"
+    ],
+    [
+     "1453",
+     "13.5"
+    ],
+    [
+     "1453",
+     "13.2"
+    ],
+    [
+     "w4",
+     "13.1"
+    ],
+    [
+     "w4",
+     "13.4"
+    ],
+    [
+     "garage",
+     "depot"
+    ]
+   ],
+   "next": {
+    "13.2": [
+     "ch14",
+     "ch16"
+    ],
+    "default": [
+     "ch14"
+    ]
+   }
+  },
+  {
+   "id": "ch16",
+   "col": 13,
+   "num": 16,
+   "title": {
+    "tr": "Gıdak",
+    "en": "Cluck"
+   },
+   "sub": {
+    "tr": "Sinerji · 90 saniye",
+    "en": "Synergy · 90 seconds"
+   },
+   "cover": "img/ch/ch16.jpg",
+   "note": {
+    "tr": "Gizli bölüm: pencere kaçtı, ama tavuk her şeyi gördü",
+    "en": "Secret chapter: the window was missed, but the chicken saw everything"
+   },
+   "nodes": [
+    {
+     "id": "drop",
+     "label": {
+      "tr": "Telsiz yerde · 90 saniye",
+      "en": "The remote on the ground · 90 seconds"
+     },
+     "outcome": false
+    },
+    {
+     "id": "16.1",
+     "label": {
+      "tr": "16.1 Düğme gagalandı → 13.6",
+      "en": "16.1 Button pecked → 13.6"
+     },
+     "outcome": true
+    },
+    {
+     "id": "16.2",
+     "label": {
+      "tr": "16.2 Leblebi kazandı → 13.2",
+      "en": "16.2 The leblebi won → 13.2"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "drop",
+     "16.1"
+    ],
+    [
+     "drop",
+     "16.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch14"
+    ]
+   }
+  },
+  {
+   "id": "ch14",
+   "col": 14,
+   "num": 14,
+   "title": {
+    "tr": "Son Form",
+    "en": "The Final Form"
+   },
+   "sub": {
+    "tr": "Nihat · Zaman Bürosu, zamanın dışında",
+    "en": "Nihat · The Time Bureau, outside of time"
+   },
+   "cover": "img/ch/ch14.jpg",
+   "note": null,
+   "nodes": [
+    {
+     "id": "desk",
+     "label": {
+      "tr": "Nihat'ın masası, daktilo",
+      "en": "Nihat's desk, the typewriter"
+     },
+     "outcome": false
+    },
+    {
+     "id": "14.1",
+     "label": {
+      "tr": "14.1 Tarih düzeltildi",
+      "en": "14.1 History corrected"
+     },
+     "outcome": true
+    },
+    {
+     "id": "14.2",
+     "label": {
+      "tr": "14.2 Rapor tahrifatı",
+      "en": "14.2 Report falsified"
+     },
+     "outcome": true
+    },
+    {
+     "id": "14.3",
+     "label": {
+      "tr": "14.3 Tolga Büro'ya",
+      "en": "14.3 Tolga joins the Bureau"
+     },
+     "outcome": true
+    },
+    {
+     "id": "14.4",
+     "label": {
+      "tr": "14.4 İstifa",
+      "en": "14.4 Resignation"
+     },
+     "outcome": true
+    },
+    {
+     "id": "14.5",
+     "label": {
+      "tr": "14.5 Yeni model",
+      "en": "14.5 The new model"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "desk",
+     "14.1"
+    ],
+    [
+     "desk",
+     "14.2"
+    ],
+    [
+     "desk",
+     "14.3"
+    ],
+    [
+     "desk",
+     "14.4"
+    ],
+    [
+     "desk",
+     "14.5"
+    ]
+   ],
+   "next": {
+    "default": [
+     "final"
+    ]
+   }
+  }
+ ],
+ "finals": [
+  {
+   "id": "two_neighbours",
+   "name": {
+    "tr": "İki Komşu 1453'te",
+    "en": "Two Neighbours in 1453"
+   },
+   "sub": {
+    "tr": "Tolga'nın masası da, Hikmet'in garajı da boş. Kimse fark etmedi.",
+    "en": "Tolga's desk and Hikmet's garage are both empty. Nobody noticed."
+   },
+   "cond": {
+    "tr": "Tolga 1453'te kaldı ve Hikmet de orada",
+    "en": "Tolga stayed in 1453 and so did Hikmet"
+   },
+   "from": [
+    "13.2",
+    "13.5"
+   ]
+  },
+  {
+   "id": "empty_desk",
+   "name": {
+    "tr": "Boş Masa",
+    "en": "The Empty Desk"
+   },
+   "sub": {
+    "tr": "Müdür: 'Tolga bugün de mi erken çıktı?' Hikmet telsizi açık bıraktı.",
+    "en": "The manager: 'Did Tolga leave early again today?' Hikmet left the radio on."
+   },
+   "cond": {
+    "tr": "Tolga dönüş penceresini kaçırdı",
+    "en": "Tolga missed the return window"
+   },
+   "from": [
+    "13.2"
+   ]
+  },
+  {
+   "id": "another_year",
+   "name": {
+    "tr": "Başka Bir Yıl",
+    "en": "Another Year"
+   },
+   "sub": {
+    "tr": "Tolga bambaşka bir yılda uyandı.",
+    "en": "Tolga woke up in a completely different year."
+   },
+   "cond": {
+    "tr": "Tolga yanlış yıla döndü",
+    "en": "Tolga came back to the wrong year"
+   },
+   "from": [
+    "13.3"
+   ]
+  },
+  {
+   "id": "founding_member",
+   "name": {
+    "tr": "Kurucu Üye",
+    "en": "Founding Member"
+   },
+   "sub": {
+    "tr": "Form Z-1'in altındaki 'T.' imzasının yanına küçük bir not eklendi: 'Tolga.' Gündüz sigortacı, gece kurucu üye.",
+    "en": "A small note has been added beside the 'T.' at the foot of Form Z-1: 'Tolga.' An insurance man by day, a founding member by night."
+   },
+   "cond": {
+    "tr": "Büronun Kuruluşu + Tolga Büro'ya katıldı",
+    "en": "The Bureau was founded + Tolga joined it"
+   },
+   "from": [
+    "10A.1",
+    "14.3"
+   ]
+  },
+  {
+   "id": "night_shift",
+   "name": {
+    "tr": "Gece Mesaisi",
+    "en": "The Night Shift"
+   },
+   "sub": {
+    "tr": "Gündüz sigortacı, gece Zaman Bürosu stajyeri.",
+    "en": "An insurance man by day, a Time Bureau trainee by night."
+   },
+   "cond": {
+    "tr": "Tolga Büro'ya katıldı",
+    "en": "Tolga joined the Bureau"
+   },
+   "from": [
+    "14.3"
+   ]
+  },
+  {
+   "id": "sultans_repair",
+   "name": {
+    "tr": "Sultan'ın Tamiri",
+    "en": "The Sultan's Repair"
+   },
+   "sub": {
+    "tr": "Garajın duvarında Fatih'in, makineyi elinde tutarken yapılmış portresi.",
+    "en": "On the garage wall, a portrait of Mehmed holding the machine."
+   },
+   "cond": {
+    "tr": "Fatih makineyi istedi, tarih düzeltilmedi",
+    "en": "Mehmed asked for the machine, history left unfixed"
+   },
+   "from": [
+    "12.4",
+    "12.6"
+   ]
+  },
+  {
+   "id": "missing_paperwork",
+   "name": {
+    "tr": "Evrak Eksik",
+    "en": "Missing Paperwork"
+   },
+   "sub": {
+    "tr": "Fetih, gerekli evrakın tamamlanmasının ardından 1456'da gerçekleşti. Tarih inatçıdır. Bürokrasi daha da inatçıdır.",
+    "en": "The Conquest took place in 1456, once the necessary paperwork was complete. History is stubborn. Bureaucracy is more stubborn still."
+   },
+   "cond": {
+    "tr": "Son Akşam: Bizans'a üç yardım",
+    "en": "The Last Evening: three kinds of help to Byzantium"
+   },
+   "from": [
+    "ch12b"
+   ]
+  },
+  {
+   "id": "long_wait",
+   "name": {
+    "tr": "Uzun Bekleyiş",
+    "en": "The Long Wait"
+   },
+   "sub": {
+    "tr": "İki yıl. Okullarda ayrı bir ünite. Kimse Tolga'nın adını bilmiyor.",
+    "en": "Two years. A separate unit in schools. Nobody knows Tolga's name."
+   },
+   "cond": {
+    "tr": "Son Akşam: Bizans'a iki yardım",
+    "en": "The Last Evening: two kinds of help to Byzantium"
+   },
+   "from": [
+    "ch12b"
+   ]
+  },
+  {
+   "id": "one_more_year",
+   "name": {
+    "tr": "Bir Yıl Daha",
+    "en": "One More Year"
+   },
+   "sub": {
+    "tr": "Fetih bir yıl gecikti. Her şey aynı, sadece tarih 1454.",
+    "en": "The Conquest came a year late. Everything's the same; only the date is 1454."
+   },
+   "cond": {
+    "tr": "Son Akşam: Bizans'a bir yardım",
+    "en": "The Last Evening: one kind of help to Byzantium"
+   },
+   "from": [
+    "ch12b"
+   ]
+  },
+  {
+   "id": "sultans_table",
+   "name": {
+    "tr": "Sultan'ın Sofrası",
+    "en": "The Sultan's Table"
+   },
+   "sub": {
+    "tr": "Tolga'nın her öğlen yediği pilavın adı: 'Kadri Usulü Leblebili Pilav.' Adını hiç merak etmedi.",
+    "en": "The pilaf Tolga eats every lunchtime is called 'Kadri-Style Leblebi Pilaf'. He never wondered about the name."
+   },
+   "cond": {
+    "tr": "Ziyafet başarılı, tarih düzeltilmedi",
+    "en": "The feast succeeded, history left unfixed"
+   },
+   "from": [
+    "10Z.1"
+   ]
+  },
+  {
+   "id": "envoy_to_venice",
+   "name": {
+    "tr": "Venedik'e Elçi",
+    "en": "Envoy to Venice"
+   },
+   "sub": {
+    "tr": "Venedik'te bir sokağın adı: 'Calle del Turco col Capello Rosso.' Tolga fotoğrafı görmeden beğendi.",
+    "en": "A street in Venice is called 'Calle del Turco col Capello Rosso'. Tolga liked the photo without looking at it."
+   },
+   "cond": {
+    "tr": "Mektup Venedik gemisine yetişti",
+    "en": "The letter made the Venetian ship"
+   },
+   "from": [
+    "10G.1"
+   ]
+  },
+  {
+   "id": "bureau_founding",
+   "name": {
+    "tr": "Büronun Kuruluşu",
+    "en": "The Founding of the Bureau"
+   },
+   "sub": {
+    "tr": "Durakta bir adam Tolga'ya şapkasıyla selam verir. Tolga selamı kendine sanmaz.",
+    "en": "A man at the bus stop tips his hat to Tolga. Tolga doesn't think it was meant for him."
+   },
+   "cond": {
+    "tr": "Form Z-1'in aslı imzalandı",
+    "en": "The original Form Z-1 was signed"
+   },
+   "from": [
+    "10A.1"
+   ]
+  },
+  {
+   "id": "tunnel_truce",
+   "name": {
+    "tr": "Tünel Sulhu",
+    "en": "The Tunnel Truce"
+   },
+   "sub": {
+    "tr": "Marmaray kazısında iki lağım ve ortada bir piknik alanı. Arkeologlar hâlâ tartışıyor.",
+    "en": "Two tunnels in the Marmaray dig, with a picnic spot in between. The archaeologists are still arguing."
+   },
+   "cond": {
+    "tr": "İki lağım karanlıkta barıştı",
+    "en": "The two tunnels made peace in the dark"
+   },
+   "from": [
+    "10L.1"
+   ]
+  },
+  {
+   "id": "big_bang",
+   "name": {
+    "tr": "Büyük Patlama",
+    "en": "The Big Bang"
+   },
+   "sub": {
+    "tr": "Urban'ın topunun parçaları müzede. Camekânda, kırmızımsı bir fes.",
+    "en": "The pieces of Urban's cannon are in a museum. In the glass case, a reddish fez."
+   },
+   "cond": {
+    "tr": "Urban'ın topu patladı",
+    "en": "Urban's cannon blew up"
+   },
+   "from": [
+    "10B.3"
+   ]
+  },
+  {
+   "id": "master_gunner",
+   "name": {
+    "tr": "Topçubaşı",
+    "en": "Master Gunner"
+   },
+   "sub": {
+    "tr": "Askerî Müze'de bir top: 'Dökümcü: Urban ve çırağı. Çırağın adı bilinmiyor, fesli olduğu rivayet edilir.'",
+    "en": "A cannon in the Military Museum: 'Cast by Urban and his apprentice. The apprentice's name is unknown; he is said to have worn a fez.'"
+   },
+   "cond": {
+    "tr": "Top döküldü ve atıldı",
+    "en": "The cannon was cast and fired"
+   },
+   "from": [
+    "10B.1",
+    "10B.2"
+   ]
+  },
+  {
+   "id": "time_repair",
+   "name": {
+    "tr": "Zaman Tamir Servisi",
+    "en": "Time Repair Co."
+   },
+   "sub": {
+    "tr": "Garajın kapısında yeni bir tabela: 'Hikmet & Nihat.'",
+    "en": "A new sign on the garage door: 'Hikmet & Nihat.'"
+   },
+   "cond": {
+    "tr": "Nihat istifa etti",
+    "en": "Nihat resigned"
+   },
+   "from": [
+    "14.4"
+   ]
+  },
+  {
+   "id": "new_model",
+   "name": {
+    "tr": "Yeni Model",
+    "en": "The New Model"
+   },
+   "sub": {
+    "tr": "Eski Nihat durakta bekliyor. Yeni Nihat yanından geçiyor.",
+    "en": "The old Nihat waits at the bus stop. The new Nihat walks past."
+   },
+   "cond": {
+    "tr": "Nihat'ın yerine yeni model geldi",
+    "en": "Nihat was replaced by a new model"
+   },
+   "from": [
+    "14.5"
+   ]
+  },
+  {
+   "id": "sealed_garage",
+   "name": {
+    "tr": "Mühürlü Garaj",
+    "en": "The Sealed Garage"
+   },
+   "sub": {
+    "tr": "Makine gitti. Zamanatör 3001 yolda.",
+    "en": "The machine is gone. The Chrono-matic 3001 is on its way."
+   },
+   "cond": {
+    "tr": "Makineye el konuldu, garaj mühürlendi",
+    "en": "The machine was confiscated, the garage sealed"
+   },
+   "from": [
+    "3.1"
+   ]
+  },
+  {
+   "id": "pyjama_rescue",
+   "name": {
+    "tr": "Pijamalı Kurtarma",
+    "en": "The Pyjama Rescue"
+   },
+   "sub": {
+    "tr": "Radyoda 1977'den bir şarkı. Hikmet ilk kez dans ediyor.",
+    "en": "A song from 1977 on the radio. Hikmet dances for the first time."
+   },
+   "cond": {
+    "tr": "Hikmet pijamasıyla kurtarmaya geldi",
+    "en": "Hikmet came to the rescue in his pyjamas"
+   },
+   "from": [
+    "13.4"
+   ]
+  },
+  {
+   "id": "off_the_books",
+   "name": {
+    "tr": "Kuralsız",
+    "en": "Off the Books"
+   },
+   "sub": {
+    "tr": "Nihat'ın raporunun altında sahte bir imza.",
+    "en": "A forged signature at the bottom of Nihat's report."
+   },
+   "cond": {
+    "tr": "Nihat raporu tahrif etti",
+    "en": "Nihat forged the report"
+   },
+   "from": [
+    "14.2"
+   ]
+  },
+  {
+   "id": "fixed_mostly",
+   "name": {
+    "tr": "Düzeltildi Ama...",
+    "en": "Fixed, Mostly"
+   },
+   "sub": {
+    "tr": "Dünya normal. Tek bir tabela hariç.",
+    "en": "The world is normal. Except for one sign."
+   },
+   "cond": {
+    "tr": "Tarih düzeltildi... neredeyse",
+    "en": "History was fixed... mostly"
+   },
+   "from": [
+    "14.1"
+   ]
+  },
+  {
+   "id": "nobody_noticed",
+   "name": {
+    "tr": "Kimse Fark Etmedi",
+    "en": "Nobody Noticed"
+   },
+   "sub": {
+    "tr": "Dünya değişti. Tolga kulaklıklarını taktı.",
+    "en": "The world has changed. Tolga put his earphones in."
+   },
+   "cond": {
+    "tr": "Dünya değişti (Leblebipolis ya da İki Hükümdar)",
+    "en": "The world changed (Chickpeapolis or Two Rulers)"
+   },
+   "from": [
+    "12.2",
+    "12.3"
+   ]
+  },
+  {
+   "id": "ordinary_monday",
+   "name": {
+    "tr": "Sıradan Bir Pazartesi",
+    "en": "An Ordinary Monday"
+   },
+   "sub": {
+    "tr": "Hiçbir şey değişmedi. Sadece dolapta bir kaftan var.",
+    "en": "Nothing has changed. There's just a kaftan in the wardrobe."
+   },
+   "cond": {
+    "tr": "Hiçbiri olmadıysa: tarih yerinde",
+    "en": "If none of the above: history intact"
+   },
+   "from": [
+    "12.1",
+    "13.1"
+   ]
+  }
+ ],
+ "effects": {
+  "1.3": {
+   "tr": "Kırmızı düğme: garanti içinde garaja dönüş, oyun erken biter.",
+   "en": "Red button: back to the garage under warranty, the game ends early."
+  },
+  "2.5": {
+   "tr": "Kırmızı düğme: garanti içinde garaja dönüş, oyun erken biter.",
+   "en": "Red button: back to the garage under warranty, the game ends early."
+  },
+  "2.3": {
+   "tr": "Bölüm 4 ve 6 surların içinde, Bizans tarafında geçer.",
+   "en": "Chapters 4 and 6 take place inside the walls, on the Byzantine side."
+  },
+  "3.1": {
+   "tr": "Makineye el konuldu: pencere de kaçarsa garaj mühürlenir.",
+   "en": "The machine is confiscated: if the window is also missed, the garage gets sealed."
+  },
+  "10Z.1": {
+   "tr": "Dünya: Sultan'ın Sofrası (W7). Bölüm 12 atlanır.",
+   "en": "World: The Sultan's Table (W7). Chapter 12 is skipped."
+  },
+  "10B.1": {
+   "tr": "Dünya: Topçubaşı (W5). Bölüm 12 atlanır.",
+   "en": "World: Master Gunner (W5). Chapter 12 is skipped."
+  },
+  "10B.2": {
+   "tr": "Dünya: Topçubaşı (W5). Bölüm 12 atlanır.",
+   "en": "World: Master Gunner (W5). Chapter 12 is skipped."
+  },
+  "10B.3": {
+   "tr": "Dünya: Büyük Patlama (W5B). Bölüm 12 atlanır.",
+   "en": "World: The Big Bang (W5B). Chapter 12 is skipped."
+  },
+  "10G.1": {
+   "tr": "Dünya: Venedik'e Elçi (W6). Doğrudan dönüş penceresine.",
+   "en": "World: Envoy to Venice (W6). Straight to the return window."
+  },
+  "10A.1": {
+   "tr": "Dünya: Büronun Kuruluşu (W8). Doğrudan dönüş penceresine.",
+   "en": "World: The Founding of the Bureau (W8). Straight to the return window."
+  },
+  "10L.1": {
+   "tr": "Dünya: Tünel Sulhu (W13). Bölüm 12 atlanır.",
+   "en": "World: The Tunnel Truce (W13). Chapter 12 is skipped."
+  },
+  "10H.1": {
+   "tr": "Bizans'a verdiğin her yardım (gedik, Giustiniani, zincir) fethi erteler: Son Akşam'a gidilir.",
+   "en": "Every bit of help you gave Byzantium (the breach, Giustiniani, the chain) delays the Conquest: on to The Last Evening."
+  },
+  "11.1": {
+   "tr": "Tolga tutuklandı: doğrudan Nihat'ın son formuna.",
+   "en": "Tolga is arrested: straight to Nihat's final form."
+  },
+  "12.1": {
+   "tr": "Dünya: Tarih yerinde (W1).",
+   "en": "World: History intact (W1)."
+  },
+  "12.2": {
+   "tr": "Dünya: Leblebipolis (W2).",
+   "en": "World: Chickpeapolis (W2)."
+  },
+  "12.3": {
+   "tr": "Dünya: İki Hükümdar (W3).",
+   "en": "World: Two Rulers (W3)."
+  },
+  "12.4": {
+   "tr": "Dünya: Sultan'ın Tamiri (W4).",
+   "en": "World: The Sultan's Repair (W4)."
+  },
+  "12.6": {
+   "tr": "Dünya: Sultan'ın Tamiri (W4).",
+   "en": "World: The Sultan's Repair (W4)."
+  },
+  "13.1": {
+   "tr": "Tolga 2026'ya döndü (T1).",
+   "en": "Tolga made it back to 2026 (T1)."
+  },
+  "13.2": {
+   "tr": "Tolga 1453'te kaldı (T2).",
+   "en": "Tolga stays in 1453 (T2)."
+  },
+  "13.3": {
+   "tr": "Tolga yanlış yılda uyandı (T3).",
+   "en": "Tolga woke up in the wrong year (T3)."
+  },
+  "13.4": {
+   "tr": "Hikmet pijamasıyla gelip Tolga'yı kurtardı.",
+   "en": "Hikmet came in his pyjamas and rescued Tolga."
+  },
+  "13.5": {
+   "tr": "Hikmet 1453'te kaldı (H3).",
+   "en": "Hikmet stays in 1453 (H3)."
+  },
+  "14.1": {
+   "tr": "Tarih düzeltildi: dünya neredeyse normale döner.",
+   "en": "History is fixed: the world goes almost back to normal."
+  },
+  "14.2": {
+   "tr": "Nihat raporu tahrif etti (N2).",
+   "en": "Nihat forged the report (N2)."
+  },
+  "14.3": {
+   "tr": "Tolga gece Büro'da çalışmaya başlar (T4).",
+   "en": "Tolga starts working night shifts at the Bureau (T4)."
+  },
+  "14.4": {
+   "tr": "Nihat istifa etti (N4).",
+   "en": "Nihat resigned (N4)."
+  },
+  "14.5": {
+   "tr": "Nihat'ın yerine yeni model geldi (N3), tarih düzeltildi.",
+   "en": "Nihat is replaced by a new model (N3), history is fixed."
+  }
+ }
+}

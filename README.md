@@ -12,6 +12,7 @@
   <a href="https://github.com/TradersEntertainment/nothistorygamedemo/releases/latest"><b>⬇️ Download / İndir</b></a> ·
   <a href="https://tradersentertainment.github.io/nothistorygamedemo/?lang=en">🌐 Website</a> ·
   <a href="https://www.youtube.com/watch?v=Q5apIK1dYms">🎬 Trailer / Fragman</a> ·
+  <a href="https://tradersentertainment.github.io/nothistorygamedemo/story.html">🗺️ Story map / Hikâye haritası</a> ·
   <a href="https://tradersentertainment.github.io/nothistorygamedemo/presskit.html">📰 Press kit / Basın kiti</a>
 </p>
 
