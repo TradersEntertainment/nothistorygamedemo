@@ -107,6 +107,10 @@ h2 small{display:block;font:600 16px Nunito,system-ui,sans-serif;color:var(--mut
 .lb .prev{left:12px}.lb .next{right:12px}
 .lb .x{position:absolute;top:12px;right:14px;background:none;border:0;color:#fff;font:700 30px Fredoka,Nunito,system-ui,sans-serif;cursor:pointer}
 
+.boom{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center}
+.boom img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.45);display:block}
+.boom blockquote{margin:0 0 14px;padding-left:14px;border-left:3px solid var(--gold);font-size:18px}
+.boom blockquote b{color:var(--gold);font-family:Fredoka,Nunito,system-ui,sans-serif}
 .story{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .story img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.4)}
 .story p{margin:0 0 14px}
@@ -129,7 +133,7 @@ footer em{color:var(--ink)}
 
 @media (max-width:760px){
   section{padding:54px 0}
-  .story{grid-template-columns:1fr}
+  .story,.boom{grid-template-columns:1fr}
   .hero{min-height:min(82vh,720px);background-position:30% 30%}
   .btn{font-size:19px;padding:14px 24px}
   .nav .go{display:none!important}
@@ -193,6 +197,18 @@ footer em{color:var(--ink)}
     <div class="wrap">
       <h2><span data-tr>Fragman</span><span data-en>Trailer</span></h2>
       <div class="video" id="video"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap boom">
+      <img loading="lazy" src="img/boom.gif" alt="">
+      <div>
+        <div class="stamp"><span data-tr>BÜYÜK ATIŞ</span><span data-en>THE GREAT SHOT</span></div>
+        <h2 style="text-align:left"><span data-tr>Urban'ın topu. Biraz fazla barut.</span><span data-en>Urban's cannon. Slightly too much powder.</span></h2>
+        <blockquote><b data-tr>Fatih:</b><b data-en>Mehmed:</b> …Urban.<br><b>Urban:</b> <span data-tr>(Gülle yığınının içinden) Efendim.</span><span data-en>(From inside the pile of cannonballs) My Sultan.</span><br><b data-tr>Fatih:</b><b data-en>Mehmed:</b> <span data-tr>Sigorta… Urban'ın topunu sigortalamış mıydın?</span><span data-en>Insurance… Had you insured Urban's cannon?</span><br><b>Tolga:</b> <span data-tr>Hayır.</span><span data-en>No.</span><br><b data-tr>Fatih:</b><b data-en>Mehmed:</b> <span data-tr>Yazık.</span><span data-en>A pity.</span></blockquote>
+        <p class="hint" style="text-align:left"><span data-tr>Sultan kıpırdamadı bile. Yüzünde tek bir is lekesi.</span><span data-en>The Sultan didn't even flinch. One soot mark on his face.</span></p>
+      </div>
     </div>
   </section>
 

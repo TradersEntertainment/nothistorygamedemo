@@ -38,6 +38,10 @@ Tolga, Fatih'e risk tablosu sunuyor, Urban'ın topunu yanlışlıkla havaya uçu
 - ⏱️ İlk oynanış yaklaşık 2–3 saat
 - 🎮 Klavye-fare ya da gamepad · Windows · macOS · Linux / Steam Deck
 
+## 💥 The Great Shot / Büyük Atış
+
+<p align="center"><img src="img/boom.gif" width="560" alt="Urban's cannon explodes"></p>
+
 ## 📸 Screenshots / Oyundan kareler
 
 | | |
