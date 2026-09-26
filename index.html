@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gerçek Tarih Bu Değil</title>
-<meta name="description" content="1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 23 farklı final, ücretsiz indir.">
-<meta property="og:title" content="Gerçek Tarih Bu Değil — Not a History Game">
-<meta property="og:description" content="1453'e düşen bir sigortacı, Fatih'e risk tablosu sunuyor. 23 farklı final. Windows · macOS · Linux.">
+<title>Gerçek Tarih Bu Değil — Not a History Game</title>
+<meta name="description" content="1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 23 farklı final, ücretsiz indir. / Istanbul, 1453. A time machine, an insurance salesman and 23 endings. Free download.">
+<meta property="og:title" content="Not a History Game — Gerçek Tarih Bu Değil">
+<meta property="og:description" content="An insurance salesman falls into 1453 and pitches a risk matrix to Sultan Mehmed. 23 endings. Fully voiced in English and Turkish. Windows · macOS · Linux.">
 <meta property="og:image" content="img/og.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,27 +16,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#23253a; --navy2:#2d3050; --ink:#f4ecd8; --muted:#b9b3a3;
+  --navy:#23253a; --navy2:#2d3050; --deep:#191a2c; --ink:#f4ecd8; --muted:#b9b3a3;
   --red:#c8262e; --red2:#e0444b; --gold:#e3b245; --card:#2a2d47; --line:#3b3f63;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--navy);color:var(--ink);font:17px/1.6 Nunito,system-ui,sans-serif;overflow-x:hidden}
 a{color:var(--gold)}
+img{max-width:100%}
 h1,h2,h3{font-family:Fredoka,Nunito,sans-serif;line-height:1.15;margin:0 0 .5em}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 
-/* üst */
-.top{position:absolute;inset:0 0 auto 0;z-index:5;display:flex;justify-content:flex-end;padding:14px 20px;gap:8px}
-.lang button{background:rgba(0,0,0,.35);color:var(--ink);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 12px;font:700 13px Nunito;cursor:pointer}
+/* dil */
+[data-en]{display:none}
+html[lang=en] [data-tr]{display:none}
+html[lang=en] [data-en]{display:revert}
+
+/* üst şerit */
+.nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 20px;transition:background .25s,box-shadow .25s}
+.nav.solid{background:rgba(25,26,44,.94);backdrop-filter:blur(8px);box-shadow:0 2px 18px rgba(0,0,0,.35)}
+.nav .mini{height:34px;width:auto;opacity:0;transition:opacity .25s;display:block}
+.nav.solid .mini{opacity:1}
+.nav .sp{flex:1}
+.nav .go{display:none;background:var(--red);color:#fff;text-decoration:none;font:700 15px Fredoka,Nunito,system-ui,sans-serif;padding:7px 16px;border-radius:10px}
+.nav.solid .go{display:inline-block}
+.nav .go:hover{background:var(--red2)}
+.lang{display:flex;gap:6px}
+.lang button{background:rgba(0,0,0,.35);color:var(--ink);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 12px;font:800 13px Nunito,system-ui,sans-serif;cursor:pointer}
 .lang button.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 
 /* kahraman */
-.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;background:#15162a url(img/hero.jpg) center 30%/cover no-repeat}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 50% 58%,rgba(20,21,38,.72),rgba(20,21,38,0) 100%),linear-gradient(180deg,rgba(35,37,58,.1) 0%,rgba(35,37,58,.35) 50%,var(--navy) 100%)}
+.hero{position:relative;min-height:min(92vh,880px);display:flex;align-items:flex-end;background:#15162a url(img/hero.jpg) center 30%/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 62% 58% at 50% 60%,rgba(20,21,38,.78),rgba(20,21,38,0) 100%),linear-gradient(180deg,rgba(35,37,58,.05) 0%,rgba(35,37,58,.35) 50%,var(--navy) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:56px;text-align:center}
-.logo{width:min(560px,86vw);filter:drop-shadow(0 6px 24px rgba(0,0,0,.6))}
-.tag{font-size:clamp(18px,2.4vw,22px);max-width:720px;margin:10px auto 26px;text-shadow:0 2px 12px rgba(0,0,0,.8)}
+.logo{width:min(600px,88vw);filter:drop-shadow(0 6px 24px rgba(0,0,0,.6))}
+h1.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.tag{font-size:clamp(18px,2.4vw,23px);max-width:740px;margin:12px auto 26px;text-shadow:0 2px 12px rgba(0,0,0,.85)}
+.tag b{color:var(--gold)}
 
 /* indir */
 .dl{display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -46,37 +62,55 @@ h1,h2,h3{font-family:Fredoka,Nunito,sans-serif;line-height:1.15;margin:0 0 .5em}
 .btn svg{width:24px;height:24px}
 .meta{font-size:14px;color:var(--muted)}
 .others{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:4px}
-.others a{font-size:14px;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:rgba(0,0,0,.25);padding:6px 12px;border-radius:999px}
+.others a{font-size:14px;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:rgba(0,0,0,.3);padding:6px 12px;border-radius:999px}
 .others a:hover{border-color:var(--gold);color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px}
+.chips span{font:700 13px Nunito,system-ui,sans-serif;letter-spacing:.02em;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14);padding:5px 12px;border-radius:999px}
 
 /* bölümler */
-section{padding:72px 0}
-.lead{font-size:clamp(20px,2.4vw,24px);max-width:760px;margin:0 auto;text-align:center}
+section{padding:76px 0}
+section.alt{background:var(--deep)}
+h2{font-size:clamp(28px,4vw,40px);text-align:center}
+h2 small{display:block;font:600 16px Nunito,system-ui,sans-serif;color:var(--muted);margin-top:8px}
+.lead{font-size:clamp(20px,2.4vw,25px);max-width:780px;margin:0 auto;text-align:center}
 .lead b{color:var(--gold)}
-.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:40px}
-.feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
-.feat .big{font:700 42px Fredoka,sans-serif;color:var(--gold);line-height:1}
-.feat h3{font-size:20px;margin:8px 0 6px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:42px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .2s,border-color .2s}
+.feat:hover{transform:translateY(-3px);border-color:var(--gold)}
+.feat .big{font:700 44px Fredoka,sans-serif;color:var(--gold);line-height:1}
+.feat h3{font-size:20px;margin:10px 0 6px}
 .feat p{margin:0;color:var(--muted);font-size:15px}
 
-h2{font-size:clamp(28px,4vw,38px);text-align:center}
-h2 small{display:block;font:600 15px Nunito;color:var(--muted);margin-top:6px}
-
-.video{max-width:900px;margin:0 auto;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000}
+.video{max-width:940px;margin:0 auto;aspect-ratio:16/9;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 20px 60px rgba(0,0,0,.45)}
 .video iframe{width:100%;height:100%;border:0;display:block}
 
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
-.gal button{padding:0;border:0;background:none;cursor:zoom-in;border-radius:12px;overflow:hidden;display:block}
-.gal img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform .25s}
-.gal button:hover img{transform:scale(1.04)}
-.lb{position:fixed;inset:0;background:rgba(10,10,20,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
-.lb.on{display:flex}
-.lb img{max-width:100%;max-height:100%;border-radius:10px}
+/* bölüm şeridi */
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,290px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 18px;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.ch{scroll-snap-align:start;margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.ch img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.ch figcaption{padding:10px 14px 12px;font:600 16px Fredoka,Nunito,system-ui,sans-serif}
+.ch figcaption i{display:block;font:800 11px Nunito,system-ui,sans-serif;letter-spacing:.12em;color:var(--gold);font-style:normal;text-transform:uppercase}
+.hint{text-align:center;color:var(--muted);font-size:14px;margin:4px 0 0}
 
-.story{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
-.story img{width:100%;border-radius:16px;border:1px solid var(--line)}
+/* galeri */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.gal button{position:relative;padding:0;border:0;background:#000;cursor:zoom-in;border-radius:14px;overflow:hidden;display:block;color:inherit;font:inherit;text-align:left}
+.gal img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform .3s}
+.gal button:hover img{transform:scale(1.05)}
+.gal .cap{position:absolute;inset:auto 0 0 0;padding:26px 12px 9px;font:600 14px Nunito,system-ui,sans-serif;background:linear-gradient(transparent,rgba(10,10,22,.9))}
+.lb{position:fixed;inset:0;background:rgba(10,10,20,.94);display:none;flex-direction:column;align-items:center;justify-content:center;z-index:60;padding:16px 70px;gap:12px}
+.lb.on{display:flex}
+.lb img{max-width:min(1280px,100%);max-height:80vh;border-radius:10px}
+.lb p{margin:0;color:var(--ink);text-align:center}
+.lb .arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:0;color:#fff;font:700 28px Fredoka,Nunito,system-ui,sans-serif;width:48px;height:48px;border-radius:50%;cursor:pointer}
+.lb .arr:hover{background:rgba(255,255,255,.2)}
+.lb .prev{left:12px}.lb .next{right:12px}
+.lb .x{position:absolute;top:12px;right:14px;background:none;border:0;color:#fff;font:700 30px Fredoka,Nunito,system-ui,sans-serif;cursor:pointer}
+
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.story img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.4)}
 .story p{margin:0 0 14px}
-.stamp{display:inline-block;transform:rotate(-3deg);border:3px solid var(--red2);color:var(--red2);font:700 15px Fredoka;letter-spacing:.08em;padding:4px 12px;border-radius:6px;margin-bottom:14px}
+.stamp{display:inline-block;transform:rotate(-3deg);border:3px solid var(--red2);color:var(--red2);font:700 15px Fredoka,Nunito,system-ui,sans-serif;letter-spacing:.08em;padding:4px 12px;border-radius:6px;margin-bottom:14px}
 
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
@@ -87,33 +121,40 @@ h2 small{display:block;font:600 15px Nunito;color:var(--muted);margin-top:6px}
 .stream{background:linear-gradient(135deg,#3a1e2e,#2a2d47);border:1px solid var(--line);border-radius:20px;padding:34px;text-align:center}
 .stream p{max-width:680px;margin:0 auto}
 
-footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px}
+.final{text-align:center}
+.final .logo{width:min(440px,80vw);margin-bottom:6px}
+
+footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
 footer em{color:var(--ink)}
 
-[data-en]{display:none}
-html[lang=en] [data-tr]{display:none}
-html[lang=en] [data-en]{display:revert}
-
 @media (max-width:760px){
-  section{padding:52px 0}
+  section{padding:54px 0}
   .story{grid-template-columns:1fr}
-  .hero{min-height:78vh;background-position:30% 30%}
+  .hero{min-height:min(82vh,720px);background-position:30% 30%}
   .btn{font-size:19px;padding:14px 24px}
+  .nav .go{display:none!important}
+  .lb{padding:16px}
+  .lb .arr{top:auto;bottom:18px;transform:none}
 }
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
-<div class="top">
+<nav class="nav" id="nav">
+  <a href="#top" aria-label="Top"><img class="mini" src="img/logo.png" data-logo alt=""></a>
+  <span class="sp"></span>
+  <a class="go" href="#download"><span data-tr>Ücretsiz İndir</span><span data-en>Download Free</span></a>
   <div class="lang" role="group" aria-label="Dil / Language">
     <button type="button" data-l="tr">TR</button>
     <button type="button" data-l="en">EN</button>
   </div>
-</div>
+</nav>
 
-<header class="hero">
+<header class="hero" id="top">
   <div class="wrap">
-    <img class="logo" src="img/logo.png" alt="Gerçek Tarih Bu Değil — Not a History Game">
+    <h1 class="sr"><span data-tr>Gerçek Tarih Bu Değil</span><span data-en>Not a History Game</span></h1>
+    <img class="logo" src="img/logo.png" data-logo alt="Gerçek Tarih Bu Değil — Not a History Game">
     <p class="tag">
       <span data-tr><b>1453, İstanbul.</b> Pijamalı mucit Hikmet Amca'nın koli bantlı zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı.</span>
       <span data-en><b>Istanbul, 1453.</b> Uncle Hikmet's duct-taped time machine actually works. The only problem: he sent an insurance salesman.</span>
@@ -123,8 +164,13 @@ html[lang=en] [data-en]{display:revert}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
         <span id="mainLabel"><span data-tr>Ücretsiz İndir</span><span data-en>Download Free</span></span>
       </a>
-      <div class="meta" id="meta"><span data-tr>Windows · macOS · Linux / Steam Deck</span><span data-en>Windows · macOS · Linux / Steam Deck</span></div>
+      <div class="meta" id="meta">Windows · macOS · Linux / Steam Deck</div>
       <div class="others" id="others"></div>
+    </div>
+    <div class="chips">
+      <span data-tr>🎙️ Türkçe ve İngilizce seslendirme</span><span data-en>🎙️ Fully voiced in English &amp; Turkish</span>
+      <span data-tr>🔀 23 final</span><span data-en>🔀 23 endings</span>
+      <span data-tr>🎮 Gamepad desteği</span><span data-en>🎮 Gamepad support</span>
     </div>
   </div>
 </header>
@@ -133,17 +179,17 @@ html[lang=en] [data-en]{display:revert}
   <section>
     <div class="wrap">
       <p class="lead" data-tr>Tolga <b>Fatih'e risk tablosu sunuyor</b>, Urban'ın topunu yanlışlıkla havaya uçuruyor, Bizans'ta yedi nüsha form dolduruyor ve pazartesi 09:00 toplantısına yetişmeye çalışıyor.</p>
-      <p class="lead" data-en>Tolga <b>pitches a risk matrix to Sultan Mehmed</b>, accidentally blows up Urban's cannon, fills out forms in seven copies in Byzantium and still tries to make the Monday 9 a.m. meeting.</p>
+      <p class="lead" data-en>Tolga <b>pitches a risk matrix to Sultan Mehmed</b>, accidentally blows up Urban's giant cannon, fills out forms in seven copies in Byzantium, and still tries to make his Monday 9 a.m. meeting.</p>
       <div class="feats">
-        <div class="feat"><div class="big">23</div><h3 data-tr>farklı final</h3><h3 data-en>different endings</h3><p data-tr>Her seçim tarihi değiştirir. Aynı İstanbul'u iki kez fethedemezsin.</p><p data-en>Every choice bends history. You won't conquer the same Istanbul twice.</p></div>
-        <div class="feat"><div class="big">2–3</div><h3 data-tr>saat ilk oynanış</h3><h3 data-en>hours per playthrough</h3><p data-tr>Tek oturuşta biter, tekrar oynattırır. Yayın için biçilmiş kaftan.</p><p data-en>Fits in one sitting, begs for a replay. Made for streams.</p></div>
-        <div class="feat"><div class="big">🎙️</div><h3 data-tr>tamamen seslendirilmiş</h3><h3 data-en>fully voiced</h3><p data-tr>Her karakter konuşuyor. Hikmet Amca'nın telsizi dahil.</p><p data-en>Every character talks. Including Uncle Hikmet over the walkie-talkie.</p></div>
-        <div class="feat"><div class="big">🐔</div><h3 data-tr>tarihi doğruluk</h3><h3 data-en>historical accuracy</h3><p data-tr>Ayasofya, Galata, surlar ve kızak yolu gerçeğine sadık. Tavuklar değil.</p><p data-en>Hagia Sophia, Galata, the walls and the ship slipway are faithful. The chickens are not.</p></div>
+        <div class="feat"><div class="big">23</div><h3 data-tr>farklı final</h3><h3 data-en>different endings</h3><p data-tr>Her seçim tarihi değiştirir. Aynı İstanbul'u iki kez fethedemezsin.</p><p data-en>Every choice bends history. You'll never conquer the same Constantinople twice.</p></div>
+        <div class="feat"><div class="big">16</div><h3 data-tr>bölüm</h3><h3 data-en>chapters</h3><p data-tr>Garajdan otağa, sur dibinden Zaman Bürosu'nun sonsuz koridorlarına.</p><p data-en>From a garage workshop to the Sultan's tent, the city walls and the endless corridors of the Time Bureau.</p></div>
+        <div class="feat"><div class="big">🎙️</div><h3 data-tr>tamamen seslendirilmiş</h3><h3 data-en>fully voiced</h3><p data-tr>Her replik Türkçe ve İngilizce seslendirildi. Hikmet Amca'nın telsizi dahil.</p><p data-en>Every line is voiced in both English and Turkish. Uncle Hikmet's crackly walkie-talkie included.</p></div>
+        <div class="feat"><div class="big">🐔</div><h3 data-tr>tarihi doğruluk</h3><h3 data-en>historical accuracy</h3><p data-tr>Ayasofya, Galata, surlar ve kızak yolu gerçeğine sadık. Tavuklar değil.</p><p data-en>Hagia Sophia, Galata, the land walls and the famous overland ship slipway are faithful. The chickens are not.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="trailer" hidden>
+  <section id="trailer" class="alt" hidden>
     <div class="wrap">
       <h2><span data-tr>Fragman</span><span data-en>Trailer</span></h2>
       <div class="video" id="video"></div>
@@ -154,14 +200,28 @@ html[lang=en] [data-en]{display:revert}
     <div class="wrap">
       <h2><span data-tr>Oyundan kareler</span><span data-en>Screenshots</span></h2>
       <div class="gal" id="gal">
-        <button type="button"><img loading="lazy" src="img/fatih.jpg" alt="Fatih'in otağında karar anı"></button>
-        <button type="button"><img loading="lazy" src="img/garaj.jpg" alt="Hikmet Amca'nın garajı ve Zamanatör 3000"></button>
-        <button type="button"><img loading="lazy" src="img/urban.jpg" alt="Usta Urban ve topu"></button>
-        <button type="button"><img loading="lazy" src="img/galata.jpg" alt="Galata'da şarapçı"></button>
-        <button type="button"><img loading="lazy" src="img/nobet.jpg" alt="Gece ordugâhında nöbetçiler"></button>
-        <button type="button"><img loading="lazy" src="img/kadri.jpg" alt="Aşçıbaşı Kadri"></button>
-        <button type="button"><img loading="lazy" src="img/tekme.jpg" alt="Makineyi tekmeyle çalıştırmak"></button>
+        <button type="button"><img loading="lazy" src="img/shots/sehir.jpg" alt=""><span class="cap"><span data-tr>Bizans sokakları: kançılaryaya izinsiz tavuk giremez</span><span data-en>The streets of Byzantium: no chickens without a permit</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/fatih.jpg" alt=""><span class="cap"><span data-tr>Fatih'in otağında karar anı</span><span data-en>Decision time in the Sultan's tent</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/patlama.jpg" alt=""><span class="cap"><span data-tr>Urban'ın topu… olması gerekenden büyük patladı</span><span data-en>Urban's cannon… went off bigger than planned</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/kosu.jpg" alt=""><span class="cap"><span data-tr>Yağlı kızaklarda gemilerle yarış</span><span data-en>Racing ships down the greased slipway</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/mufide.jpg" alt=""><span class="cap"><span data-tr>Zaman Bürosu: her kapının arkasında bir yıl</span><span data-en>The Time Bureau: a year behind every door</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/hologram.jpg" alt=""><span class="cap"><span data-tr>Denetçi Nihat paradoks izlerini sürüyor</span><span data-en>Auditor Nihat follows the paradox trail</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/galata.jpg" alt=""><span class="cap"><span data-tr>Galata'da bilgi şarapçıdan alınır</span><span data-en>In Galata, information costs one glass of wine</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/zincir.jpg" alt=""><span class="cap"><span data-tr>Gece, deniz surlarında denge</span><span data-en>Balancing on the sea walls at night</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/yangin.jpg" alt=""><span class="cap"><span data-tr>Ziyafet mutfağında leblebi faciası</span><span data-en>A chickpea disaster in the palace kitchen</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/pencere.jpg" alt=""><span class="cap"><span data-tr>Dönüş penceresi açık: kolu çek!</span><span data-en>The return window is open: pull the lever!</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/ajan.jpg" alt=""><span class="cap"><span data-tr>Nöbetçi hırdavatçıda gece operasyonu</span><span data-en>A midnight heist at the all-night hardware store</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/gidak.jpg" alt=""><span class="cap"><span data-tr>Gıdak.</span><span data-en>Cluck.</span></span></button>
       </div>
+      <p class="hint" style="margin-top:14px"><span data-tr>Görüntüler Türkçe arayüzle alındı; oyunun tamamı İngilizce de oynanabilir.</span><span data-en>Screenshots show the Turkish interface; the whole game is also fully playable in English.</span></p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2><span data-tr>Bölümler</span><span data-en>Chapters</span><small><span data-tr>Bazı bölümler yalnızca belli seçimlerden sonra açılır.</span><span data-en>Some chapters only open up after certain choices.</span></small></h2>
+      <div class="strip" id="strip"></div>
+      <p class="hint"><span data-tr>← kaydır →</span><span data-en>← scroll →</span></p>
     </div>
   </section>
 
@@ -171,15 +231,15 @@ html[lang=en] [data-en]{display:revert}
         <div class="stamp"><span data-tr>DİKKAT: ZAMAN</span><span data-en>CAUTION: TIME</span></div>
         <h2 style="text-align:left"><span data-tr>Her bölümün sonunda bir akış şeması</span><span data-en>A flowchart after every chapter</span></h2>
         <p data-tr>Neyi seçtin, neyi kaçırdın, hangi yollar hâlâ kilitli: hepsi Zaman Bürosu'nun resmî şemasında. Bölümü baştan oynayıp başka bir kapıyı açabilirsin.</p>
-        <p data-en>What you chose, what you missed, which paths are still locked: it's all on the Time Bureau's official chart. Replay a chapter and open another door.</p>
+        <p data-en>What you chose, what you missed, which paths are still locked: it's all on the Time Bureau's official chart, stamped in triplicate. Replay any chapter and open another door.</p>
         <p data-tr>Tolga'nın çantasındaki beş eşya (leblebi, koli bandı, telefon…) her sahnede başka bir işe yarar. Ya da yaramaz.</p>
-        <p data-en>The five items in Tolga's bag (roasted chickpeas, duct tape, a phone…) do something different in every scene. Or don't.</p>
+        <p data-en>The five items in Tolga's bag (roasted chickpeas, duct tape, a phone…) do something different in every scene. Or absolutely nothing.</p>
       </div>
       <img loading="lazy" src="img/akis.jpg" alt="">
     </div>
   </section>
 
-  <section>
+  <section class="alt">
     <div class="wrap">
       <h2><span data-tr>Kurulum</span><span data-en>Installing</span><small><span data-tr>İmzasız bağımsız oyun olduğu için sistem bir kez uyarabilir. Normaldir.</span><span data-en>It's an unsigned indie game, so your system may warn you once. That's normal.</span></small></h2>
       <div class="steps">
@@ -193,6 +253,7 @@ html[lang=en] [data-en]{display:revert}
           <p data-tr>Zip'i aç ve <code>GercekTarihBuDegil</code> dosyasını çalıştır. Steam Deck'te “Steam dışı oyun ekle” ile kütüphaneye ekleyebilirsin.</p>
           <p data-en>Unzip and run <code>GercekTarihBuDegil</code>. On Steam Deck, use “Add a Non-Steam Game” to put it in your library.</p></div>
       </div>
+      <p class="hint" style="margin-top:18px"><span data-tr>Dil ve seslendirme oyun içinden, Ayarlar menüsünden değiştirilir.</span><span data-en>Switch language and voice-over any time from the in-game Settings menu.</span></p>
     </div>
   </section>
 
@@ -205,6 +266,14 @@ html[lang=en] [data-en]{display:revert}
       </div>
     </div>
   </section>
+
+  <section class="final alt">
+    <div class="wrap">
+      <img class="logo" src="img/logo.png" data-logo alt="">
+      <p class="lead" style="margin-bottom:22px"><span data-tr>Pazartesi 09:00 toplantısı bekliyor.</span><span data-en>The Monday 9 a.m. meeting is waiting.</span></p>
+      <a class="btn" href="#download"><span data-tr>Ücretsiz İndir</span><span data-en>Download Free</span></a>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -214,41 +283,94 @@ html[lang=en] [data-en]{display:revert}
   </div>
 </footer>
 
-<div class="lb" id="lb"><img alt=""></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="x" type="button" aria-label="Close">×</button>
+  <button class="arr prev" type="button" aria-label="Previous">‹</button>
+  <img alt="">
+  <p></p>
+  <button class="arr next" type="button" aria-label="Next">›</button>
+</div>
 
 <script>
-// Fragman: YouTube video kimliğini buraya yaz (ör. "dQw4w9WgXcQ"). Boşsa bölüm gizli kalır.
+// Fragman: YouTube video kimliği. Boşsa bölüm gizli kalır.
 const YOUTUBE_ID = "gSqSRNaB8FE";
 
 const REPO = "TradersEntertainment/nothistorygamedemo";
 const LATEST = `https://github.com/${REPO}/releases/latest`;
 
-// Dil
+const TEXT = {
+  tr: {title: "Gerçek Tarih Bu Değil — Not a History Game", logo: "img/logo.png", logoAlt: "Gerçek Tarih Bu Değil",
+       desc: "1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 23 farklı final, ücretsiz indir."},
+  en: {title: "Not a History Game — Istanbul, 1453 · Free download", logo: "img/logo_en.png", logoAlt: "Not a History Game",
+       desc: "Istanbul, 1453. A duct-taped time machine sends an insurance salesman to the conquest of Constantinople. 23 endings, fully voiced in English. Free for Windows, macOS and Linux."},
+};
+
+// Bölümler (oyundaki kapak çizimleri)
+const CHAPTERS = [
+  ["ch1", "Zamanatör", "The Chrono-Matic"], ["ch2", "Yağlı Kızaklar", "Greased Slipways"],
+  ["ch3", "Vaka 1453-T", "Case 1453-T"], ["ch4a", "İlk Gece", "The First Night"],
+  ["ch5", "Garajda Gece", "Night in the Garage"], ["ch6a", "Ordugâh", "The Camp"],
+  ["ch7", "Saha Çalışması", "Fieldwork"], ["ch8", "Hırdavatçı", "The Hardware Shop"],
+  ["ch9", "Teklifler", "Offers"], ["ch10", "Otağ Kapısı", "The Imperial Gate"],
+  ["ch11", "Yüzleşme", "The Confrontation"], ["ch12", "Huzur", "The Audience"],
+  ["ch13", "Dönüş Penceresi", "The Return Window"], ["ch14", "Son Form", "The Final Form"],
+  ["ch15", "Pazartesi", "Monday"], ["ch16", "Gıdak", "Cluck"],
+];
+document.getElementById("strip").innerHTML = CHAPTERS.map((c, i) =>
+  `<figure class="ch"><img loading="lazy" src="img/ch/${c[0]}.jpg" alt=""><figcaption>` +
+  `<i><span data-tr>Bölüm ${i + 1}</span><span data-en>Chapter ${i + 1}</span></i>` +
+  `<span data-tr>${c[1]}</span><span data-en>${c[2]}</span></figcaption></figure>`).join("");
+
+// Dil: ?lang=en > son seçim > tarayıcı dili
 function setLang(l){
+  const t = TEXT[l];
   document.documentElement.lang = l;
+  document.title = t.title;
+  document.querySelector("meta[name=description]").content = t.desc;
+  document.querySelectorAll("[data-logo]").forEach(img => { img.src = t.logo; if (img.alt) img.alt = t.logoAlt; });
   document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.l === l));
   try { localStorage.setItem("lang", l); } catch (e) {}
+  try { const u = new URL(location.href); u.searchParams.set("lang", l); history.replaceState(null, "", u); } catch (e) {}
 }
-let lang = "tr";
-try { lang = localStorage.getItem("lang") || (navigator.language || "tr").slice(0, 2); } catch (e) {}
+let lang = new URLSearchParams(location.search).get("lang");
+if (!lang) { try { lang = localStorage.getItem("lang"); } catch (e) {} }
+if (!lang) lang = (navigator.language || "en").slice(0, 2);
 setLang(lang === "tr" ? "tr" : "en");
 document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.l));
+
+// Üst şerit: kahramanın altına inince koyulaşır
+const nav = document.getElementById("nav");
+const onScroll = () => nav.classList.toggle("solid", scrollY > innerHeight * 0.6);
+addEventListener("scroll", onScroll, {passive: true}); onScroll();
 
 // Fragman
 if (YOUTUBE_ID) {
   document.getElementById("trailer").hidden = false;
   document.getElementById("video").innerHTML =
-    `<iframe src="https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}" title="Trailer" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    `<iframe src="https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}" title="Trailer" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
 }
 
-// Galeri büyütme
-const lb = document.getElementById("lb");
-document.querySelectorAll(".gal button").forEach(b => b.onclick = () => {
-  lb.querySelector("img").src = b.querySelector("img").src;
+// Galeri büyütme (oklarla gezinme)
+const lb = document.getElementById("lb"), shots = [...document.querySelectorAll(".gal button")];
+let cur = 0;
+function show(i){
+  cur = (i + shots.length) % shots.length;
+  lb.querySelector("img").src = shots[cur].querySelector("img").src;
+  lb.querySelector("p").innerHTML = shots[cur].querySelector(".cap").innerHTML;
   lb.classList.add("on");
+}
+const closeLb = () => lb.classList.remove("on");
+shots.forEach((b, i) => b.onclick = () => show(i));
+lb.querySelector(".prev").onclick = () => show(cur - 1);
+lb.querySelector(".next").onclick = () => show(cur + 1);
+lb.querySelector(".x").onclick = closeLb;
+lb.onclick = e => { if (e.target === lb || e.target.tagName === "IMG") closeLb(); };
+addEventListener("keydown", e => {
+  if (!lb.classList.contains("on")) return;
+  if (e.key === "Escape") closeLb();
+  if (e.key === "ArrowLeft") show(cur - 1);
+  if (e.key === "ArrowRight") show(cur + 1);
 });
-lb.onclick = () => lb.classList.remove("on");
-addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("on"); });
 
 // İndirme: en son sürümü GitHub'dan çek, işletim sistemine uygun dosyayı öne koy
 function detectOS(){
@@ -282,7 +404,7 @@ fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
     const os = detectOS();
     const pick = os === "win" ? (files.setup || files.win) : files[os];
     const ver = (rel.tag_name || "").replace(/^v/, "");
-    const date = rel.published_at ? new Date(rel.published_at).toLocaleDateString(document.documentElement.lang) : "";
+    const date = rel.published_at ? rel.published_at.slice(0, 10) : "";
     const btn = document.getElementById("mainBtn");
     if (pick) {
       btn.href = pick.browser_download_url;
