@@ -111,6 +111,9 @@ h2 small{display:block;font:600 16px Nunito,system-ui,sans-serif;color:var(--mut
 .boom img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.45);display:block}
 .boom blockquote{margin:0 0 14px;padding-left:14px;border-left:3px solid var(--gold);font-size:18px}
 .boom blockquote b{color:var(--gold);font-family:Fredoka,Nunito,system-ui,sans-serif}
+.boom.siege{grid-template-columns:.8fr 1.2fr}
+.boom.siege img{order:2}
+.boom.siege p{margin:0 0 12px}
 .story{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
 .story img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.4)}
 .story p{margin:0 0 14px}
@@ -133,7 +136,8 @@ footer em{color:var(--ink)}
 
 @media (max-width:760px){
   section{padding:54px 0}
-  .story,.boom{grid-template-columns:1fr}
+  .story,.boom,.boom.siege{grid-template-columns:1fr}
+  .boom.siege img{order:0}
   .hero{min-height:min(82vh,720px);background-position:30% 30%}
   .btn{font-size:19px;padding:14px 24px}
   .nav .go{display:none!important}
@@ -173,6 +177,7 @@ footer em{color:var(--ink)}
     </div>
     <div class="chips">
       <span data-tr>🎙️ Türkçe ve İngilizce seslendirme</span><span data-en>🎙️ Fully voiced in English &amp; Turkish</span>
+      <span data-tr>⚔️ İki taraflı kuşatma</span><span data-en>⚔️ The siege, from both sides</span>
       <span data-tr>🔀 23 final</span><span data-en>🔀 23 endings</span>
       <span data-tr>🎮 Gamepad desteği</span><span data-en>🎮 Gamepad support</span>
     </div>
@@ -182,11 +187,11 @@ footer em{color:var(--ink)}
 <main>
   <section>
     <div class="wrap">
-      <p class="lead" data-tr>Tolga <b>Fatih'e risk tablosu sunuyor</b>, Urban'ın topunu yanlışlıkla havaya uçuruyor, Bizans'ta yedi nüsha form dolduruyor ve pazartesi 09:00 toplantısına yetişmeye çalışıyor.</p>
-      <p class="lead" data-en>Tolga <b>pitches a risk matrix to Sultan Mehmed</b>, accidentally blows up Urban's giant cannon, fills out forms in seven copies in Byzantium, and still tries to make his Monday 9 a.m. meeting.</p>
+      <p class="lead" data-tr>Tolga <b>Fatih'e risk tablosu sunuyor</b>, Urban'ın topunu yanlışlıkla havaya uçuruyor, Bizans'ta yedi nüsha form dolduruyor ve pazartesi 09:00 toplantısına yetişmeye çalışıyor. Sonra Zaman Bürosu onu kuşatmaya <b>tanık</b> olarak geri yolluyor.</p>
+      <p class="lead" data-en>Tolga <b>pitches a risk matrix to Sultan Mehmed</b>, accidentally blows up Urban's giant cannon, fills out forms in seven copies in Byzantium, and still tries to make his Monday 9 a.m. meeting. Then the Time Bureau sends him back to the siege as an <b>official witness</b>.</p>
       <div class="feats">
         <div class="feat"><div class="big">23</div><h3 data-tr>farklı final</h3><h3 data-en>different endings</h3><p data-tr>Her seçim tarihi değiştirir. Aynı İstanbul'u iki kez fethedemezsin.</p><p data-en>Every choice bends history. You'll never conquer the same Constantinople twice.</p></div>
-        <div class="feat"><div class="big">16</div><h3 data-tr>bölüm</h3><h3 data-en>chapters</h3><p data-tr>Garajdan otağa, sur dibinden Zaman Bürosu'nun sonsuz koridorlarına.</p><p data-en>From a garage workshop to the Sultan's tent, the city walls and the endless corridors of the Time Bureau.</p></div>
+        <div class="feat"><div class="big">27</div><h3 data-tr>bölüm</h3><h3 data-en>chapters</h3><p data-tr>Garajdan otağa, Zaman Bürosu'nun koridorlarından kuşatmanın son gecesine.</p><p data-en>From a garage workshop to the Sultan's tent, the Time Bureau's corridors and the last night of the siege.</p></div>
         <div class="feat"><div class="big">🎙️</div><h3 data-tr>tamamen seslendirilmiş</h3><h3 data-en>fully voiced</h3><p data-tr>Her replik Türkçe ve İngilizce seslendirildi. Hikmet Amca'nın telsizi dahil.</p><p data-en>Every line is voiced in both English and Turkish. Uncle Hikmet's crackly walkie-talkie included.</p></div>
         <div class="feat"><div class="big">🐔</div><h3 data-tr>tarihi doğruluk</h3><h3 data-en>historical accuracy</h3><p data-tr>Ayasofya, Galata, surlar ve kızak yolu gerçeğine sadık. Tavuklar değil.</p><p data-en>Hagia Sophia, Galata, the land walls and the famous overland ship slipway are faithful. The chickens are not.</p></div>
       </div>
@@ -212,21 +217,36 @@ footer em{color:var(--ink)}
     </div>
   </section>
 
+  <section class="alt">
+    <div class="wrap boom siege">
+      <img loading="lazy" src="img/shots/kusatma.jpg" alt="">
+      <div>
+        <div class="stamp"><span data-tr>PERDE IV · KUŞATMA</span><span data-en>ACT IV · THE SIEGE</span></div>
+        <h2 style="text-align:left"><span data-tr>28 Nisan – 1 Haziran 1453. İki taraftan.</span><span data-en>28 April – 1 June 1453. From both sides.</span></h2>
+        <p data-tr>Zaman Bürosu, Tolga'yı kuşatmanın geçici tanığı yapar: on bir bölüm, her olayın bir fotoğrafı. Bizans surlarında mı durursun, Osmanlı ordugâhında mı? Tarafını sen seçersin.</p>
+        <p data-en>The Time Bureau makes Tolga a temporary witness to the siege: eleven chapters, one photograph of every event. Do you stand on the Byzantine walls or in the Ottoman camp? You pick the side.</p>
+        <p data-tr>Haliç'te kundak gemileriyle kürek çek, gedikte kovayla su taşı, Urban'ın topuna gülle sür, lağımda karşı lağım kaz, son hücumda merdiven daya. Galata'da ahitnamenin okunuşunu izle.</p>
+        <p data-en>Row with the fire ships on the Golden Horn, haul water buckets to the breach, load Urban's great gun, dig counter-mines under the walls and plant ladders in the final assault. Then watch the charter of Galata being read out.</p>
+        <blockquote><b>Tolga:</b> <span data-tr>Kuşatmada iş kazası kapsamda mı? Top güllesi mesela?</span><span data-en>Is a workplace accident covered during a siege? A cannonball, say?</span><br><b>Nihat:</b> <span data-tr>Büro personeli ölmez, Tolga Bey. Sadece geç kalır. Madde 9.</span><span data-en>Bureau staff don't die, Mr Tolga. They're just late. Article 9.</span></blockquote>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="wrap">
       <h2><span data-tr>Oyundan kareler</span><span data-en>Screenshots</span></h2>
       <div class="gal" id="gal">
-        <button type="button"><img loading="lazy" src="img/shots/sehir.jpg" alt=""><span class="cap"><span data-tr>Bizans sokakları: kançılaryaya izinsiz tavuk giremez</span><span data-en>The streets of Byzantium: no chickens without a permit</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/gedik.jpg" alt=""><span class="cap"><span data-tr>Son hücum: gedikte Giustiniani, surda ok yağmuru</span><span data-en>The final assault: Giustiniani at the breach, arrows raining from the walls</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/urban_top.jpg" alt=""><span class="cap"><span data-tr>Urban'ın büyük topuna gülle sür, nişan al</span><span data-en>Load Urban's great gun and take aim</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/kundak.jpg" alt=""><span class="cap"><span data-tr>Haliç'te kundak gemileri: Tolga kürekte (ters oturuyor)</span><span data-en>Fire ships on the Golden Horn: Tolga at the oar (facing backwards)</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/barikat.jpg" alt=""><span class="cap"><span data-tr>Gece gedik kapanır: fıçı, toprak, kalas</span><span data-en>At night the breach gets patched: barrels, earth, planks</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/lagim.jpg" alt=""><span class="cap"><span data-tr>Surların altında karşı lağım</span><span data-en>Counter-mining under the walls</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/ahitname.jpg" alt=""><span class="cap"><span data-tr>1 Haziran, Galata: ahitname okunuyor</span><span data-en>1 June, Galata: the charter is read out</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/fatih.jpg" alt=""><span class="cap"><span data-tr>Fatih'in otağında karar anı</span><span data-en>Decision time in the Sultan's tent</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/patlama.jpg" alt=""><span class="cap"><span data-tr>Urban'ın topu… olması gerekenden büyük patladı</span><span data-en>Urban's cannon… went off bigger than planned</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/kosu.jpg" alt=""><span class="cap"><span data-tr>Yağlı kızaklarda gemilerle yarış</span><span data-en>Racing ships down the greased slipway</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/mufide.jpg" alt=""><span class="cap"><span data-tr>Zaman Bürosu: her kapının arkasında bir yıl</span><span data-en>The Time Bureau: a year behind every door</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/hologram.jpg" alt=""><span class="cap"><span data-tr>Denetçi Nihat paradoks izlerini sürüyor</span><span data-en>Auditor Nihat follows the paradox trail</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/galata.jpg" alt=""><span class="cap"><span data-tr>Galata'da bilgi şarapçıdan alınır</span><span data-en>In Galata, information costs one glass of wine</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/zincir.jpg" alt=""><span class="cap"><span data-tr>Gece, deniz surlarında denge</span><span data-en>Balancing on the sea walls at night</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/yangin.jpg" alt=""><span class="cap"><span data-tr>Ziyafet mutfağında leblebi faciası</span><span data-en>A chickpea disaster in the palace kitchen</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/pencere.jpg" alt=""><span class="cap"><span data-tr>Dönüş penceresi açık: kolu çek!</span><span data-en>The return window is open: pull the lever!</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/ajan.jpg" alt=""><span class="cap"><span data-tr>Nöbetçi hırdavatçıda gece operasyonu</span><span data-en>A midnight heist at the all-night hardware store</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/sehir.jpg" alt=""><span class="cap"><span data-tr>Bizans sarayında tercüme: kendinden emin, Rumca</span><span data-en>Translating at the Byzantine court: confidently, in Greek</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/ordugah.jpg" alt=""><span class="cap"><span data-tr>Ordugâh pazarı: keçi Tolga'dan hızlı</span><span data-en>The camp market: the goat is faster than Tolga</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/alamet.jpg" alt=""><span class="cap"><span data-tr>Kuşatmanın alametleri: sağanak, sel ve karanlık</span><span data-en>Omens of the siege: downpour, flood and darkness</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/gidak.jpg" alt=""><span class="cap"><span data-tr>Gıdak.</span><span data-en>Cluck.</span></span></button>
       </div>
       <p class="hint" style="margin-top:14px"><span data-tr>Görüntüler Türkçe arayüzle alındı; oyunun tamamı İngilizce de oynanabilir.</span><span data-en>Screenshots show the Turkish interface; the whole game is also fully playable in English.</span></p>
@@ -318,9 +338,9 @@ const LATEST = `https://github.com/${REPO}/releases/latest`;
 
 const TEXT = {
   tr: {title: "Gerçek Tarih Bu Değil — Not a History Game", logo: "img/logo.png", logoAlt: "Gerçek Tarih Bu Değil",
-       desc: "1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 23 farklı final, ücretsiz indir."},
+       desc: "1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 27 bölüm, iki taraflı kuşatma, 23 farklı final, ücretsiz indir."},
   en: {title: "Not a History Game — Istanbul, 1453 · Free download", logo: "img/logo_en.png", logoAlt: "Not a History Game",
-       desc: "Istanbul, 1453. A duct-taped time machine sends an insurance salesman to the conquest of Constantinople. 23 endings, fully voiced in English. Free for Windows, macOS and Linux."},
+       desc: "Istanbul, 1453. A duct-taped time machine sends an insurance salesman to the conquest of Constantinople. 27 chapters, the siege from both sides, 23 endings, fully voiced in English. Free for Windows, macOS and Linux."},
 };
 
 // Bölümler (oyundaki kapak çizimleri)
@@ -333,6 +353,12 @@ const CHAPTERS = [
   ["ch11", "Yüzleşme", "The Confrontation"], ["ch12", "Huzur", "The Audience"],
   ["ch13", "Dönüş Penceresi", "The Return Window"], ["ch14", "Son Form", "The Final Form"],
   ["ch15", "Pazartesi", "Monday"], ["ch16", "Gıdak", "Cluck"],
+  ["ch17", "Kundak", "Fire Ships"], ["ch18", "Fıçı Köprü", "The Barrel Bridge"],
+  ["ch19", "Brigantin", "The Brigantine"], ["ch20", "Gedik", "The Breach"],
+  ["ch21", "Lağım", "The Mines"], ["ch22", "Kule", "The Tower"],
+  ["ch23", "Elçi", "The Envoy"], ["ch24", "Alametler", "Omens"],
+  ["ch25", "Son Akşam", "The Last Evening"], ["ch26", "Şafak", "Dawn"],
+  ["ch27", "Ahitname", "The Charter"],
 ];
 document.getElementById("strip").innerHTML = CHAPTERS.map((c, i) =>
   `<figure class="ch"><img loading="lazy" src="img/ch/${c[0]}.jpg" alt=""><figcaption>` +
