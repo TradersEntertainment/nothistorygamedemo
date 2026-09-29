@@ -324,7 +324,10 @@
     "en": "Nihat · The Time Bureau, outside of time"
    },
    "cover": "img/ch/ch3.jpg",
-   "note": null,
+   "note": {
+    "tr": "Bölüm 4'ün hangi yarısının oynanacağına Bölüm 2 karar verir: zincire ulaştıysan (2.3) 4b, yoksa 4a",
+    "en": "Chapter 2 decides which half of Chapter 4 you play: 4b if you reached the chain (2.3), otherwise 4a"
+   },
    "nodes": [
     {
      "id": "brief",
@@ -705,7 +708,10 @@
     "en": "Hikmet · 2026, Sunday night, 4 a.m."
    },
    "cover": "img/ch/ch5.jpg",
-   "note": null,
+   "note": {
+    "tr": "Yol kendini sürdürür: 4a'dan gelen 6a'ya (ordugâh), 4b'den gelen 6b'ye (surlar) gider",
+    "en": "The route carries on: from 4a to 6a (the camp), from 4b to 6b (the walls)"
+   },
    "nodes": [
     {
      "id": "van",
@@ -1122,7 +1128,10 @@
     "en": "Inspector Nihat · 24 April 1453, noon"
    },
    "cover": "img/ch/ch7.jpg",
-   "note": null,
+   "note": {
+    "tr": "İki sürüm: 6a'dan gelince ordugâhta (7a), 6b'den gelince Bizans şehrinde (7b)",
+    "en": "Two versions: in the camp (7a) after 6a, in the Byzantine city (7b) after 6b"
+   },
    "nodes": [
     {
      "id": "arrive",
@@ -4402,8 +4411,8 @@
    },
    "cover": "img/ch/ch16.jpg",
    "note": {
-    "tr": "Gizli bölüm: pencere kaçtı, ama tavuk her şeyi gördü",
-    "en": "Secret chapter: the window was missed, but the chicken saw everything"
+    "tr": "Gizli bölüm: pencere kaçtı (13.2), ama 4b'de Tolga'ya takılan tavuk Sinerji her şeyi gördü",
+    "en": "Secret chapter: the window was missed (13.2), but Synergy, the chicken that latched onto Tolga in 4b, saw everything"
    },
    "nodes": [
     {
@@ -4554,12 +4563,30 @@
     "en": "Tolga's desk and Hikmet's garage are both empty. Nobody noticed."
    },
    "cond": {
-    "tr": "Tolga 1453'te kaldı ve Hikmet de orada",
-    "en": "Tolga stayed in 1453 and so did Hikmet"
+    "tr": "Hikmet'le 1453'teyken pencere kaçtı: ikisi de kaldı",
+    "en": "The window was missed with Hikmet in 1453: both stay"
    },
    "from": [
-    "13.2",
-    "13.5"
+    "13.2"
+   ]
+  },
+  {
+   "id": "sealed_garage",
+   "name": {
+    "tr": "Mühürlü Garaj",
+    "en": "The Sealed Garage"
+   },
+   "sub": {
+    "tr": "Makine gitti. Zamanatör 3001 yolda.",
+    "en": "The machine is gone. The Chrono-matic 3001 is on its way."
+   },
+   "cond": {
+    "tr": "Makineye el konuldu ve pencere kaçtı",
+    "en": "The machine was confiscated and the window was missed"
+   },
+   "from": [
+    "3.1",
+    "13.2"
    ]
   },
   {
@@ -4573,11 +4600,13 @@
     "en": "The manager: 'Did Tolga leave early again today?' Hikmet left the radio on."
    },
    "cond": {
-    "tr": "Tolga dönüş penceresini kaçırdı",
-    "en": "Tolga missed the return window"
+    "tr": "Tolga dönüş penceresini kaçırdı (ya da tutuklandı)",
+    "en": "Tolga missed the return window (or was arrested)"
    },
    "from": [
-    "13.2"
+    "13.2",
+    "11.1",
+    "16.2"
    ]
   },
   {
@@ -4854,24 +4883,6 @@
    ]
   },
   {
-   "id": "sealed_garage",
-   "name": {
-    "tr": "Mühürlü Garaj",
-    "en": "The Sealed Garage"
-   },
-   "sub": {
-    "tr": "Makine gitti. Zamanatör 3001 yolda.",
-    "en": "The machine is gone. The Chrono-matic 3001 is on its way."
-   },
-   "cond": {
-    "tr": "Makineye el konuldu, garaj mühürlendi",
-    "en": "The machine was confiscated, the garage sealed"
-   },
-   "from": [
-    "3.1"
-   ]
-  },
-  {
    "id": "pyjama_rescue",
    "name": {
     "tr": "Pijamalı Kurtarma",
@@ -4890,6 +4901,26 @@
    ]
   },
   {
+   "id": "nobody_noticed",
+   "name": {
+    "tr": "Kimse Fark Etmedi",
+    "en": "Nobody Noticed"
+   },
+   "sub": {
+    "tr": "Dünya değişti. Tolga kulaklıklarını taktı.",
+    "en": "The world has changed. Tolga put his earphones in."
+   },
+   "cond": {
+    "tr": "Dünya değişti (Leblebipolis ya da İki Hükümdar) ve Nihat raporu tahrif etti",
+    "en": "The world changed (Chickpeapolis or Two Rulers) and Nihat forged the report"
+   },
+   "from": [
+    "12.2",
+    "12.3",
+    "14.2"
+   ]
+  },
+  {
    "id": "off_the_books",
    "name": {
     "tr": "Kuralsız",
@@ -4900,8 +4931,8 @@
     "en": "A forged signature at the bottom of Nihat's report."
    },
    "cond": {
-    "tr": "Nihat raporu tahrif etti",
-    "en": "Nihat forged the report"
+    "tr": "Nihat raporu tahrif etti (dünya değişmediyse)",
+    "en": "Nihat forged the report (world unchanged)"
    },
    "from": [
     "14.2"
@@ -4926,25 +4957,6 @@
    ]
   },
   {
-   "id": "nobody_noticed",
-   "name": {
-    "tr": "Kimse Fark Etmedi",
-    "en": "Nobody Noticed"
-   },
-   "sub": {
-    "tr": "Dünya değişti. Tolga kulaklıklarını taktı.",
-    "en": "The world has changed. Tolga put his earphones in."
-   },
-   "cond": {
-    "tr": "Dünya değişti (Leblebipolis ya da İki Hükümdar)",
-    "en": "The world changed (Chickpeapolis or Two Rulers)"
-   },
-   "from": [
-    "12.2",
-    "12.3"
-   ]
-  },
-  {
    "id": "ordinary_monday",
    "name": {
     "tr": "Sıradan Bir Pazartesi",
@@ -4960,7 +4972,9 @@
    },
    "from": [
     "12.1",
-    "13.1"
+    "12.5",
+    "13.1",
+    "16.1"
    ]
   }
  ],
@@ -4974,8 +4988,8 @@
    "en": "Red button: back to the garage under warranty, the game ends early."
   },
   "2.3": {
-   "tr": "Bölüm 4 ve 6 surların içinde, Bizans tarafında geçer.",
-   "en": "Chapters 4 and 6 take place inside the walls, on the Byzantine side."
+   "tr": "Bölüm 4, 6 ve 7 surların içinde, Bizans tarafında geçer.",
+   "en": "Chapters 4, 6 and 7 take place inside the walls, on the Byzantine side."
   },
   "3.1": {
    "tr": "Makineye el konuldu: pencere de kaçarsa garaj mühürlenir.",
@@ -4998,12 +5012,12 @@
    "en": "World: The Big Bang (W5B). Chapter 12 is skipped."
   },
   "10G.1": {
-   "tr": "Dünya: Venedik'e Elçi (W6). Doğrudan dönüş penceresine.",
-   "en": "World: Envoy to Venice (W6). Straight to the return window."
+   "tr": "Dünya: Venedik'e Elçi (W6). Bölüm 11 ve 12 atlanır: kuşatmadan sonra dönüş penceresine.",
+   "en": "World: Envoy to Venice (W6). Chapters 11 and 12 are skipped: after the siege, straight to the return window."
   },
   "10A.1": {
-   "tr": "Dünya: Büronun Kuruluşu (W8). Doğrudan dönüş penceresine.",
-   "en": "World: The Founding of the Bureau (W8). Straight to the return window."
+   "tr": "Dünya: Büronun Kuruluşu (W8). Bölüm 11 ve 12 atlanır: kuşatmadan sonra dönüş penceresine.",
+   "en": "World: The Founding of the Bureau (W8). Chapters 11 and 12 are skipped: after the siege, straight to the return window."
   },
   "10L.1": {
    "tr": "Dünya: Tünel Sulhu (W13). Bölüm 12 atlanır.",
@@ -5014,8 +5028,8 @@
    "en": "Every bit of help you gave Byzantium (the breach, Giustiniani, the chain) delays the Conquest: on to The Last Evening."
   },
   "11.1": {
-   "tr": "Tolga tutuklandı: kuşatmadan sonra doğrudan Nihat'ın son formuna.",
-   "en": "Tolga is arrested: after the siege, straight to Nihat's final form."
+   "tr": "Tolga tutuklandı: kuşatmadan sonra doğrudan Nihat'ın son formuna. Büro'ya katılmazsa (14.3) dönüş penceresi kaçar: Boş Masa.",
+   "en": "Tolga is arrested: after the siege, straight to Nihat's final form. Unless he joins the Bureau (14.3), the return window is lost: The Empty Desk."
   },
   "12.1": {
    "tr": "Dünya: Tarih yerinde (W1).",
@@ -5033,6 +5047,10 @@
    "tr": "Dünya: Sultan'ın Tamiri (W4).",
    "en": "World: The Sultan's Repair (W4)."
   },
+  "12.5": {
+   "tr": "Mutfağa gönderildi: dünya değişmez (W1).",
+   "en": "Sent to the kitchen: the world stays the same (W1)."
+  },
   "12.6": {
    "tr": "Dünya: Sultan'ın Tamiri (W4).",
    "en": "World: The Sultan's Repair (W4)."
@@ -5042,8 +5060,8 @@
    "en": "Tolga made it back to 2026 (T1)."
   },
   "13.2": {
-   "tr": "Tolga 1453'te kaldı (T2).",
-   "en": "Tolga stays in 1453 (T2)."
+   "tr": "Tolga 1453'te kaldı (T2). Hikmet de oradaysa İki Komşu; makineye el konulduysa Mühürlü Garaj; Sinerji varsa gizli Bölüm 16.",
+   "en": "Tolga stays in 1453 (T2). If Hikmet is there too: Two Neighbours; if the machine was confiscated: The Sealed Garage; with Synergy: secret Chapter 16."
   },
   "13.3": {
    "tr": "Tolga yanlış yılda uyandı (T3).",
@@ -5054,8 +5072,16 @@
    "en": "Hikmet came in his pyjamas and rescued Tolga."
   },
   "13.5": {
-   "tr": "Hikmet 1453'te kaldı (H3).",
-   "en": "Hikmet stays in 1453 (H3)."
+   "tr": "Tolga döndü, Hikmet 1453'te kaldı (H3): garaj boş. Bu yolun kendine ait finali yok; final dünyaya göre belirlenir.",
+   "en": "Tolga made it back, Hikmet stays in 1453 (H3): the garage is empty. This path has no ending of its own; the world decides the ending."
+  },
+  "16.1": {
+   "tr": "Sinerji düğmeyi gagaladı: pencere kurtuldu (13.6), Tolga döner (T1).",
+   "en": "Synergy pecked the button: the window is saved (13.6), Tolga makes it back (T1)."
+  },
+  "16.2": {
+   "tr": "Leblebi kazandı: pencere kaçtı (13.2, T2).",
+   "en": "The chickpeas won: the window is lost (13.2, T2)."
   },
   "14.1": {
    "tr": "Tarih düzeltildi: dünya neredeyse normale döner.",
