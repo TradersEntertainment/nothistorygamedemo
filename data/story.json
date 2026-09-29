@@ -3,7 +3,7 @@
   {
    "id": "ch0",
    "col": 0,
-   "num": 0,
+   "num": "0",
    "pos": 0,
    "siege": false,
    "title": {
@@ -30,7 +30,7 @@
   {
    "id": "ch1",
    "col": 1,
-   "num": 1,
+   "num": "1",
    "pos": 1,
    "siege": false,
    "title": {
@@ -98,7 +98,8 @@
       "tr": "1.1 Hikmet tekmeyi attı",
       "en": "1.1 Hikmet kicked it"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "1.1"
     },
     {
      "id": "1.2",
@@ -106,7 +107,8 @@
       "tr": "1.2 Tolga tekmeyi attı",
       "en": "1.2 Tolga kicked it"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "1.2"
     },
     {
      "id": "1.3",
@@ -114,7 +116,8 @@
       "tr": "1.3 Kırmızı düğme",
       "en": "1.3 The red button"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "1.3"
     }
    ],
    "edges": [
@@ -163,7 +166,7 @@
   {
    "id": "ch2",
    "col": 2,
-   "num": 2,
+   "num": "2",
    "pos": 2,
    "siege": false,
    "title": {
@@ -215,7 +218,8 @@
       "tr": "2.5 Kırmızı düğme",
       "en": "2.5 The red button"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "2.5"
     },
     {
      "id": "horn",
@@ -231,7 +235,8 @@
       "tr": "2.1 Kıyıda yakalandı",
       "en": "2.1 Caught on the shore"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "2.1"
     },
     {
      "id": "2.2",
@@ -239,7 +244,8 @@
       "tr": "2.2 Kıyıya gizlice çıktı",
       "en": "2.2 Sneaked ashore"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "2.2"
     },
     {
      "id": "2.3",
@@ -247,7 +253,8 @@
       "tr": "2.3 Zincire ulaştı",
       "en": "2.3 Reached the chain"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "2.3"
     },
     {
      "id": "2.4",
@@ -255,7 +262,8 @@
       "tr": "2.4 Zincirden düştü",
       "en": "2.4 Fell off the chain"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "2.4"
     }
    ],
    "edges": [
@@ -312,7 +320,7 @@
   {
    "id": "ch3",
    "col": 3,
-   "num": 3,
+   "num": "3",
    "pos": 3,
    "siege": false,
    "title": {
@@ -391,7 +399,8 @@
       "tr": "3.1 El konuldu",
       "en": "3.1 Confiscated"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "3.1"
     },
     {
      "id": "3.2",
@@ -399,7 +408,8 @@
       "tr": "3.2 Mühürlendi",
       "en": "3.2 Sealed"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "3.2"
     },
     {
      "id": "3.4",
@@ -407,7 +417,8 @@
       "tr": "3.4 Kurutma makinesi",
       "en": "3.4 A tumble dryer"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "3.4"
     },
     {
      "id": "3.3",
@@ -415,7 +426,8 @@
       "tr": "3.3 Bırakıldı, kartvizit",
       "en": "3.3 Left, card given"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "3.3"
     },
     {
      "id": "3.5",
@@ -423,7 +435,8 @@
       "tr": "3.5 Çay içildi",
       "en": "3.5 Tea was had"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "3.5"
     }
    ],
    "edges": [
@@ -498,7 +511,7 @@
   {
    "id": "ch4a",
    "col": 4,
-   "num": 4,
+   "num": "4",
    "pos": 4,
    "siege": false,
    "title": {
@@ -545,7 +558,8 @@
       "tr": "4a.1 Tartışırken kaçtı",
       "en": "4a.1 Slipped out mid-argument"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "4a.1"
     },
     {
      "id": "4a.2",
@@ -553,7 +567,8 @@
       "tr": "4a.2 Eşyayla atlattı",
       "en": "4a.2 Outwitted them with an item"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "4a.2"
     },
     {
      "id": "4a.3",
@@ -561,7 +576,8 @@
       "tr": "4a.3 Bulaşığa verildi",
       "en": "4a.3 Put on washing-up"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "4a.3"
     }
    ],
    "edges": [
@@ -595,7 +611,7 @@
   {
    "id": "ch4b",
    "col": 4,
-   "num": 4,
+   "num": "4",
    "pos": 4,
    "siege": false,
    "title": {
@@ -642,7 +658,8 @@
       "tr": "4b.3 Düştü, hücrede",
       "en": "4b.3 Fell in, spent the night in a cell"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "4b.3"
     },
     {
      "id": "4b.1",
@@ -650,7 +667,8 @@
       "tr": "4b.1 Türk casusu",
       "en": "4b.1 'Turkish spy'"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "4b.1"
     },
     {
      "id": "4b.2",
@@ -658,7 +676,8 @@
       "tr": "4b.2 Frenk tüccarı",
       "en": "4b.2 'Frankish merchant'"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "4b.2"
     }
    ],
    "edges": [
@@ -696,7 +715,7 @@
   {
    "id": "ch5",
    "col": 5,
-   "num": 5,
+   "num": "5",
    "pos": 5,
    "siege": false,
    "title": {
@@ -759,7 +778,8 @@
       "tr": "5.1 Makine bodrumda",
       "en": "5.1 Machine in the cellar"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "5.1"
     },
     {
      "id": "5.2",
@@ -767,7 +787,8 @@
       "tr": "5.2 Yedek kumanda bulundu",
       "en": "5.2 Spare remote found"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "5.2"
     },
     {
      "id": "5.3",
@@ -775,7 +796,8 @@
       "tr": "5.3 Nihat arandı",
       "en": "5.3 Called Nihat"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "5.3"
     },
     {
      "id": "5.4",
@@ -783,7 +805,8 @@
       "tr": "5.4 Tolga'ya ulaşılamadı",
       "en": "5.4 Couldn't reach Tolga"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "5.4"
     }
    ],
    "edges": [
@@ -834,7 +857,7 @@
   {
    "id": "ch6a",
    "col": 6,
-   "num": 6,
+   "num": "6",
    "pos": 6,
    "siege": false,
    "title": {
@@ -897,7 +920,8 @@
       "tr": "6a.1 Aşçı yamağı",
       "en": "6a.1 Kitchen boy"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6a.1"
     },
     {
      "id": "6a.2",
@@ -905,7 +929,8 @@
       "tr": "6a.2 Frenk elçisi",
       "en": "6a.2 Frankish envoy"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6a.2"
     },
     {
      "id": "6a.3",
@@ -913,7 +938,8 @@
       "tr": "6a.3 Urban'ın çırağı",
       "en": "6a.3 Urban's apprentice"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6a.3"
     },
     {
      "id": "6a.4",
@@ -921,7 +947,8 @@
       "tr": "6a.4 Kaftanlı sigortacı",
       "en": "6a.4 Insurance man in a kaftan"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6a.4"
     },
     {
      "id": "6a.5",
@@ -929,7 +956,8 @@
       "tr": "6a.5 Çandarlı'nın mektubu",
       "en": "6a.5 Çandarlı's letter"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6a.5"
     }
    ],
    "edges": [
@@ -979,7 +1007,7 @@
   {
    "id": "ch6b",
    "col": 6,
-   "num": 6,
+   "num": "6",
    "pos": 6,
    "siege": false,
    "title": {
@@ -999,26 +1027,28 @@
     {
      "id": "maze",
      "label": {
-      "tr": "Bizans Labirenti",
-      "en": "The Byzantine Maze"
+      "tr": "Martı Kovalamacası",
+      "en": "The Gull Chase"
      },
      "outcome": false
     },
     {
      "id": "6b.1",
      "label": {
-      "tr": "6b.1 Labirent kusursuz",
-      "en": "6b.1 Flawless maze"
+      "tr": "6b.1 Martı ilk seferde",
+      "en": "6b.1 Gull caught cleanly"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6b.1"
     },
     {
      "id": "6b.2",
      "label": {
-      "tr": "6b.2 Labirent tamam",
-      "en": "6b.2 Maze completed"
+      "tr": "6b.2 Martı yakalandı",
+      "en": "6b.2 Gull caught"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6b.2"
     },
     {
      "id": "6b.3",
@@ -1026,7 +1056,8 @@
       "tr": "6b.3 Zindan",
       "en": "6b.3 The dungeon"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6b.3"
     },
     {
      "id": "giust",
@@ -1050,7 +1081,8 @@
       "tr": "6b.4 Niko dost",
       "en": "6b.4 Niko's a friend"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6b.4"
     },
     {
      "id": "6b.5",
@@ -1058,7 +1090,8 @@
       "tr": "6b.5 Giustiniani uyarıldı",
       "en": "6b.5 Giustiniani warned"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6b.5"
     },
     {
      "id": "6b.6",
@@ -1066,7 +1099,8 @@
       "tr": "6b.6 Mektup açıldı",
       "en": "6b.6 The letter opened"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "6b.6"
     }
    ],
    "edges": [
@@ -1116,7 +1150,7 @@
   {
    "id": "ch7",
    "col": 7,
-   "num": 7,
+   "num": "7",
    "pos": 7,
    "siege": false,
    "title": {
@@ -1163,7 +1197,8 @@
       "tr": "7.1 Tolga'nın yeri bulundu",
       "en": "7.1 Tolga located"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "7.1"
     },
     {
      "id": "7.2",
@@ -1171,7 +1206,8 @@
       "tr": "7.2 İz kaybedildi",
       "en": "7.2 Trail lost"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "7.2"
     },
     {
      "id": "wall",
@@ -1187,7 +1223,8 @@
       "tr": "7.5a Form yırtıldı: Kuralsız",
       "en": "7.5a Form torn: Rule-free"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "7.5a"
     },
     {
      "id": "7.5b",
@@ -1195,7 +1232,8 @@
       "tr": "7.5b Form yırtılmadı",
       "en": "7.5b Form intact"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "7.5b"
     }
    ],
    "edges": [
@@ -1237,7 +1275,7 @@
   {
    "id": "ch8",
    "col": 8,
-   "num": 8,
+   "num": "8",
    "pos": 8,
    "siege": false,
    "title": {
@@ -1289,7 +1327,8 @@
       "tr": "8.2 Parça bulunamadı",
       "en": "8.2 Parts not found"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "8.2"
     },
     {
      "id": "8.3",
@@ -1297,7 +1336,8 @@
       "tr": "8.3 Büro deposu planı",
       "en": "8.3 The Bureau depot plan"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "8.3"
     },
     {
      "id": "garage",
@@ -1313,7 +1353,8 @@
       "tr": "8.1 Makine tamir edildi",
       "en": "8.1 Machine repaired"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "8.1"
     },
     {
      "id": "8.4",
@@ -1321,7 +1362,8 @@
       "tr": "8.4 Hikmet makineye bindi",
       "en": "8.4 Hikmet got in the machine"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "8.4"
     }
    ],
    "edges": [
@@ -1375,7 +1417,7 @@
   {
    "id": "ch9",
    "col": 9,
-   "num": 9,
+   "num": "9",
    "pos": 9,
    "siege": false,
    "title": {
@@ -1403,7 +1445,8 @@
       "tr": "9.1 Kadri: Ziyafet",
       "en": "9.1 Kadri: The feast"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "9.1"
     },
     {
      "id": "9.2",
@@ -1411,7 +1454,8 @@
       "tr": "9.2 Urban: Büyük Atış",
       "en": "9.2 Urban: The great shot"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "9.2"
     },
     {
      "id": "9.3",
@@ -1419,7 +1463,8 @@
       "tr": "9.3 Çandarlı: Galata",
       "en": "9.3 Çandarlı: Galata"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "9.3"
     },
     {
      "id": "9.4",
@@ -1427,7 +1472,8 @@
       "tr": "9.4 Lütfi: Heyet",
       "en": "9.4 Lütfi: The embassy"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "9.4"
     },
     {
      "id": "9.5",
@@ -1435,7 +1481,8 @@
       "tr": "9.5 Theodoros: Arşiv",
       "en": "9.5 Theodoros: The archive"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "9.5"
     },
     {
      "id": "9.6",
@@ -1443,7 +1490,8 @@
       "tr": "9.6 Hepsi reddedildi: Otağ Kapısı",
       "en": "9.6 All declined: the gate"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "9.6"
     },
     {
      "id": "9.7",
@@ -1451,7 +1499,8 @@
       "tr": "9.7 Dragan: Lağım",
       "en": "9.7 Dragan: The Tunnel"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "9.7"
     },
     {
      "id": "fatih",
@@ -1523,7 +1572,7 @@
   {
    "id": "ch10z",
    "col": 10,
-   "num": 10,
+   "num": "10",
    "pos": 10,
    "siege": false,
    "title": {
@@ -1570,7 +1619,8 @@
       "tr": "10Z.1 Sultan'ın Sofrası",
       "en": "10Z.1 The Sultan's Table"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10Z.1"
     },
     {
      "id": "10Z.2",
@@ -1578,7 +1628,8 @@
       "tr": "10Z.2 Mutfak yandı, leblebi yağdı",
       "en": "10Z.2 Kitchen fire, raining leblebi"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10Z.2"
     }
    ],
    "edges": [
@@ -1615,7 +1666,7 @@
   {
    "id": "ch10b",
    "col": 10,
-   "num": 10,
+   "num": "10",
    "pos": 10,
    "siege": false,
    "title": {
@@ -1678,7 +1729,8 @@
       "tr": "10B.1 Gülle Galata'da, şarap fıçısında",
       "en": "10B.1 The ball lands in Galata, in a wine barrel"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10B.1"
     },
     {
      "id": "10B.2",
@@ -1686,7 +1738,8 @@
       "tr": "10B.2 Yirmi metre öteye",
       "en": "10B.2 Twenty metres away"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10B.2"
     },
     {
      "id": "10B.3",
@@ -1694,7 +1747,8 @@
       "tr": "10B.3 Büyük Patlama",
       "en": "10B.3 The Big Bang"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10B.3"
     }
    ],
    "edges": [
@@ -1736,7 +1790,7 @@
   {
    "id": "ch10g",
    "col": 10,
-   "num": 10,
+   "num": "10",
    "pos": 10,
    "siege": false,
    "title": {
@@ -1791,7 +1845,8 @@
       "tr": "10G.1 Venedik'e Elçi",
       "en": "10G.1 Envoy to Venice"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10G.1"
     },
     {
      "id": "10G.2",
@@ -1799,7 +1854,8 @@
       "tr": "10G.2 Mektup Fatih'e",
       "en": "10G.2 The letter goes to Mehmed"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10G.2"
     }
    ],
    "edges": [
@@ -1836,7 +1892,7 @@
   {
    "id": "ch10h",
    "col": 10,
-   "num": 10,
+   "num": "10",
    "pos": 10,
    "siege": false,
    "title": {
@@ -1875,7 +1931,8 @@
       "tr": "10H.2 Heyet rezil oldu",
       "en": "10H.2 The embassy disgraced"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10H.2"
     },
     {
      "id": "10H.1",
@@ -1883,7 +1940,8 @@
       "tr": "10H.1 İmparator'un mektubu",
       "en": "10H.1 The Emperor's letter"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10H.1"
     },
     {
      "id": "open",
@@ -1993,7 +2051,7 @@
   {
    "id": "ch10a",
    "col": 10,
-   "num": 10,
+   "num": "10",
    "pos": 10,
    "siege": false,
    "title": {
@@ -2040,7 +2098,8 @@
       "tr": "10A.1 Büronun Kuruluşu",
       "en": "10A.1 The Founding of the Bureau"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10A.1"
     },
     {
      "id": "10A.2",
@@ -2048,7 +2107,8 @@
       "tr": "10A.2 'Ben sigortacıyım.'",
       "en": "10A.2 'I'm in insurance.'"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10A.2"
     }
    ],
    "edges": [
@@ -2081,7 +2141,7 @@
   {
    "id": "ch10l",
    "col": 10,
-   "num": 10,
+   "num": "10",
    "pos": 10,
    "siege": false,
    "title": {
@@ -2128,7 +2188,8 @@
       "tr": "10L.1 Tünel Sulhu",
       "en": "10L.1 The Tunnel Truce"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10L.1"
     },
     {
      "id": "10L.2",
@@ -2136,7 +2197,8 @@
       "tr": "10L.2 Sessizce geri",
       "en": "10L.2 Quietly back"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10L.2"
     },
     {
      "id": "10L.3",
@@ -2144,7 +2206,8 @@
       "tr": "10L.3 Tavan çöktü",
       "en": "10L.3 The roof caved in"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10L.3"
     }
    ],
    "edges": [
@@ -2182,7 +2245,7 @@
   {
    "id": "ch10",
    "col": 10,
-   "num": 10,
+   "num": "10",
    "pos": 10,
    "siege": false,
    "title": {
@@ -2237,7 +2300,8 @@
       "tr": "10O.1 Kapı geçildi → Huzur",
       "en": "10O.1 Through the gate → Audience"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10O.1"
     },
     {
      "id": "10O.2",
@@ -2245,7 +2309,8 @@
       "tr": "10O.2 Geçilemedi → Mutfak",
       "en": "10O.2 Turned away → Kitchen"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "10O.2"
     }
    ],
    "edges": [
@@ -2283,7 +2348,7 @@
   {
    "id": "ch11",
    "col": 11,
-   "num": 11,
+   "num": "11",
    "pos": 11,
    "siege": false,
    "title": {
@@ -2311,7 +2376,8 @@
       "tr": "11.4 İz kaybedildi",
       "en": "11.4 Trail lost"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "11.4"
     },
     {
      "id": "face",
@@ -2327,7 +2393,8 @@
       "tr": "11.5 Pijamalı Hikmet araya girdi",
       "en": "11.5 Hikmet in pyjamas intervenes"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "11.5"
     },
     {
      "id": "11.6",
@@ -2335,7 +2402,8 @@
       "tr": "11.6 Niko araya girdi",
       "en": "11.6 Niko intervenes"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "11.6"
     },
     {
      "id": "nihat",
@@ -2359,7 +2427,8 @@
       "tr": "11.1 Tolga tutuklandı",
       "en": "11.1 Tolga arrested"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "11.1"
     },
     {
      "id": "11.2",
@@ -2367,7 +2436,8 @@
       "tr": "11.2 Tolga serbest",
       "en": "11.2 Tolga goes free"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "11.2"
     },
     {
      "id": "11.3",
@@ -2375,7 +2445,8 @@
       "tr": "11.3 Nihat Tolga'ya katıldı",
       "en": "11.3 Nihat joins Tolga"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "11.3"
     }
    ],
    "edges": [
@@ -2434,7 +2505,7 @@
   {
    "id": "ch12",
    "col": 12,
-   "num": 12,
+   "num": "12",
    "pos": 12,
    "siege": false,
    "title": {
@@ -2478,7 +2549,8 @@
       "tr": "12.1 Tarih Yerinde",
       "en": "12.1 History Intact"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12.1"
     },
     {
      "id": "12.2",
@@ -2486,7 +2558,8 @@
       "tr": "12.2 Leblebipolis",
       "en": "12.2 Chickpeapolis"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12.2"
     },
     {
      "id": "12.3",
@@ -2494,7 +2567,8 @@
       "tr": "12.3 İki Hükümdar",
       "en": "12.3 Two Rulers"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12.3"
     },
     {
      "id": "12.4",
@@ -2502,7 +2576,8 @@
       "tr": "12.4 Sultan'ın Tamiri",
       "en": "12.4 The Sultan's Repair"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12.4"
     },
     {
      "id": "12.6",
@@ -2510,7 +2585,8 @@
       "tr": "12.6 Mühendisler Meclisi",
       "en": "12.6 Council of Engineers"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12.6"
     },
     {
      "id": "12.5",
@@ -2518,7 +2594,8 @@
       "tr": "12.5 Mutfağa gönderildi",
       "en": "12.5 Sent to the kitchen"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12.5"
     }
    ],
    "edges": [
@@ -2568,7 +2645,7 @@
   {
    "id": "ch12b",
    "col": 12,
-   "num": 12,
+   "num": "12",
    "pos": 12,
    "siege": false,
    "title": {
@@ -2599,7 +2676,8 @@
       "tr": "12B.1 'Bunu size söyleyemem.'",
       "en": "12B.1 'I can't tell you that.'"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12B.1"
     },
     {
      "id": "12B.2",
@@ -2607,7 +2685,8 @@
       "tr": "12B.2 İyi niyetli yalan",
       "en": "12B.2 A kind lie"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12B.2"
     },
     {
      "id": "12B.3",
@@ -2615,29 +2694,14 @@
       "tr": "12B.3 'Belki bir yıl.'",
       "en": "12B.3 'Perhaps a year.'"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "12B.3"
     },
     {
-     "id": "W10",
+     "id": "siege",
      "label": {
-      "tr": "W10 · 1454",
-      "en": "W10 · 1454"
-     },
-     "outcome": false
-    },
-    {
-     "id": "W11",
-     "label": {
-      "tr": "W11 · 1455",
-      "en": "W11 · 1455"
-     },
-     "outcome": false
-    },
-    {
-     "id": "W12",
-     "label": {
-      "tr": "W12 · Ertelendi",
-      "en": "W12 · Postponed"
+      "tr": "Cevabı kuşatma verecek (29 Mayıs şafağı)",
+      "en": "The siege will answer (dawn, 29 May)"
      },
      "outcome": false
     }
@@ -2657,15 +2721,15 @@
     ],
     [
      "12B.1",
-     "W10"
+     "siege"
     ],
     [
      "12B.2",
-     "W11"
+     "siege"
     ],
     [
      "12B.3",
-     "W12"
+     "siege"
     ]
    ],
    "next": {
@@ -2676,9 +2740,9 @@
   },
   {
    "id": "ch17",
-   "col": 17,
-   "num": 17,
-   "pos": 12.01,
+   "col": 13,
+   "num": "13",
+   "pos": 13,
    "siege": true,
    "title": {
     "tr": "Kundak",
@@ -2721,26 +2785,29 @@
     {
      "id": "17.1",
      "label": {
-      "tr": "17.1 Üç denizci kurtarıldı",
-      "en": "17.1 Three sailors saved"
+      "tr": "13.1 Üç denizci kurtarıldı",
+      "en": "13.1 Three sailors saved"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "13.1"
     },
     {
      "id": "17.2",
      "label": {
-      "tr": "17.2 Hepsine yetişilemedi",
-      "en": "17.2 Not everyone reached"
+      "tr": "13.2 Hepsine yetişilemedi",
+      "en": "13.2 Not everyone reached"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "13.2"
     },
     {
      "id": "17.3",
      "label": {
-      "tr": "17.3 Tolga da suya düştü",
-      "en": "17.3 Tolga fell in too"
+      "tr": "13.3 Tolga da suya düştü",
+      "en": "13.3 Tolga fell in too"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "13.3"
     }
    ],
    "edges": [
@@ -2786,9 +2853,9 @@
   },
   {
    "id": "ch17o",
-   "col": 17,
-   "num": 17,
-   "pos": 12.01,
+   "col": 13,
+   "num": "13",
+   "pos": 13,
    "siege": true,
    "title": {
     "tr": "Kundak (Ordugâh)",
@@ -2823,18 +2890,20 @@
     {
      "id": "17O.1",
      "label": {
-      "tr": "17O.1 Yangın çabuk söndü",
-      "en": "17O.1 The fire was quickly put out"
+      "tr": "13O.1 Yangın çabuk söndü",
+      "en": "13O.1 The fire was quickly put out"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "13O.1"
     },
     {
      "id": "17O.2",
      "label": {
-      "tr": "17O.2 Kadırganın kıçı yandı",
-      "en": "17O.2 The galley's stern burned"
+      "tr": "13O.2 Kadırganın kıçı yandı",
+      "en": "13O.2 The galley's stern burned"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "13O.2"
     }
    ],
    "edges": [
@@ -2859,9 +2928,9 @@
   },
   {
    "id": "ch18b",
-   "col": 18,
-   "num": 18,
-   "pos": 12.02,
+   "col": 14,
+   "num": "14",
+   "pos": 14,
    "siege": true,
    "title": {
     "tr": "Fıçı Köprü (Surlar)",
@@ -2888,18 +2957,20 @@
     {
      "id": "18B.1",
      "label": {
-      "tr": "18B.1 Köprü sarsıldı",
-      "en": "18B.1 The bridge was shaken"
+      "tr": "14B.1 Köprü sarsıldı",
+      "en": "14B.1 The bridge was shaken"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "14B.1"
     },
     {
      "id": "18B.2",
      "label": {
-      "tr": "18B.2 Gülleler suya",
-      "en": "18B.2 The balls hit the water"
+      "tr": "14B.2 Gülleler suya",
+      "en": "14B.2 The balls hit the water"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "14B.2"
     }
    ],
    "edges": [
@@ -2920,9 +2991,9 @@
   },
   {
    "id": "ch18",
-   "col": 18,
-   "num": 18,
-   "pos": 12.02,
+   "col": 14,
+   "num": "14",
+   "pos": 14,
    "siege": true,
    "title": {
     "tr": "Fıçı Köprü",
@@ -2949,18 +3020,20 @@
     {
      "id": "18.1",
      "label": {
-      "tr": "18.1 Köprü sağlam",
-      "en": "18.1 A sound bridge"
+      "tr": "14.1 Köprü sağlam",
+      "en": "14.1 A sound bridge"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "14.1"
     },
     {
      "id": "18.2",
      "label": {
-      "tr": "18.2 Köprü eğri ama ayakta",
-      "en": "18.2 Crooked but standing"
+      "tr": "14.2 Köprü eğri ama ayakta",
+      "en": "14.2 Crooked but standing"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "14.2"
     },
     {
      "id": "cannon",
@@ -2997,9 +3070,9 @@
   },
   {
    "id": "ch19",
-   "col": 19,
-   "num": 19,
-   "pos": 12.03,
+   "col": 15,
+   "num": "15",
+   "pos": 15,
    "siege": true,
    "title": {
     "tr": "Brigantin",
@@ -3034,18 +3107,20 @@
     {
      "id": "19.1",
      "label": {
-      "tr": "19.1 Dönmek için oy",
-      "en": "19.1 Voted to return"
+      "tr": "15.1 Dönmek için oy",
+      "en": "15.1 Voted to return"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "15.1"
     },
     {
      "id": "19.2",
      "label": {
-      "tr": "19.2 Kaçmak için oy",
-      "en": "19.2 Voted to flee"
+      "tr": "15.2 Kaçmak için oy",
+      "en": "15.2 Voted to flee"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "15.2"
     }
    ],
    "edges": [
@@ -3070,9 +3145,9 @@
   },
   {
    "id": "ch19o",
-   "col": 19,
-   "num": 19,
-   "pos": 12.03,
+   "col": 15,
+   "num": "15",
+   "pos": 15,
    "siege": true,
    "title": {
     "tr": "Devriye (Ordugâh)",
@@ -3099,18 +3174,20 @@
     {
      "id": "19O.1",
      "label": {
-      "tr": "19O.1 Reise söyledi",
-      "en": "19O.1 Told the captain"
+      "tr": "15O.1 Reise söyledi",
+      "en": "15O.1 Told the captain"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "15O.1"
     },
     {
      "id": "19O.2",
      "label": {
-      "tr": "19O.2 Sustu",
-      "en": "19O.2 Kept quiet"
+      "tr": "15O.2 Sustu",
+      "en": "15O.2 Kept quiet"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "15O.2"
     },
     {
      "id": "back",
@@ -3147,9 +3224,9 @@
   },
   {
    "id": "ch20",
-   "col": 20,
-   "num": 20,
-   "pos": 12.04,
+   "col": 16,
+   "num": "16",
+   "pos": 16,
    "siege": true,
    "title": {
     "tr": "Gedik",
@@ -3192,26 +3269,29 @@
     {
      "id": "20.1",
      "label": {
-      "tr": "20.1 Gedik şafaktan önce kapandı",
-      "en": "20.1 Breach closed before dawn"
+      "tr": "16.1 Gedik şafaktan önce kapandı",
+      "en": "16.1 Breach closed before dawn"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "16.1"
     },
     {
      "id": "20.2",
      "label": {
-      "tr": "20.2 Kapandı ve bantlandı",
-      "en": "20.2 Closed and taped"
+      "tr": "16.2 Kapandı ve bantlandı",
+      "en": "16.2 Closed and taped"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "16.2"
     },
     {
      "id": "20.3",
      "label": {
-      "tr": "20.3 Yarım kaldı, sabah bitti",
-      "en": "20.3 Half done, finished in the morning"
+      "tr": "16.3 Yarım kaldı, sabah bitti",
+      "en": "16.3 Half done, finished in the morning"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "16.3"
     }
    ],
    "edges": [
@@ -3236,9 +3316,9 @@
   },
   {
    "id": "ch20o",
-   "col": 20,
-   "num": 20,
-   "pos": 12.04,
+   "col": 16,
+   "num": "16",
+   "pos": 16,
    "siege": true,
    "title": {
     "tr": "Gedik (Ordugâh)",
@@ -3265,18 +3345,20 @@
     {
      "id": "20O.1",
      "label": {
-      "tr": "20O.1 Gedik açıldı",
-      "en": "20O.1 The breach opened"
+      "tr": "16O.1 Gedik açıldı",
+      "en": "16O.1 The breach opened"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "16O.1"
     },
     {
      "id": "20O.2",
      "label": {
-      "tr": "20O.2 Surlar dayandı",
-      "en": "20O.2 The walls held"
+      "tr": "16O.2 Surlar dayandı",
+      "en": "16O.2 The walls held"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "16O.2"
     }
    ],
    "edges": [
@@ -3297,9 +3379,9 @@
   },
   {
    "id": "ch21",
-   "col": 21,
-   "num": 21,
-   "pos": 12.05,
+   "col": 17,
+   "num": "17",
+   "pos": 17,
    "siege": true,
    "title": {
     "tr": "Lağım",
@@ -3326,18 +3408,20 @@
     {
      "id": "21.1",
      "label": {
-      "tr": "21.1 Lağımı Tolga'nın kabı buldu",
-      "en": "21.1 Tolga's bowl found the mine"
+      "tr": "17.1 Lağımı Tolga'nın kabı buldu",
+      "en": "17.1 Tolga's bowl found the mine"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "17.1"
     },
     {
      "id": "21.2",
      "label": {
-      "tr": "21.2 Grant kendisi buldu",
-      "en": "21.2 Grant found it himself"
+      "tr": "17.2 Grant kendisi buldu",
+      "en": "17.2 Grant found it himself"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "17.2"
     },
     {
      "id": "tunnel",
@@ -3438,9 +3522,9 @@
   },
   {
    "id": "ch21o",
-   "col": 21,
-   "num": 21,
-   "pos": 12.05,
+   "col": 17,
+   "num": "17",
+   "pos": 17,
    "siege": true,
    "title": {
     "tr": "Lağım (Ordugâh)",
@@ -3475,18 +3559,20 @@
     {
      "id": "21O.1",
      "label": {
-      "tr": "21O.1 Dumandan önce çıkıldı",
-      "en": "21O.1 Out before the smoke"
+      "tr": "17O.1 Dumandan önce çıkıldı",
+      "en": "17O.1 Out before the smoke"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "17O.1"
     },
     {
      "id": "21O.2",
      "label": {
-      "tr": "21O.2 Dragan çekip çıkardı",
-      "en": "21O.2 Dragan pulled him out"
+      "tr": "17O.2 Dragan çekip çıkardı",
+      "en": "17O.2 Dragan pulled him out"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "17O.2"
     }
    ],
    "edges": [
@@ -3511,9 +3597,9 @@
   },
   {
    "id": "ch22",
-   "col": 22,
-   "num": 22,
-   "pos": 12.06,
+   "col": 18,
+   "num": "18",
+   "pos": 18,
    "siege": true,
    "title": {
     "tr": "Kule",
@@ -3548,26 +3634,29 @@
     {
      "id": "22.1",
      "label": {
-      "tr": "22.1 Kule Tolga'nın fıçısıyla yandı",
-      "en": "22.1 Tolga's barrels burned the tower"
+      "tr": "18.1 Kule Tolga'nın fıçısıyla yandı",
+      "en": "18.1 Tolga's barrels burned the tower"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "18.1"
     },
     {
      "id": "22.2",
      "label": {
-      "tr": "22.2 Kule yandı, kaşlar da",
-      "en": "22.2 The tower burned, eyebrows too"
+      "tr": "18.2 Kule yandı, kaşlar da",
+      "en": "18.2 The tower burned, eyebrows too"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "18.2"
     },
     {
      "id": "22.3",
      "label": {
-      "tr": "22.3 Kuleyi Giustiniani'nin adamları yaktı",
-      "en": "22.3 Giustiniani's men burned it"
+      "tr": "18.3 Kuleyi Giustiniani'nin adamları yaktı",
+      "en": "18.3 Giustiniani's men burned it"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "18.3"
     }
    ],
    "edges": [
@@ -3596,9 +3685,9 @@
   },
   {
    "id": "ch22o",
-   "col": 22,
-   "num": 22,
-   "pos": 12.06,
+   "col": 18,
+   "num": "18",
+   "pos": 18,
    "siege": true,
    "title": {
     "tr": "Kule (Ordugâh)",
@@ -3633,18 +3722,20 @@
     {
      "id": "22O.1",
      "label": {
-      "tr": "22O.1 Herkes indi",
-      "en": "22O.1 Everyone got down"
+      "tr": "18O.1 Herkes indi",
+      "en": "18O.1 Everyone got down"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "18O.1"
     },
     {
      "id": "22O.2",
      "label": {
-      "tr": "22O.2 Hasan son adamı taşıdı",
-      "en": "22O.2 Hasan carried the last man"
+      "tr": "18O.2 Hasan son adamı taşıdı",
+      "en": "18O.2 Hasan carried the last man"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "18O.2"
     }
    ],
    "edges": [
@@ -3669,9 +3760,9 @@
   },
   {
    "id": "ch23",
-   "col": 23,
-   "num": 23,
-   "pos": 12.07,
+   "col": 19,
+   "num": "19",
+   "pos": 19,
    "siege": true,
    "title": {
     "tr": "Elçi",
@@ -3706,18 +3797,20 @@
     {
      "id": "23.1",
      "label": {
-      "tr": "23.1 Sadık tercüme",
-      "en": "23.1 Faithful translation"
+      "tr": "19.1 Sadık tercüme",
+      "en": "19.1 Faithful translation"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "19.1"
     },
     {
      "id": "23.2",
      "label": {
-      "tr": "23.2 Yaratıcı tercüme",
-      "en": "23.2 Creative translation"
+      "tr": "19.2 Yaratıcı tercüme",
+      "en": "19.2 Creative translation"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "19.2"
     }
    ],
    "edges": [
@@ -3743,9 +3836,9 @@
   },
   {
    "id": "ch24",
-   "col": 24,
-   "num": 24,
-   "pos": 12.08,
+   "col": 20,
+   "num": "20",
+   "pos": 20,
    "siege": true,
    "title": {
     "tr": "Alametler",
@@ -3780,18 +3873,20 @@
     {
      "id": "24.1",
      "label": {
-      "tr": "24.1 Çocuk saçağa alındı",
-      "en": "24.1 The child reached shelter"
+      "tr": "20.1 Çocuk saçağa alındı",
+      "en": "20.1 The child reached shelter"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "20.1"
     },
     {
      "id": "24.2",
      "label": {
-      "tr": "24.2 Çocuk kendi koştu",
-      "en": "24.2 The child ran off alone"
+      "tr": "20.2 Çocuk kendi koştu",
+      "en": "20.2 The child ran off alone"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "20.2"
     },
     {
      "id": "light",
@@ -3832,9 +3927,9 @@
   },
   {
    "id": "ch24o",
-   "col": 24,
-   "num": 24,
-   "pos": 12.08,
+   "col": 20,
+   "num": "20",
+   "pos": 20,
    "siege": true,
    "title": {
     "tr": "Alametler (Ordugâh)",
@@ -3861,18 +3956,20 @@
     {
      "id": "24O.1",
      "label": {
-      "tr": "24O.1 Üç ateş de sakin",
-      "en": "24O.1 All three fires calm"
+      "tr": "20O.1 Üç ateş de sakin",
+      "en": "20O.1 All three fires calm"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "20O.1"
     },
     {
      "id": "24O.2",
      "label": {
-      "tr": "24O.2 Derviş yetişti",
-      "en": "24O.2 The dervish stepped in"
+      "tr": "20O.2 Derviş yetişti",
+      "en": "20O.2 The dervish stepped in"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "20O.2"
     },
     {
      "id": "storm",
@@ -3909,9 +4006,9 @@
   },
   {
    "id": "ch25",
-   "col": 25,
-   "num": 25,
-   "pos": 12.09,
+   "col": 21,
+   "num": "21",
+   "pos": 21,
    "siege": true,
    "title": {
     "tr": "Son Akşam",
@@ -3938,18 +4035,20 @@
     {
      "id": "25.1",
      "label": {
-      "tr": "25.1 Işıklar kayda geçti",
-      "en": "25.1 The lights were recorded"
+      "tr": "21.1 Işıklar kayda geçti",
+      "en": "21.1 The lights were recorded"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "21.1"
     },
     {
      "id": "25.2",
      "label": {
-      "tr": "25.2 Işıklar kayda geçmedi",
-      "en": "25.2 The lights went unrecorded"
+      "tr": "21.2 Işıklar kayda geçmedi",
+      "en": "21.2 The lights went unrecorded"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "21.2"
     },
     {
      "id": "liturgy",
@@ -3999,9 +4098,9 @@
   },
   {
    "id": "ch26",
-   "col": 26,
-   "num": 26,
-   "pos": 12.1,
+   "col": 22,
+   "num": "22",
+   "pos": 22,
    "siege": true,
    "title": {
     "tr": "Şafak",
@@ -4026,6 +4125,14 @@
      "outcome": false
     },
     {
+     "id": "dawn",
+     "label": {
+      "tr": "Şafak: tüfekçi Giustiniani'ye nişan alıyor",
+      "en": "Dawn: a gunner takes aim at Giustiniani"
+     },
+     "outcome": false
+    },
+    {
      "id": "giust",
      "label": {
       "tr": "Giustiniani gemiye taşındı",
@@ -4044,24 +4151,43 @@
     {
      "id": "26.1",
      "label": {
-      "tr": "26.1 Son kare çekildi",
-      "en": "26.1 The last frame taken"
+      "tr": "22.1 Son kare çekildi",
+      "en": "22.1 The last frame taken"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "22.1"
     },
     {
      "id": "26.2",
      "label": {
-      "tr": "26.2 Son kare çekilmedi",
-      "en": "26.2 No last frame"
+      "tr": "22.2 Son kare çekilmedi",
+      "en": "22.2 No last frame"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "22.2"
+    },
+    {
+     "id": "26.3",
+     "label": {
+      "tr": "22.3 Hücum püskürtüldü, şehir düşmedi",
+      "en": "22.3 The assault thrown back; the city did not fall"
+     },
+     "outcome": true,
+     "disp": "22.3"
     }
    ],
    "edges": [
     [
      "waves",
+     "dawn"
+    ],
+    [
+     "dawn",
      "giust"
+    ],
+    [
+     "dawn",
+     "26.3"
     ],
     [
      "giust",
@@ -4077,6 +4203,10 @@
     ]
    ],
    "next": {
+    "26.3": [
+     "ch13",
+     "ch14"
+    ],
     "default": [
      "ch27"
     ]
@@ -4084,9 +4214,9 @@
   },
   {
    "id": "ch26o",
-   "col": 26,
-   "num": 26,
-   "pos": 12.1,
+   "col": 22,
+   "num": "22",
+   "pos": 22,
    "siege": true,
    "title": {
     "tr": "Şafak (Ordugâh)",
@@ -4129,18 +4259,20 @@
     {
      "id": "26.1",
      "label": {
-      "tr": "26.1 Son kare çekildi",
-      "en": "26.1 The last frame taken"
+      "tr": "22.1 Son kare çekildi",
+      "en": "22.1 The last frame taken"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "22.1"
     },
     {
      "id": "26.2",
      "label": {
-      "tr": "26.2 Son kare çekilmedi",
-      "en": "26.2 No last frame"
+      "tr": "22.2 Son kare çekilmedi",
+      "en": "22.2 No last frame"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "22.2"
     }
    ],
    "edges": [
@@ -4169,9 +4301,9 @@
   },
   {
    "id": "ch27",
-   "col": 27,
-   "num": 27,
-   "pos": 12.11,
+   "col": 23,
+   "num": "23",
+   "pos": 23,
    "siege": true,
    "title": {
     "tr": "Ahitname",
@@ -4183,8 +4315,8 @@
    },
    "cover": "img/ch/ch27.jpg",
    "note": {
-    "tr": "Kuşatma biter; Tolga bıraktığı ana, Bölüm 13'e (tutukluysa 14'e) döner",
-    "en": "The siege ends; Tolga returns to the moment he left, Chapter 13 (or 14 if arrested)"
+    "tr": "Şehir düştüyse: kuşatma biter, Tolga bıraktığı ana, Bölüm 24'e (tutukluysa 25'e) döner",
+    "en": "If the city fell: the siege ends, Tolga returns to the moment he left, Chapter 24 (or 25 if arrested)"
    },
    "nodes": [
     {
@@ -4206,18 +4338,20 @@
     {
      "id": "27.1",
      "label": {
-      "tr": "27.1 Kalanlar",
-      "en": "27.1 Those who stayed"
+      "tr": "23.1 Kalanlar",
+      "en": "23.1 Those who stayed"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "23.1"
     },
     {
      "id": "27.2",
      "label": {
-      "tr": "27.2 Gidenler",
-      "en": "27.2 Those who left"
+      "tr": "23.2 Gidenler",
+      "en": "23.2 Those who left"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "23.2"
     }
    ],
    "edges": [
@@ -4243,9 +4377,9 @@
   },
   {
    "id": "ch13",
-   "col": 13,
-   "num": 13,
-   "pos": 13.5,
+   "col": 24,
+   "num": "24",
+   "pos": 24,
    "siege": false,
    "title": {
     "tr": "Dönüş Penceresi",
@@ -4301,42 +4435,47 @@
     {
      "id": "13.1",
      "label": {
-      "tr": "13.1 Tolga döndü",
-      "en": "13.1 Tolga returned"
+      "tr": "24.1 Tolga döndü",
+      "en": "24.1 Tolga returned"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "24.1"
     },
     {
      "id": "13.2",
      "label": {
-      "tr": "13.2 Pencere kaçtı",
-      "en": "13.2 The window was missed"
+      "tr": "24.2 Pencere kaçtı",
+      "en": "24.2 The window was missed"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "24.2"
     },
     {
      "id": "13.3",
      "label": {
-      "tr": "13.3 Yanlış yıl",
-      "en": "13.3 Wrong year"
+      "tr": "24.3 Yanlış yıl",
+      "en": "24.3 Wrong year"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "24.3"
     },
     {
      "id": "13.4",
      "label": {
-      "tr": "13.4 Hikmet ile birlikte döndü",
-      "en": "13.4 Returned with Hikmet"
+      "tr": "24.4 Hikmet ile birlikte döndü",
+      "en": "24.4 Returned with Hikmet"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "24.4"
     },
     {
      "id": "13.5",
      "label": {
-      "tr": "13.5 Hikmet 1453'te kaldı",
-      "en": "13.5 Hikmet stayed in 1453"
+      "tr": "24.5 Hikmet 1453'te kaldı",
+      "en": "24.5 Hikmet stayed in 1453"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "24.5"
     }
    ],
    "edges": [
@@ -4397,9 +4536,9 @@
   },
   {
    "id": "ch16",
-   "col": 13,
-   "num": 16,
-   "pos": 13.5,
+   "col": 24,
+   "num": "G",
+   "pos": 24,
    "siege": false,
    "title": {
     "tr": "Gıdak",
@@ -4411,8 +4550,8 @@
    },
    "cover": "img/ch/ch16.jpg",
    "note": {
-    "tr": "Gizli bölüm: pencere kaçtı (13.2), ama 4b'de Tolga'ya takılan tavuk Sinerji her şeyi gördü",
-    "en": "Secret chapter: the window was missed (13.2), but Synergy, the chicken that latched onto Tolga in 4b, saw everything"
+    "tr": "Gizli bölüm: pencere kaçtı (24.2), ama 4b'de Tolga'ya takılan tavuk Sinerji her şeyi gördü",
+    "en": "Secret chapter: the window was missed (24.2), but Synergy, the chicken that latched onto Tolga in 4b, saw everything"
    },
    "nodes": [
     {
@@ -4426,18 +4565,20 @@
     {
      "id": "16.1",
      "label": {
-      "tr": "16.1 Düğme gagalandı → 13.6",
-      "en": "16.1 Button pecked → 13.6"
+      "tr": "G.1 Düğme gagalandı → 24.6",
+      "en": "G.1 Button pecked → 24.6"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "G.1"
     },
     {
      "id": "16.2",
      "label": {
-      "tr": "16.2 Leblebi kazandı → 13.2",
-      "en": "16.2 The leblebi won → 13.2"
+      "tr": "G.2 Leblebi kazandı → 24.2",
+      "en": "G.2 The leblebi won → 24.2"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "G.2"
     }
    ],
    "edges": [
@@ -4458,9 +4599,9 @@
   },
   {
    "id": "ch14",
-   "col": 14,
-   "num": 14,
-   "pos": 14.5,
+   "col": 25,
+   "num": "25",
+   "pos": 25,
    "siege": false,
    "title": {
     "tr": "Son Form",
@@ -4484,42 +4625,47 @@
     {
      "id": "14.1",
      "label": {
-      "tr": "14.1 Tarih düzeltildi",
-      "en": "14.1 History corrected"
+      "tr": "25.1 Tarih düzeltildi",
+      "en": "25.1 History corrected"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "25.1"
     },
     {
      "id": "14.2",
      "label": {
-      "tr": "14.2 Rapor tahrifatı",
-      "en": "14.2 Report falsified"
+      "tr": "25.2 Rapor tahrifatı",
+      "en": "25.2 Report falsified"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "25.2"
     },
     {
      "id": "14.3",
      "label": {
-      "tr": "14.3 Tolga Büro'ya",
-      "en": "14.3 Tolga joins the Bureau"
+      "tr": "25.3 Tolga Büro'ya",
+      "en": "25.3 Tolga joins the Bureau"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "25.3"
     },
     {
      "id": "14.4",
      "label": {
-      "tr": "14.4 İstifa",
-      "en": "14.4 Resignation"
+      "tr": "25.4 İstifa",
+      "en": "25.4 Resignation"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "25.4"
     },
     {
      "id": "14.5",
      "label": {
-      "tr": "14.5 Yeni model",
-      "en": "14.5 The new model"
+      "tr": "25.5 Yeni model",
+      "en": "25.5 The new model"
      },
-     "outcome": true
+     "outcome": true,
+     "disp": "25.5"
     }
    ],
    "edges": [
@@ -4694,11 +4840,13 @@
     "en": "The Conquest took place in 1456, once the necessary paperwork was complete. History is stubborn. Bureaucracy is more stubborn still."
    },
    "cond": {
-    "tr": "Son Akşam: Bizans'a üç yardım",
-    "en": "The Last Evening: three kinds of help to Byzantium"
+    "tr": "Bizans'a yardım + yaratıcı tercüme + şafakta şehir düşmedi",
+    "en": "Helped Byzantium + creative translation + the city held at dawn"
    },
    "from": [
-    "ch12b"
+    "10H.1",
+    "23.2",
+    "26.3"
    ]
   },
   {
@@ -4712,11 +4860,16 @@
     "en": "Two years. A separate unit in schools. Nobody knows Tolga's name."
    },
    "cond": {
-    "tr": "Son Akşam: Bizans'a iki yardım",
-    "en": "The Last Evening: two kinds of help to Byzantium"
+    "tr": "Bizans'a yardım + gedik, lağım, kule Tolga'nın eliyle + şafakta şehir düşmedi",
+    "en": "Helped Byzantium + the breach, the mine and the tower by Tolga's hand + the city held at dawn"
    },
    "from": [
-    "ch12b"
+    "10H.1",
+    "20.1",
+    "20.2",
+    "21.1",
+    "22.1",
+    "26.3"
    ]
   },
   {
@@ -4730,11 +4883,32 @@
     "en": "The Conquest came a year late. Everything's the same; only the date is 1454."
    },
    "cond": {
-    "tr": "Son Akşam: Bizans'a bir yardım",
-    "en": "The Last Evening: one kind of help to Byzantium"
+    "tr": "Bizans'a yardım + şafakta şehir düşmedi",
+    "en": "Helped Byzantium + the city held at dawn"
    },
    "from": [
-    "ch12b"
+    "10H.1",
+    "26.3"
+   ]
+  },
+  {
+   "id": "one_evening",
+   "name": {
+    "tr": "Bir Akşam",
+    "en": "One Evening"
+   },
+   "sub": {
+    "tr": "Fetih 1453'te oldu. Restorasyon ekibi surun taşlarının arasında 570 yıllık bir bant buldu.",
+    "en": "The Conquest came in 1453. A restoration crew found 570-year-old tape between the stones of the wall."
+   },
+   "cond": {
+    "tr": "Bizans'a yardım ama şehir şafakta düştü: fetih 1453'te",
+    "en": "Helped Byzantium but the city fell at dawn: the Conquest in 1453"
+   },
+   "from": [
+    "10H.1",
+    "26.1",
+    "26.2"
    ]
   },
   {
@@ -4911,13 +5085,52 @@
     "en": "The world has changed. Tolga put his earphones in."
    },
    "cond": {
-    "tr": "Dünya değişti (Leblebipolis ya da İki Hükümdar) ve Nihat raporu tahrif etti",
-    "en": "The world changed (Chickpeapolis or Two Rulers) and Nihat forged the report"
+    "tr": "Dünya değişti (Leblebipolis ya da İki Hükümdar), düzeltilmedi",
+    "en": "The world changed (Chickpeapolis or Two Rulers) and wasn't fixed"
    },
    "from": [
     "12.2",
-    "12.3",
-    "14.2"
+    "12.3"
+   ]
+  },
+  {
+   "id": "eaves_child",
+   "name": {
+    "tr": "Saçaktaki Çocuk",
+    "en": "The Child Under the Eaves"
+   },
+   "sub": {
+    "tr": "Eleni'nin büyükannesi hep anlatırdı: selde bir çocuğu fesli bir adam saçağa çekmiş. Tolga kulaklıklıydı.",
+    "en": "Eleni's grandmother always told it: in the flood a man in a fez pulled a child under the eaves. Tolga had his earphones in."
+   },
+   "cond": {
+    "tr": "Bizans tarafında kimseyi bırakmadı: üç denizci, seldeki çocuk, Galata'da 'kal'",
+    "en": "Left no one behind on the Byzantine side: three sailors, the child in the flood, 'stay' in Galata"
+   },
+   "from": [
+    "17.1",
+    "24.1",
+    "27.1"
+   ]
+  },
+  {
+   "id": "water_bearer",
+   "name": {
+    "tr": "Sakabaşı",
+    "en": "The Water-Bearer"
+   },
+   "sub": {
+    "tr": "Topkapı yolunda bir çeşme: 'Sakabaşı, 1453.' Yaptıranın adı bilinmiyor, fesli olduğu rivayet edilir.",
+    "en": "A fountain on the Topkapı road: 'The Water-Bearer, 1453.' The builder's name is unknown; he is said to have worn a fez."
+   },
+   "cond": {
+    "tr": "Osmanlı tarafında askerlere su ve yardım: kadırga yangını, kuledeki marangozlar, kanlı ay çorbası",
+    "en": "Water and help for the soldiers on the Ottoman side: the galley fire, the carpenters on the tower, the blood-moon soup"
+   },
+   "from": [
+    "17O.1",
+    "22O.1",
+    "24O.1"
    ]
   },
   {
@@ -5024,8 +5237,76 @@
    "en": "World: The Tunnel Truce (W13). Chapter 12 is skipped."
   },
   "10H.1": {
-   "tr": "Bizans'a verdiğin her yardım (gedik, Giustiniani, zincir) fethi erteler: Son Akşam'a gidilir.",
-   "en": "Every bit of help you gave Byzantium (the breach, Giustiniani, the chain) delays the Conquest: on to The Last Evening."
+   "tr": "Bizans'a yardım ettiysen (gedik, Giustiniani, zincir) Son Akşam'a gidilir. Fethin ertelenip ertelenmeyeceğine kuşatma karar verir (Bölüm 22, şafak).",
+   "en": "If you helped Byzantium (the breach, Giustiniani, the chain) you go on to The Last Evening. Whether the Conquest is delayed is decided by the siege (Chapter 22, dawn)."
+  },
+  "12B.1": {
+   "tr": "Dünya burada yazılmaz: cevabı kuşatma verir (Bölüm 22, şafak).",
+   "en": "The world isn't decided here: the siege answers (Chapter 22, dawn)."
+  },
+  "12B.2": {
+   "tr": "Dünya burada yazılmaz: cevabı kuşatma verir (Bölüm 22, şafak).",
+   "en": "The world isn't decided here: the siege answers (Chapter 22, dawn)."
+  },
+  "12B.3": {
+   "tr": "Dünya burada yazılmaz: cevabı kuşatma verir (Bölüm 22, şafak).",
+   "en": "The world isn't decided here: the siege answers (Chapter 22, dawn)."
+  },
+  "17.1": {
+   "tr": "Kurtarılanlardan biri. Seldeki çocuk ve Galata'daki 'kal' ile birlikte: Saçaktaki Çocuk.",
+   "en": "One of the rescues. Together with the child in the flood and 'stay' in Galata: The Child Under the Eaves."
+  },
+  "24.1": {
+   "tr": "Kurtarılanlardan biri. Üç denizci ve Galata'daki 'kal' ile birlikte: Saçaktaki Çocuk.",
+   "en": "One of the rescues. Together with the three sailors and 'stay' in Galata: The Child Under the Eaves."
+  },
+  "27.1": {
+   "tr": "Kurtarılanlardan biri. Üç denizci ve seldeki çocukla birlikte: Saçaktaki Çocuk.",
+   "en": "One of the rescues. Together with the three sailors and the child in the flood: The Child Under the Eaves."
+  },
+  "17O.1": {
+   "tr": "Askerlere su ve yardım. Kuledeki marangozlar ve kanlı ay gecesinin çorbasıyla birlikte: Sakabaşı.",
+   "en": "Water and help for the soldiers. Together with the carpenters on the tower and the soup on the blood-moon night: The Water-Bearer."
+  },
+  "22O.1": {
+   "tr": "Askerlere su ve yardım. Kadırganın yangını ve kanlı ay gecesinin çorbasıyla birlikte: Sakabaşı.",
+   "en": "Water and help for the soldiers. Together with the galley fire and the soup on the blood-moon night: The Water-Bearer."
+  },
+  "24O.1": {
+   "tr": "Askerlere su ve yardım. Kadırganın yangını ve kuledeki marangozlarla birlikte: Sakabaşı.",
+   "en": "Water and help for the soldiers. Together with the galley fire and the carpenters on the tower: The Water-Bearer."
+  },
+  "20.1": {
+   "tr": "Gedik şafaktan önce kapandı. Bizans'a yardım ettiysen ve şafakta şehir düşmezse, lağım ve kuleyle birlikte ertelemeyi iki yıla çıkarır.",
+   "en": "The breach closed before dawn. If you helped Byzantium and the city holds at dawn, together with the mine and the tower it stretches the delay to two years."
+  },
+  "20.2": {
+   "tr": "Gedik kapandı ve bantlandı. Bizans'a yardım ettiysen ve şafakta şehir düşmezse, lağım ve kuleyle birlikte ertelemeyi iki yıla çıkarır.",
+   "en": "The breach closed and taped. If you helped Byzantium and the city holds at dawn, together with the mine and the tower it stretches the delay to two years."
+  },
+  "21.1": {
+   "tr": "Lağımı Tolga'nın kabı buldu: şehir şafakta düşmezse gedik ve kuleyle birlikte Uzun Bekleyiş.",
+   "en": "Tolga's bowl found the mine: if the city holds at dawn, together with the breach and the tower, The Long Wait."
+  },
+  "22.1": {
+   "tr": "Kule Tolga'nın fıçısıyla yandı: şehir şafakta düşmezse gedik ve lağımla birlikte Uzun Bekleyiş.",
+   "en": "Tolga's barrels burned the tower: if the city holds at dawn, together with the breach and the mine, The Long Wait."
+  },
+  "23.2": {
+   "tr": "Yaratıcı tercüme: şehir şafakta düşmezse teslim teklifi evrakta kaybolur: Evrak Eksik.",
+   "en": "Creative translation: if the city holds at dawn, the surrender offer gets lost in the paperwork: Missing Paperwork."
+  },
+  "26.1": {
+   "tr": "Şehir düştü. Bizans'a yardım ettiysen: Bir Akşam.",
+   "en": "The city fell. If you had helped Byzantium: One Evening."
+  },
+  "26.2": {
+   "tr": "Şehir düştü. Bizans'a yardım ettiysen: Bir Akşam.",
+   "en": "The city fell. If you had helped Byzantium: One Evening."
+  },
+  "26.3": {
+   "tr": "Giustiniani ayakta kaldı, hücum püskürtüldü: şehir o sabah düşmedi. Erteleme Bölüm 16–19'daki kararlara göre 1454, 1455 ya da 'evrak eksik'. Ahitname (Bölüm 23) yazılmaz.",
+   "en": "Giustiniani stayed on his feet, the assault was thrown back: the city did not fall that morning. The delay is 1454, 1455 or 'paperwork missing', depending on Chapters 16–19. The charter (Chapter 23) is never written."
   },
   "11.1": {
    "tr": "Tolga tutuklandı: kuşatmadan sonra doğrudan Nihat'ın son formuna. Büro'ya katılmazsa (14.3) dönüş penceresi kaçar: Boş Masa.",
@@ -5060,7 +5341,7 @@
    "en": "Tolga made it back to 2026 (T1)."
   },
   "13.2": {
-   "tr": "Tolga 1453'te kaldı (T2). Hikmet de oradaysa İki Komşu; makineye el konulduysa Mühürlü Garaj; Sinerji varsa gizli Bölüm 16.",
+   "tr": "Tolga 1453'te kaldı (T2). Hikmet de oradaysa İki Komşu; makineye el konulduysa Mühürlü Garaj; Sinerji varsa gizli bölüm (Gıdak).",
    "en": "Tolga stays in 1453 (T2). If Hikmet is there too: Two Neighbours; if the machine was confiscated: The Sealed Garage; with Synergy: secret Chapter 16."
   },
   "13.3": {
@@ -5076,12 +5357,12 @@
    "en": "Tolga made it back, Hikmet stays in 1453 (H3): the garage is empty. This path has no ending of its own; the world decides the ending."
   },
   "16.1": {
-   "tr": "Sinerji düğmeyi gagaladı: pencere kurtuldu (13.6), Tolga döner (T1).",
-   "en": "Synergy pecked the button: the window is saved (13.6), Tolga makes it back (T1)."
+   "tr": "Sinerji düğmeyi gagaladı: pencere kurtuldu (24.6), Tolga döner (T1).",
+   "en": "Synergy pecked the button: the window is saved (24.6), Tolga makes it back (T1)."
   },
   "16.2": {
-   "tr": "Leblebi kazandı: pencere kaçtı (13.2, T2).",
-   "en": "The chickpeas won: the window is lost (13.2, T2)."
+   "tr": "Leblebi kazandı: pencere kaçtı (24.2, T2).",
+   "en": "The chickpeas won: the window is lost (24.2, T2)."
   },
   "14.1": {
    "tr": "Tarih düzeltildi: dünya neredeyse normale döner.",

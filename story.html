@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hikâye Haritası — Gerçek Tarih Bu Değil</title>
-<meta name="description" content="Gerçek Tarih Bu Değil'in bütün dalları: 28 bölüm, iki taraflı kuşatma, her karar, her sonuç ve 23 final tek bir etkileşimli haritada. / Every branch of Not a History Game in one interactive map.">
+<meta name="description" content="Gerçek Tarih Bu Değil'in bütün dalları: 28 bölüm, iki taraflı kuşatma, her karar, her sonuç ve 26 final tek bir etkileşimli haritada. / Every branch of Not a History Game in one interactive map.">
 <meta property="og:title" content="Story map — Not a History Game">
 <meta property="og:image" content="img/og.jpg">
 <link rel="icon" href="img/icon.png">
@@ -149,8 +149,8 @@ footer{padding:30px 20px 60px;text-align:center;color:var(--muted);font-size:14p
 <header class="intro">
   <div class="kicker"><span data-tr>Zaman Bürosu · Resmî akış şeması</span><span data-en>Time Bureau · Official flowchart</span></div>
   <h1><span data-tr>Hikâye Haritası</span><span data-en>Story Map</span></h1>
-  <p data-tr>Oyunun bütün dalları tek bir haritada: her bölüm, her karar, her sonuç ve 23 final. Bir <b>karara</b> ya da <b>sonuca</b> tıkla, oraya nasıl gelindiğini ve neye yol açtığını gör. Bir <b>finale</b> tıkla, hangi seçimlerin oraya götürdüğünü gör. <b>Kuşatma</b> (Bölüm 17–27), hangi yoldan gelirsen gel dönüş penceresinden (Bölüm 13, tutuklandıysan 14) hemen önce oynanır; Büro'da Bizans ya da Osmanlı tarafını seçersin.</p>
-  <p data-en>Every branch of the game in one map: each chapter, each decision, each outcome and all 23 endings. Click a <b>decision</b> or an <b>outcome</b> to see how you get there and what it leads to. Click an <b>ending</b> to see which choices lead to it. <b>The siege</b> (Chapters 17–27) plays right before the return window (Chapter 13, or 14 if you were arrested), whichever route you took; at the Bureau you pick the Byzantine or the Ottoman side.</p>
+  <p data-tr>Oyunun bütün dalları tek bir haritada: her bölüm, her karar, her sonuç ve 26 final. Bir <b>karara</b> ya da <b>sonuca</b> tıkla, oraya nasıl gelindiğini ve neye yol açtığını gör. Bir <b>finale</b> tıkla, hangi seçimlerin oraya götürdüğünü gör. <b>Kuşatma</b> (Bölüm 13–23), hangi yoldan gelirsen gel dönüş penceresinden (Bölüm 24, tutuklandıysan 25) hemen önce oynanır; Büro'da Bizans ya da Osmanlı tarafını seçersin. Heyette Bizans'a yardım ettiysen fethin ertelenip ertelenmeyeceğine kuşatmanın son şafağı (Bölüm 22) karar verir.</p>
+  <p data-en>Every branch of the game in one map: each chapter, each decision, each outcome and all 26 endings. Click a <b>decision</b> or an <b>outcome</b> to see how you get there and what it leads to. Click an <b>ending</b> to see which choices lead to it. <b>The siege</b> (Chapters 13–23) plays right before the return window (Chapter 24, or 25 if you were arrested), whichever route you took; at the Bureau you pick the Byzantine or the Ottoman side. If you helped Byzantium during the embassy, the siege's last dawn (Chapter 22) decides whether the Conquest is delayed.</p>
   <div class="stats" id="stats"></div>
 </header>
 
@@ -230,7 +230,7 @@ const finalsFor = (ch, id) => D.finals.filter(f => f.from.includes(id) || (f.fro
 const chLabel = ch => `${L("Bölüm", "Chapter")} ${ch.num}`;
 function nameOfTarget(t){
   if (t === "early") return {tr: "Erken son: garaja dönüş", en: "Early ending: back to the garage"};
-  if (t === "final") return {tr: "Bölüm 15 · Pazartesi: final", en: "Chapter 15 · Monday: the ending"};
+  if (t === "final") return {tr: "Bölüm 26 · Pazartesi: final", en: "Chapter 26 · Monday: the ending"};
   const c = chById(t); return {tr: `Bölüm ${c.num} · ${c.title.tr}`, en: `Chapter ${c.num} · ${c.title.en}`};
 }
 
@@ -254,7 +254,7 @@ function build(){
   });
   const fc = document.createElement("div");
   fc.className = "finals";
-  fc.innerHTML = `<div class="col" id="col-final"><div class="colhead">${bi({tr: "Bölüm 15 · 23 final", en: "Chapter 15 · 23 endings"})}</div>` +
+  fc.innerHTML = `<div class="col" id="col-final"><div class="colhead">${bi({tr: "Bölüm 26 · " + D.finals.length + " final", en: "Chapter 26 · " + D.finals.length + " endings"})}</div>` +
     D.finals.map((f, i) => `<article class="final" id="f-${f.id}" data-f="${f.id}"><span class="rank">#${i + 1}</span><h4>${bi(f.name)}</h4><p class="cond">${bi(f.cond)}</p><p class="spoil">${bi(f.sub)}</p></article>`).join("") + "</div>";
   map.appendChild(fc);
   const fb = document.createElement("button");
@@ -270,7 +270,7 @@ function card(c){
   const nodes = c.nodes.map(n => {
     const early = n.outcome && targetsOf(c, n.id).includes("early");
     return n.outcome
-      ? `<li class="out${early ? " early" : ""}" data-n="${c.id}|${esc(n.id)}"><b>${esc(n.id)}</b>${bi(stripId(n.label, n.id))}</li>`
+      ? `<li class="out${early ? " early" : ""}" data-n="${c.id}|${esc(n.id)}"><b>${esc(n.disp || n.id)}</b>${bi(stripId(n.label, n.disp || n.id))}</li>`
       : `<li class="choice" data-n="${c.id}|${esc(n.id)}">${bi(n.label)}</li>`;
   }).join("");
   return `<article class="card" id="c-${c.id}" data-ch="${c.id}">
@@ -391,8 +391,8 @@ function showPanel(){
   let h = "";
   if (selected.type === "node"){
     const ch = chById(selected.ch), n = nodeOf(ch, selected.id);
-    const lab = n.outcome ? stripId(n.label, n.id) : n.label;
-    h += `<div class="ch">${chLabel(ch)} · ${esc(L(ch.title.tr, ch.title.en))}${n.outcome ? " · " + esc(n.id) : ""}</div><h3>${esc(L(lab.tr, lab.en))}</h3>`;
+    const lab = n.outcome ? stripId(n.label, n.disp || n.id) : n.label;
+    h += `<div class="ch">${chLabel(ch)} · ${esc(L(ch.title.tr, ch.title.en))}${n.outcome ? " · " + esc(n.disp || n.id) : ""}</div><h3>${esc(L(lab.tr, lab.en))}</h3>`;
     const pids = preds(ch, selected.id);
     const pre = ch.nodes.filter(x => pids.has(x.id));   // bölümdeki sırasıyla
     h += `<h5>${L("Buraya nasıl gelinir", "How you get here")}</h5>`;
@@ -413,7 +413,7 @@ function showPanel(){
     } else {
       const outs = [...succs(ch, selected.id)].map(x => nodeOf(ch, x)).filter(x => x && x.outcome);
       h += `<h5>${L("Bu karardan sonra olabilecekler", "Where this can lead")}</h5>`;
-      h += outs.length ? `<ul>${outs.map(o => goBtn(`<b style="color:var(--gold)">${esc(o.id)}</b> ${esc(L(stripId(o.label, o.id).tr, stripId(o.label, o.id).en))}`, "", "n:" + ch.id + "|" + o.id)).join("")}</ul>` : `<p class="none">—</p>`;
+      h += outs.length ? `<ul>${outs.map(o => goBtn(`<b style="color:var(--gold)">${esc(o.disp || o.id)}</b> ${esc(L(stripId(o.label, o.disp || o.id).tr, stripId(o.label, o.disp || o.id).en))}`, "", "n:" + ch.id + "|" + o.id)).join("")}</ul>` : `<p class="none">—</p>`;
     }
   } else {
     const f = D.finals.find(x => x.id === selected.id), i = D.finals.indexOf(f) + 1;
@@ -423,8 +423,9 @@ function showPanel(){
       const c = chById(src);
       if (c) return goBtn(esc(L(`Bölüm ${c.num} · ${c.title.tr}`, `Chapter ${c.num} · ${c.title.en}`)), "", c.id);
       const ch = D.chapters.find(x => nodeOf(x, src)); if (!ch) return "";
-      const lab = stripId(nodeOf(ch, src).label, src);
-      return goBtn(`<b style="color:var(--gold)">${esc(src)}</b> ${esc(L(lab.tr, lab.en))}`, esc(L(`Bölüm ${ch.num} · ${ch.title.tr}`, `Chapter ${ch.num} · ${ch.title.en}`)), "n:" + ch.id + "|" + src);
+      const nd = nodeOf(ch, src), ds = nd.disp || src;
+      const lab = stripId(nd.label, ds);
+      return goBtn(`<b style="color:var(--gold)">${esc(ds)}</b> ${esc(L(lab.tr, lab.en))}`, esc(L(`Bölüm ${ch.num} · ${ch.title.tr}`, `Chapter ${ch.num} · ${ch.title.en}`)), "n:" + ch.id + "|" + src);
     }).join("") + "</ul>";
     h += `<h5>${L("Final sahnesi", "The ending scene")}</h5><p class="none"><span class="spoil${document.body.classList.contains("hide") ? "" : " show"}" onclick="this.classList.add('show')" style="cursor:pointer">${esc(L(f.sub.tr, f.sub.en))}</span></p>`;
     h += `<p class="none" style="margin-top:10px;font-size:12px">${L("Birden fazla finalin koşulu tutarsa listede üstte olan kazanır.", "If several endings qualify, the one higher in the list wins.")}</p>`;
