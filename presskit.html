@@ -100,7 +100,7 @@ footer{padding:36px 0 56px;text-align:center;color:var(--muted);font-size:14px}
     <p data-tr>1453'e yanlışlıkla gönderilen bir sigortacının, Fatih'e risk tablosu sunup pazartesi 09:00 toplantısına yetişmeye çalıştığı, tamamen seslendirilmiş bir komedi-macera. 23 final, ücretsiz.</p>
     <p data-en>A fully voiced comedy adventure about an insurance salesman accidentally sent to 1453, who pitches a risk matrix to Sultan Mehmed and still tries to make his Monday 9 a.m. meeting. 23 endings, free.</p>
     <div class="btns">
-      <a class="btn" href="presskit.zip" download><span data-tr>⬇️ Görsel paketini indir (ZIP, 8 MB)</span><span data-en>⬇️ Download media kit (ZIP, 8 MB)</span></a>
+      <a class="btn" href="presskit.zip" download><span data-tr>⬇️ Görsel paketini indir (ZIP, 15 MB)</span><span data-en>⬇️ Download media kit (ZIP, 15 MB)</span></a>
       <a class="btn alt" href="story.html"><span data-tr>🗺️ Hikâye haritası</span><span data-en>🗺️ Story map</span></a>
       <a class="btn alt" id="gameBtn" href="https://github.com/TradersEntertainment/nothistorygamedemo/releases/latest"><span data-tr>🎮 Oyunu indir</span><span data-en>🎮 Get the game</span></a>
     </div>
@@ -114,7 +114,7 @@ footer{padding:36px 0 56px;text-align:center;color:var(--muted);font-size:14px}
         <div><dt data-tr>Platform</dt><dt data-en>Platforms</dt><dd>Windows · macOS · Linux / Steam Deck</dd></div>
         <div><dt data-tr>Fiyat</dt><dt data-en>Price</dt><dd data-tr>Ücretsiz</dd><dd data-en>Free</dd></div>
         <div><dt data-tr>Sürüm</dt><dt data-en>Version</dt><dd id="ver">—</dd></div>
-        <div><dt data-tr>Süre</dt><dt data-en>Length</dt><dd data-tr>İlk oynanış 2–3 saat · 16 bölüm · 23 final</dd><dd data-en>2–3 hours first playthrough · 16 chapters · 23 endings</dd></div>
+        <div><dt data-tr>Süre</dt><dt data-en>Length</dt><dd data-tr>İlk oynanış yaklaşık 2–3 saat · 27 bölüm · 23 final · kuşatma iki taraftan</dd><dd data-en>About 2–3 hours first playthrough · 27 chapters · 23 endings · the siege from both sides</dd></div>
         <div><dt data-tr>Dil</dt><dt data-en>Languages</dt><dd data-tr>Türkçe ve İngilizce: tam seslendirme + altyazı</dd><dd data-en>English &amp; Turkish: full voice-over + subtitles</dd></div>
         <div><dt data-tr>Kontrol</dt><dt data-en>Controls</dt><dd data-tr>Klavye-fare ya da gamepad</dd><dd data-en>Keyboard &amp; mouse or gamepad</dd></div>
         <div><dt data-tr>Motor</dt><dt data-en>Engine</dt><dd>Godot 4</dd></div>
@@ -204,12 +204,14 @@ const YOUTUBE_ID = "Q5apIK1dYms";
 const CONTACT_EMAIL = "";
 
 const REPO = "TradersEntertainment/nothistorygamedemo";
-const SHOTS = [["sehir", "Bizans sokakları", "The streets of Byzantium"], ["fatih", "Fatih'in otağı", "The Sultan's tent"],
-  ["patlama", "Urban'ın topu", "Urban's cannon"], ["kosu", "Yağlı kızaklar", "The greased slipway"],
-  ["mufide", "Zaman Bürosu", "The Time Bureau"], ["hologram", "Paradoks izleri", "The paradox trail"],
-  ["galata", "Galata", "Galata"], ["zincir", "Deniz surları", "The sea walls"],
-  ["yangin", "Ziyafet mutfağı", "The palace kitchen"], ["pencere", "Dönüş penceresi", "The return window"],
-  ["ajan", "Nöbetçi hırdavatçı", "The all-night hardware store"], ["gidak", "Gıdak", "Cluck"]];
+const SHOTS = [["kosu", "Ok yağmuru", "Under the arrows"], ["donan_kare", "Donan kare", "Freeze frame"],
+  ["yatak_oda", "Gece 03.00", "3 AM"], ["garaj", "Zamanatör 3000", "The Chrono-Matic 3000"],
+  ["zamanator", "Kalkış", "Take-off"], ["kizak_tolga", "Yağlı kızaklar", "The greased slipway"],
+  ["otag_kitap", "Otağda tarih kitabı", "A history book in the Sultan's tent"], ["patlama", "Urban'ın topu", "Urban's cannon"],
+  ["is_lekesi", "Sultan kıpırdamadı", "The Sultan didn't flinch"], ["gozcu", "Surda gözcü", "The lookout"],
+  ["hucum", "Son hücum", "The final assault"], ["ordu", "Kuşatma gecesi", "The night of the siege"],
+  ["ordugah", "Ordugâh", "The camp"], ["ayasofya", "Ayasofya", "Hagia Sophia"],
+  ["urban_top", "Urban'ın büyük topu", "Urban's great gun"], ["keci_tavuk", "Ordugâhta bir gün", "A day in the camp"]];
 document.getElementById("shots").innerHTML = SHOTS.map(s =>
   `<a href="img/shots/${s[0]}.jpg" title="${s[2]}"><img loading="lazy" src="img/shots/${s[0]}.jpg" alt="${s[2]}"></a>`).join("");
 

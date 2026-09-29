@@ -1,9 +1,38 @@
 {
  "chapters": [
   {
+   "id": "ch0",
+   "col": 0,
+   "num": 0,
+   "pos": 0,
+   "siege": false,
+   "title": {
+    "tr": "Soğuk Açılış",
+    "en": "Cold Open"
+   },
+   "sub": {
+    "tr": "29 Mayıs 1453 · gece 01.30",
+    "en": "29 May 1453 · 1:30 AM"
+   },
+   "cover": "img/ch/ch0.jpg",
+   "note": {
+    "tr": "Soğuk açılış: 29 Mayıs 1453, gedik. Kare donar, beş hafta geri sarılır.",
+    "en": "Cold open: 29 May 1453, the breach. The frame freezes and rewinds five weeks."
+   },
+   "nodes": [],
+   "edges": [],
+   "next": {
+    "default": [
+     "ch1"
+    ]
+   }
+  },
+  {
    "id": "ch1",
    "col": 1,
    "num": 1,
+   "pos": 1,
+   "siege": false,
    "title": {
     "tr": "Zamanatör",
     "en": "The Chrono-Matic"
@@ -15,6 +44,14 @@
    "cover": "img/ch/ch1.jpg",
    "note": null,
    "nodes": [
+    {
+     "id": "bed",
+     "label": {
+      "tr": "Gece 03.00: telefon",
+      "en": "3 AM: the phone call"
+     },
+     "outcome": false
+    },
     {
      "id": "garage",
      "label": {
@@ -82,6 +119,10 @@
    ],
    "edges": [
     [
+     "bed",
+     "garage"
+    ],
+    [
      "garage",
      "costume"
     ],
@@ -123,6 +164,8 @@
    "id": "ch2",
    "col": 2,
    "num": 2,
+   "pos": 2,
+   "siege": false,
    "title": {
     "tr": "Yağlı Kızaklar",
     "en": "Greased Slipways"
@@ -270,6 +313,8 @@
    "id": "ch3",
    "col": 3,
    "num": 3,
+   "pos": 3,
+   "siege": false,
    "title": {
     "tr": "Vaka 1453-T",
     "en": "Case 1453-T"
@@ -451,6 +496,8 @@
    "id": "ch4a",
    "col": 4,
    "num": 4,
+   "pos": 4,
+   "siege": false,
    "title": {
     "tr": "İlk Gece",
     "en": "The First Night"
@@ -546,6 +593,8 @@
    "id": "ch4b",
    "col": 4,
    "num": 4,
+   "pos": 4,
+   "siege": false,
    "title": {
     "tr": "İlk Gece",
     "en": "The First Night"
@@ -645,6 +694,8 @@
    "id": "ch5",
    "col": 5,
    "num": 5,
+   "pos": 5,
+   "siege": false,
    "title": {
     "tr": "Garajda Gece",
     "en": "Night in the Garage"
@@ -778,6 +829,8 @@
    "id": "ch6a",
    "col": 6,
    "num": 6,
+   "pos": 6,
+   "siege": false,
    "title": {
     "tr": "Ordugâh",
     "en": "The Camp"
@@ -921,6 +974,8 @@
    "id": "ch6b",
    "col": 6,
    "num": 6,
+   "pos": 6,
+   "siege": false,
    "title": {
     "tr": "Surların İçi",
     "en": "Inside the Walls"
@@ -1056,6 +1111,8 @@
    "id": "ch7",
    "col": 7,
    "num": 7,
+   "pos": 7,
+   "siege": false,
    "title": {
     "tr": "Saha Çalışması",
     "en": "Fieldwork"
@@ -1172,6 +1229,8 @@
    "id": "ch8",
    "col": 8,
    "num": 8,
+   "pos": 8,
+   "siege": false,
    "title": {
     "tr": "Hırdavatçı",
     "en": "The Hardware Shop"
@@ -1308,6 +1367,8 @@
    "id": "ch9",
    "col": 9,
    "num": 9,
+   "pos": 9,
+   "siege": false,
    "title": {
     "tr": "Teklifler",
     "en": "Offers"
@@ -1454,6 +1515,8 @@
    "id": "ch10z",
    "col": 10,
    "num": 10,
+   "pos": 10,
+   "siege": false,
    "title": {
     "tr": "Ziyafet",
     "en": "The Feast"
@@ -1544,6 +1607,8 @@
    "id": "ch10b",
    "col": 10,
    "num": 10,
+   "pos": 10,
+   "siege": false,
    "title": {
     "tr": "Büyük Atış",
     "en": "The Great Shot"
@@ -1663,6 +1728,8 @@
    "id": "ch10g",
    "col": 10,
    "num": 10,
+   "pos": 10,
+   "siege": false,
    "title": {
     "tr": "Galata",
     "en": "Galata"
@@ -1750,7 +1817,7 @@
    ],
    "next": {
     "10G.1": [
-     "ch13"
+     "ch17"
     ],
     "10G.2": [
      "ch11"
@@ -1761,6 +1828,8 @@
    "id": "ch10h",
    "col": 10,
    "num": 10,
+   "pos": 10,
+   "siege": false,
    "title": {
     "tr": "Heyet",
     "en": "The Embassy"
@@ -1916,6 +1985,8 @@
    "id": "ch10a",
    "col": 10,
    "num": 10,
+   "pos": 10,
+   "siege": false,
    "title": {
     "tr": "Arşiv",
     "en": "The Archive"
@@ -1991,7 +2062,7 @@
    ],
    "next": {
     "10A.1": [
-     "ch13"
+     "ch17"
     ],
     "10A.2": [
      "ch11"
@@ -2002,6 +2073,8 @@
    "id": "ch10l",
    "col": 10,
    "num": 10,
+   "pos": 10,
+   "siege": false,
    "title": {
     "tr": "Lağım",
     "en": "The Tunnel"
@@ -2101,6 +2174,8 @@
    "id": "ch10",
    "col": 10,
    "num": 10,
+   "pos": 10,
+   "siege": false,
    "title": {
     "tr": "Otağ Kapısı",
     "en": "The Imperial Gate"
@@ -2200,6 +2275,8 @@
    "id": "ch11",
    "col": 11,
    "num": 11,
+   "pos": 11,
+   "siege": false,
    "title": {
     "tr": "Yüzleşme",
     "en": "The Confrontation"
@@ -2336,12 +2413,12 @@
    ],
    "next": {
     "11.1": [
-     "ch14"
+     "ch17"
     ],
     "default": [
      "ch12",
      "ch12b",
-     "ch13"
+     "ch17"
     ]
    }
   },
@@ -2349,6 +2426,8 @@
    "id": "ch12",
    "col": 12,
    "num": 12,
+   "pos": 12,
+   "siege": false,
    "title": {
     "tr": "Huzur",
     "en": "The Audience"
@@ -2473,7 +2552,7 @@
    ],
    "next": {
     "default": [
-     "ch13"
+     "ch17"
     ]
    }
   },
@@ -2481,6 +2560,8 @@
    "id": "ch12b",
    "col": 12,
    "num": 12,
+   "pos": 12,
+   "siege": false,
    "title": {
     "tr": "Son Akşam",
     "en": "The Last Evening"
@@ -2580,7 +2661,1574 @@
    ],
    "next": {
     "default": [
-     "ch13"
+     "ch17"
+    ]
+   }
+  },
+  {
+   "id": "ch17",
+   "col": 17,
+   "num": 17,
+   "pos": 12.01,
+   "siege": true,
+   "title": {
+    "tr": "Kundak",
+    "en": "Fire Ships"
+   },
+   "sub": {
+    "tr": "28 Nisan 1453 · Haliç · şafaktan iki saat önce",
+    "en": "28 April 1453 · The Golden Horn · two hours before dawn"
+   },
+   "cover": "img/ch/ch17.jpg",
+   "note": {
+    "tr": "Büro'da taraf seçilir; Bizans kaydıyla Kundak burada",
+    "en": "The side is chosen at the Bureau; with the Byzantine record, Fire Ships plays here"
+   },
+   "nodes": [
+    {
+     "id": "sign",
+     "label": {
+      "tr": "Form Z-1453/GT imzalandı",
+      "en": "Form Z-1453/TW signed"
+     },
+     "outcome": false
+    },
+    {
+     "id": "light",
+     "label": {
+      "tr": "Galata'daki ışık tespit edildi",
+      "en": "The light at Galata recorded"
+     },
+     "outcome": false
+    },
+    {
+     "id": "nolight",
+     "label": {
+      "tr": "Işık kaçırıldı",
+      "en": "The light missed"
+     },
+     "outcome": false
+    },
+    {
+     "id": "17.1",
+     "label": {
+      "tr": "17.1 Üç denizci kurtarıldı",
+      "en": "17.1 Three sailors saved"
+     },
+     "outcome": true
+    },
+    {
+     "id": "17.2",
+     "label": {
+      "tr": "17.2 Hepsine yetişilemedi",
+      "en": "17.2 Not everyone reached"
+     },
+     "outcome": true
+    },
+    {
+     "id": "17.3",
+     "label": {
+      "tr": "17.3 Tolga da suya düştü",
+      "en": "17.3 Tolga fell in too"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "sign",
+     "light"
+    ],
+    [
+     "sign",
+     "nolight"
+    ],
+    [
+     "light",
+     "17.1"
+    ],
+    [
+     "light",
+     "17.2"
+    ],
+    [
+     "light",
+     "17.3"
+    ],
+    [
+     "nolight",
+     "17.1"
+    ],
+    [
+     "nolight",
+     "17.2"
+    ],
+    [
+     "nolight",
+     "17.3"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch18b",
+     "ch17o"
+    ]
+   }
+  },
+  {
+   "id": "ch17o",
+   "col": 17,
+   "num": 17,
+   "pos": 12.01,
+   "siege": true,
+   "title": {
+    "tr": "Kundak (Ordugâh)",
+    "en": "Fire Ships (the Camp)"
+   },
+   "sub": {
+    "tr": "28 Nisan 1453 · Haliç'in kuzey kıyısı · kıyı topları",
+    "en": "28 April 1453 · The north shore of the Golden Horn · the shore guns"
+   },
+   "cover": "img/ch/ch17o.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "light",
+     "label": {
+      "tr": "Galata'daki ışık tespit edildi",
+      "en": "The light at Galata recorded"
+     },
+     "outcome": false
+    },
+    {
+     "id": "gun",
+     "label": {
+      "tr": "Kıyı topu ateşlendi",
+      "en": "The shore gun fired"
+     },
+     "outcome": false
+    },
+    {
+     "id": "17O.1",
+     "label": {
+      "tr": "17O.1 Yangın çabuk söndü",
+      "en": "17O.1 The fire was quickly put out"
+     },
+     "outcome": true
+    },
+    {
+     "id": "17O.2",
+     "label": {
+      "tr": "17O.2 Kadırganın kıçı yandı",
+      "en": "17O.2 The galley's stern burned"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "light",
+     "gun"
+    ],
+    [
+     "gun",
+     "17O.1"
+    ],
+    [
+     "gun",
+     "17O.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch18"
+    ]
+   }
+  },
+  {
+   "id": "ch18b",
+   "col": 18,
+   "num": 18,
+   "pos": 12.02,
+   "siege": true,
+   "title": {
+    "tr": "Fıçı Köprü (Surlar)",
+    "en": "The Barrel Bridge (the Walls)"
+   },
+   "sub": {
+    "tr": "Mayıs başı 1453 · Haliç surları · öğle",
+    "en": "Early May 1453 · the Golden Horn walls · midday"
+   },
+   "cover": "img/ch/ch18b.jpg",
+   "note": {
+    "tr": "Bizans tarafı (surlar)",
+    "en": "The Byzantine side (the walls)"
+   },
+   "nodes": [
+    {
+     "id": "gun",
+     "label": {
+      "tr": "Surdaki küçük top",
+      "en": "The small gun on the wall"
+     },
+     "outcome": false
+    },
+    {
+     "id": "18B.1",
+     "label": {
+      "tr": "18B.1 Köprü sarsıldı",
+      "en": "18B.1 The bridge was shaken"
+     },
+     "outcome": true
+    },
+    {
+     "id": "18B.2",
+     "label": {
+      "tr": "18B.2 Gülleler suya",
+      "en": "18B.2 The balls hit the water"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "gun",
+     "18B.1"
+    ],
+    [
+     "gun",
+     "18B.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch19"
+    ]
+   }
+  },
+  {
+   "id": "ch18",
+   "col": 18,
+   "num": 18,
+   "pos": 12.02,
+   "siege": true,
+   "title": {
+    "tr": "Fıçı Köprü",
+    "en": "The Barrel Bridge"
+   },
+   "sub": {
+    "tr": "Mayıs başı 1453 · Haliç'in iç ucu · Osmanlı kıyısı",
+    "en": "Early May 1453 · The head of the Golden Horn · the Ottoman shore"
+   },
+   "cover": "img/ch/ch18.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "build",
+     "label": {
+      "tr": "Altı bölüm kuruldu",
+      "en": "Six sections built"
+     },
+     "outcome": false
+    },
+    {
+     "id": "18.1",
+     "label": {
+      "tr": "18.1 Köprü sağlam",
+      "en": "18.1 A sound bridge"
+     },
+     "outcome": true
+    },
+    {
+     "id": "18.2",
+     "label": {
+      "tr": "18.2 Köprü eğri ama ayakta",
+      "en": "18.2 Crooked but standing"
+     },
+     "outcome": true
+    },
+    {
+     "id": "cannon",
+     "label": {
+      "tr": "Top köprüde",
+      "en": "The gun on the bridge"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "build",
+     "18.1"
+    ],
+    [
+     "build",
+     "18.2"
+    ],
+    [
+     "18.1",
+     "cannon"
+    ],
+    [
+     "18.2",
+     "cannon"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch19o"
+    ]
+   }
+  },
+  {
+   "id": "ch19",
+   "col": 19,
+   "num": 19,
+   "pos": 12.03,
+   "siege": true,
+   "title": {
+    "tr": "Brigantin",
+    "en": "The Brigantine"
+   },
+   "sub": {
+    "tr": "3 Mayıs 1453 · Haliç · gece yarısı",
+    "en": "3 May 1453 · The Golden Horn · midnight"
+   },
+   "cover": "img/ch/ch19.jpg",
+   "note": {
+    "tr": "Bizans tarafı (surlar)",
+    "en": "The Byzantine side (the walls)"
+   },
+   "nodes": [
+    {
+     "id": "out",
+     "label": {
+      "tr": "Devriye atlatıldı",
+      "en": "The patrol passed"
+     },
+     "outcome": false
+    },
+    {
+     "id": "empty",
+     "label": {
+      "tr": "Ege boş",
+      "en": "The Aegean is empty"
+     },
+     "outcome": false
+    },
+    {
+     "id": "19.1",
+     "label": {
+      "tr": "19.1 Dönmek için oy",
+      "en": "19.1 Voted to return"
+     },
+     "outcome": true
+    },
+    {
+     "id": "19.2",
+     "label": {
+      "tr": "19.2 Kaçmak için oy",
+      "en": "19.2 Voted to flee"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "out",
+     "empty"
+    ],
+    [
+     "empty",
+     "19.1"
+    ],
+    [
+     "empty",
+     "19.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch20"
+    ]
+   }
+  },
+  {
+   "id": "ch19o",
+   "col": 19,
+   "num": 19,
+   "pos": 12.03,
+   "siege": true,
+   "title": {
+    "tr": "Devriye (Ordugâh)",
+    "en": "The Patrol (the Camp)"
+   },
+   "sub": {
+    "tr": "3 Mayıs 1453 gecesi · Haliç'in ağzı, zincirin dışı",
+    "en": "Night of 3 May 1453 · the mouth of the Golden Horn, outside the chain"
+   },
+   "cover": "img/ch/ch19o.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "patrol",
+     "label": {
+      "tr": "Zincirin önünde devriye",
+      "en": "Patrol before the chain"
+     },
+     "outcome": false
+    },
+    {
+     "id": "19O.1",
+     "label": {
+      "tr": "19O.1 Reise söyledi",
+      "en": "19O.1 Told the captain"
+     },
+     "outcome": true
+    },
+    {
+     "id": "19O.2",
+     "label": {
+      "tr": "19O.2 Sustu",
+      "en": "19O.2 Kept quiet"
+     },
+     "outcome": true
+    },
+    {
+     "id": "back",
+     "label": {
+      "tr": "Yirmi gün sonra: dönüş",
+      "en": "Twenty days later: the return"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "patrol",
+     "19O.1"
+    ],
+    [
+     "patrol",
+     "19O.2"
+    ],
+    [
+     "19O.1",
+     "back"
+    ],
+    [
+     "19O.2",
+     "back"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch20o"
+    ]
+   }
+  },
+  {
+   "id": "ch20",
+   "col": 20,
+   "num": 20,
+   "pos": 12.04,
+   "siege": true,
+   "title": {
+    "tr": "Gedik",
+    "en": "The Breach"
+   },
+   "sub": {
+    "tr": "7 Mayıs 1453 · Kara surları, Lykos vadisi · gece",
+    "en": "7 May 1453 · The land walls, Lycus valley · night"
+   },
+   "cover": "img/ch/ch20.jpg",
+   "note": {
+    "tr": "Bizans tarafı (surlar)",
+    "en": "The Byzantine side (the walls)"
+   },
+   "nodes": [
+    {
+     "id": "carry",
+     "label": {
+      "tr": "Giustiniani'nin emrinde yük taşındı",
+      "en": "Loads carried under Giustiniani"
+     },
+     "outcome": false
+    },
+    {
+     "id": "arrows",
+     "label": {
+      "tr": "Oklar okçulara yetişti",
+      "en": "Arrows reached the archers"
+     },
+     "outcome": false
+    },
+    {
+     "id": "noarrows",
+     "label": {
+      "tr": "Oklar geç kaldı",
+      "en": "The arrows came late"
+     },
+     "outcome": false
+    },
+    {
+     "id": "20.1",
+     "label": {
+      "tr": "20.1 Gedik şafaktan önce kapandı",
+      "en": "20.1 Breach closed before dawn"
+     },
+     "outcome": true
+    },
+    {
+     "id": "20.2",
+     "label": {
+      "tr": "20.2 Kapandı ve bantlandı",
+      "en": "20.2 Closed and taped"
+     },
+     "outcome": true
+    },
+    {
+     "id": "20.3",
+     "label": {
+      "tr": "20.3 Yarım kaldı, sabah bitti",
+      "en": "20.3 Half done, finished in the morning"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "carry",
+     "arrows"
+    ],
+    [
+     "carry",
+     "noarrows"
+    ],
+    [
+     "arrows",
+     "noarrows"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch21"
+    ]
+   }
+  },
+  {
+   "id": "ch20o",
+   "col": 20,
+   "num": 20,
+   "pos": 12.04,
+   "siege": true,
+   "title": {
+    "tr": "Gedik (Ordugâh)",
+    "en": "The Breach (the Camp)"
+   },
+   "sub": {
+    "tr": "7 Mayıs 1453 · Urban'ın büyük topu · gündüz",
+    "en": "7 May 1453 · Urban's great gun · by day"
+   },
+   "cover": "img/ch/ch20o.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "load",
+     "label": {
+      "tr": "Üç atış",
+      "en": "Three shots"
+     },
+     "outcome": false
+    },
+    {
+     "id": "20O.1",
+     "label": {
+      "tr": "20O.1 Gedik açıldı",
+      "en": "20O.1 The breach opened"
+     },
+     "outcome": true
+    },
+    {
+     "id": "20O.2",
+     "label": {
+      "tr": "20O.2 Surlar dayandı",
+      "en": "20O.2 The walls held"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "load",
+     "20O.1"
+    ],
+    [
+     "load",
+     "20O.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch21o"
+    ]
+   }
+  },
+  {
+   "id": "ch21",
+   "col": 21,
+   "num": 21,
+   "pos": 12.05,
+   "siege": true,
+   "title": {
+    "tr": "Lağım",
+    "en": "The Mines"
+   },
+   "sub": {
+    "tr": "16 Mayıs 1453 · Mesoteichion · gece",
+    "en": "16 May 1453 · The Mesoteichion · night"
+   },
+   "cover": "img/ch/ch21.jpg",
+   "note": {
+    "tr": "Bizans tarafı (surlar)",
+    "en": "The Byzantine side (the walls)"
+   },
+   "nodes": [
+    {
+     "id": "bowls",
+     "label": {
+      "tr": "Su kapları dizildi",
+      "en": "Bowls of water set out"
+     },
+     "outcome": false
+    },
+    {
+     "id": "21.1",
+     "label": {
+      "tr": "21.1 Lağımı Tolga'nın kabı buldu",
+      "en": "21.1 Tolga's bowl found the mine"
+     },
+     "outcome": true
+    },
+    {
+     "id": "21.2",
+     "label": {
+      "tr": "21.2 Grant kendisi buldu",
+      "en": "21.2 Grant found it himself"
+     },
+     "outcome": true
+    },
+    {
+     "id": "tunnel",
+     "label": {
+      "tr": "Karanlıkta karşılaşma",
+      "en": "A meeting in the dark"
+     },
+     "outcome": false
+    },
+    {
+     "id": "peace",
+     "label": {
+      "tr": "Sus: madenci kendi tarafına yalan söyledi",
+      "en": "Hush: the miner lied to his own side"
+     },
+     "outcome": false
+    },
+    {
+     "id": "fight",
+     "label": {
+      "tr": "Kaç: arbede ve ateş kabı",
+      "en": "Run: a scuffle and a fire pot"
+     },
+     "outcome": false
+    },
+    {
+     "id": "capture",
+     "label": {
+      "tr": "23 Mayıs: esir lağımcıbaşı",
+      "en": "23 May: the captured chief sapper"
+     },
+     "outcome": false
+    },
+    {
+     "id": "talk",
+     "label": {
+      "tr": "Tercüman: söz karşılığı konuştu",
+      "en": "Interpreter: he talked in return for a promise"
+     },
+     "outcome": false
+    },
+    {
+     "id": "iron",
+     "label": {
+      "tr": "Kapı kapandı",
+      "en": "The door closed"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "bowls",
+     "21.1"
+    ],
+    [
+     "bowls",
+     "21.2"
+    ],
+    [
+     "21.1",
+     "tunnel"
+    ],
+    [
+     "21.2",
+     "tunnel"
+    ],
+    [
+     "tunnel",
+     "peace"
+    ],
+    [
+     "tunnel",
+     "fight"
+    ],
+    [
+     "peace",
+     "capture"
+    ],
+    [
+     "fight",
+     "capture"
+    ],
+    [
+     "capture",
+     "talk"
+    ],
+    [
+     "capture",
+     "iron"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch22"
+    ]
+   }
+  },
+  {
+   "id": "ch21o",
+   "col": 21,
+   "num": 21,
+   "pos": 12.05,
+   "siege": true,
+   "title": {
+    "tr": "Lağım (Ordugâh)",
+    "en": "The Mine (the Camp)"
+   },
+   "sub": {
+    "tr": "16 Mayıs 1453 · Zağanos Paşa'nın lağımı · toprağın altı",
+    "en": "16 May 1453 · Zaganos Pasha's mine · under the earth"
+   },
+   "cover": "img/ch/ch21o.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "dig",
+     "label": {
+      "tr": "Kaz ve destekle",
+      "en": "Dig and prop"
+     },
+     "outcome": false
+    },
+    {
+     "id": "meet",
+     "label": {
+      "tr": "Karanlıkta karşılaşma",
+      "en": "A meeting in the dark"
+     },
+     "outcome": false
+    },
+    {
+     "id": "21O.1",
+     "label": {
+      "tr": "21O.1 Dumandan önce çıkıldı",
+      "en": "21O.1 Out before the smoke"
+     },
+     "outcome": true
+    },
+    {
+     "id": "21O.2",
+     "label": {
+      "tr": "21O.2 Dragan çekip çıkardı",
+      "en": "21O.2 Dragan pulled him out"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "dig",
+     "meet"
+    ],
+    [
+     "meet",
+     "21O.1"
+    ],
+    [
+     "meet",
+     "21O.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch22o"
+    ]
+   }
+  },
+  {
+   "id": "ch22",
+   "col": 22,
+   "num": 22,
+   "pos": 12.06,
+   "siege": true,
+   "title": {
+    "tr": "Kule",
+    "en": "The Tower"
+   },
+   "sub": {
+    "tr": "18 Mayıs 1453 · Mesoteichion · şafak",
+    "en": "18 May 1453 · The Mesoteichion · dawn"
+   },
+   "cover": "img/ch/ch22.jpg",
+   "note": {
+    "tr": "Bizans tarafı (surlar)",
+    "en": "The Byzantine side (the walls)"
+   },
+   "nodes": [
+    {
+     "id": "tower",
+     "label": {
+      "tr": "Bir gecede kurulan kule",
+      "en": "A tower raised overnight"
+     },
+     "outcome": false
+    },
+    {
+     "id": "barrels",
+     "label": {
+      "tr": "Barut fıçıları yuvarlandı",
+      "en": "Powder barrels rolled down"
+     },
+     "outcome": false
+    },
+    {
+     "id": "22.1",
+     "label": {
+      "tr": "22.1 Kule Tolga'nın fıçısıyla yandı",
+      "en": "22.1 Tolga's barrels burned the tower"
+     },
+     "outcome": true
+    },
+    {
+     "id": "22.2",
+     "label": {
+      "tr": "22.2 Kule yandı, kaşlar da",
+      "en": "22.2 The tower burned, eyebrows too"
+     },
+     "outcome": true
+    },
+    {
+     "id": "22.3",
+     "label": {
+      "tr": "22.3 Kuleyi Giustiniani'nin adamları yaktı",
+      "en": "22.3 Giustiniani's men burned it"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "tower",
+     "barrels"
+    ],
+    [
+     "barrels",
+     "22.1"
+    ],
+    [
+     "barrels",
+     "22.2"
+    ],
+    [
+     "barrels",
+     "22.3"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch23"
+    ]
+   }
+  },
+  {
+   "id": "ch22o",
+   "col": 22,
+   "num": 22,
+   "pos": 12.06,
+   "siege": true,
+   "title": {
+    "tr": "Kule (Ordugâh)",
+    "en": "The Tower (the Camp)"
+   },
+   "sub": {
+    "tr": "17 Mayıs 1453 gecesi · hendeğin önü",
+    "en": "Night of 17 May 1453 · before the moat"
+   },
+   "cover": "img/ch/ch22o.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "build",
+     "label": {
+      "tr": "Bir gecede kule",
+      "en": "A tower in a night"
+     },
+     "outcome": false
+    },
+    {
+     "id": "fire",
+     "label": {
+      "tr": "Fıçılar ve yangın",
+      "en": "The barrels and the fire"
+     },
+     "outcome": false
+    },
+    {
+     "id": "22O.1",
+     "label": {
+      "tr": "22O.1 Herkes indi",
+      "en": "22O.1 Everyone got down"
+     },
+     "outcome": true
+    },
+    {
+     "id": "22O.2",
+     "label": {
+      "tr": "22O.2 Hasan son adamı taşıdı",
+      "en": "22O.2 Hasan carried the last man"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "build",
+     "fire"
+    ],
+    [
+     "fire",
+     "22O.1"
+    ],
+    [
+     "fire",
+     "22O.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch23"
+    ]
+   }
+  },
+  {
+   "id": "ch23",
+   "col": 23,
+   "num": 23,
+   "pos": 12.07,
+   "siege": true,
+   "title": {
+    "tr": "Elçi",
+    "en": "The Envoy"
+   },
+   "sub": {
+    "tr": "21 Mayıs 1453 · Blakherna Sarayı",
+    "en": "21 May 1453 · The Palace of Blachernae"
+   },
+   "cover": "img/ch/ch23.jpg",
+   "note": {
+    "tr": "İki taraf da: Bizans'ta saray, Osmanlı'da heyetin tercümanı",
+    "en": "Both sides: the palace for Byzantium, the envoy's interpreter for the Ottomans"
+   },
+   "nodes": [
+    {
+     "id": "offer",
+     "label": {
+      "tr": "Sultan'ın son teklifi",
+      "en": "The Sultan's final offer"
+     },
+     "outcome": false
+    },
+    {
+     "id": "refusal",
+     "label": {
+      "tr": "İmparator'un reddi",
+      "en": "The Emperor's refusal"
+     },
+     "outcome": false
+    },
+    {
+     "id": "23.1",
+     "label": {
+      "tr": "23.1 Sadık tercüme",
+      "en": "23.1 Faithful translation"
+     },
+     "outcome": true
+    },
+    {
+     "id": "23.2",
+     "label": {
+      "tr": "23.2 Yaratıcı tercüme",
+      "en": "23.2 Creative translation"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "offer",
+     "refusal"
+    ],
+    [
+     "refusal",
+     "23.1"
+    ],
+    [
+     "refusal",
+     "23.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch24",
+     "ch24o"
+    ]
+   }
+  },
+  {
+   "id": "ch24",
+   "col": 24,
+   "num": 24,
+   "pos": 12.08,
+   "siege": true,
+   "title": {
+    "tr": "Alametler",
+    "en": "Omens"
+   },
+   "sub": {
+    "tr": "24 Mayıs 1453 · Konstantinopolis · Hodegetria alayı",
+    "en": "24 May 1453 · Constantinople · the Hodegetria procession"
+   },
+   "cover": "img/ch/ch24.jpg",
+   "note": {
+    "tr": "Bizans tarafı (surlar)",
+    "en": "The Byzantine side (the walls)"
+   },
+   "nodes": [
+    {
+     "id": "procession",
+     "label": {
+      "tr": "Hodegetria alayı",
+      "en": "The Hodegetria procession"
+     },
+     "outcome": false
+    },
+    {
+     "id": "slip",
+     "label": {
+      "tr": "İkona kaydı",
+      "en": "The icon slipped"
+     },
+     "outcome": false
+    },
+    {
+     "id": "24.1",
+     "label": {
+      "tr": "24.1 Çocuk saçağa alındı",
+      "en": "24.1 The child reached shelter"
+     },
+     "outcome": true
+    },
+    {
+     "id": "24.2",
+     "label": {
+      "tr": "24.2 Çocuk kendi koştu",
+      "en": "24.2 The child ran off alone"
+     },
+     "outcome": true
+    },
+    {
+     "id": "light",
+     "label": {
+      "tr": "Kubbede ışık",
+      "en": "A light on the dome"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "procession",
+     "slip"
+    ],
+    [
+     "slip",
+     "24.1"
+    ],
+    [
+     "slip",
+     "24.2"
+    ],
+    [
+     "24.1",
+     "light"
+    ],
+    [
+     "24.2",
+     "light"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch25"
+    ]
+   }
+  },
+  {
+   "id": "ch24o",
+   "col": 24,
+   "num": 24,
+   "pos": 12.08,
+   "siege": true,
+   "title": {
+    "tr": "Alametler (Ordugâh)",
+    "en": "The Omens (the Camp)"
+   },
+   "sub": {
+    "tr": "22 Mayıs 1453 gecesi · ordugâh",
+    "en": "Night of 22 May 1453 · the camp"
+   },
+   "cover": "img/ch/ch24o.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "moon",
+     "label": {
+      "tr": "Kanlı ay",
+      "en": "The blood moon"
+     },
+     "outcome": false
+    },
+    {
+     "id": "24O.1",
+     "label": {
+      "tr": "24O.1 Üç ateş de sakin",
+      "en": "24O.1 All three fires calm"
+     },
+     "outcome": true
+    },
+    {
+     "id": "24O.2",
+     "label": {
+      "tr": "24O.2 Derviş yetişti",
+      "en": "24O.2 The dervish stepped in"
+     },
+     "outcome": true
+    },
+    {
+     "id": "storm",
+     "label": {
+      "tr": "Fırtına ve dolu",
+      "en": "Storm and hail"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "moon",
+     "24O.1"
+    ],
+    [
+     "moon",
+     "24O.2"
+    ],
+    [
+     "24O.1",
+     "storm"
+    ],
+    [
+     "24O.2",
+     "storm"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch25"
+    ]
+   }
+  },
+  {
+   "id": "ch25",
+   "col": 25,
+   "num": 25,
+   "pos": 12.09,
+   "siege": true,
+   "title": {
+    "tr": "Son Akşam",
+    "en": "The Last Evening"
+   },
+   "sub": {
+    "tr": "27 Mayıs 1453 · Osmanlı ordugâhı · gece",
+    "en": "27 May 1453 · The Ottoman camp · night"
+   },
+   "cover": "img/ch/ch25.jpg",
+   "note": {
+    "tr": "İki taraf da: ordugâhta meclis, Ayasofya'da son ayin",
+    "en": "Both sides: the council in the camp, the last liturgy in Hagia Sophia"
+   },
+   "nodes": [
+    {
+     "id": "tray",
+     "label": {
+      "tr": "Surdan ordugâhın ışıkları izlendi",
+      "en": "The camp's lights watched from the wall"
+     },
+     "outcome": false
+    },
+    {
+     "id": "25.1",
+     "label": {
+      "tr": "25.1 Işıklar kayda geçti",
+      "en": "25.1 The lights were recorded"
+     },
+     "outcome": true
+    },
+    {
+     "id": "25.2",
+     "label": {
+      "tr": "25.2 Işıklar kayda geçmedi",
+      "en": "25.2 The lights went unrecorded"
+     },
+     "outcome": true
+    },
+    {
+     "id": "liturgy",
+     "label": {
+      "tr": "Ordugâhta son gece",
+      "en": "The last night in the camp"
+     },
+     "outcome": false
+    },
+    {
+     "id": "candle",
+     "label": {
+      "tr": "Bir mum yakıldı",
+      "en": "A candle was lit"
+     },
+     "outcome": false
+    }
+   ],
+   "edges": [
+    [
+     "tray",
+     "25.1"
+    ],
+    [
+     "tray",
+     "25.2"
+    ],
+    [
+     "25.1",
+     "liturgy"
+    ],
+    [
+     "25.2",
+     "liturgy"
+    ],
+    [
+     "liturgy",
+     "candle"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch26",
+     "ch26o"
+    ]
+   }
+  },
+  {
+   "id": "ch26",
+   "col": 26,
+   "num": 26,
+   "pos": 12.1,
+   "siege": true,
+   "title": {
+    "tr": "Şafak",
+    "en": "Dawn"
+   },
+   "sub": {
+    "tr": "29 Mayıs 1453 · Mesoteichion · gece 01.30",
+    "en": "29 May 1453 · The Mesoteichion · 1:30 at night"
+   },
+   "cover": "img/ch/ch26.jpg",
+   "note": {
+    "tr": "Bizans tarafı (surlar)",
+    "en": "The Byzantine side (the walls)"
+   },
+   "nodes": [
+    {
+     "id": "waves",
+     "label": {
+      "tr": "Üç dalga",
+      "en": "Three waves"
+     },
+     "outcome": false
+    },
+    {
+     "id": "giust",
+     "label": {
+      "tr": "Giustiniani gemiye taşındı",
+      "en": "Giustiniani carried to his ship"
+     },
+     "outcome": false
+    },
+    {
+     "id": "aya",
+     "label": {
+      "tr": "Ayasofya, öğleden sonra",
+      "en": "Hagia Sophia, afternoon"
+     },
+     "outcome": false
+    },
+    {
+     "id": "26.1",
+     "label": {
+      "tr": "26.1 Son kare çekildi",
+      "en": "26.1 The last frame taken"
+     },
+     "outcome": true
+    },
+    {
+     "id": "26.2",
+     "label": {
+      "tr": "26.2 Son kare çekilmedi",
+      "en": "26.2 No last frame"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "waves",
+     "giust"
+    ],
+    [
+     "giust",
+     "aya"
+    ],
+    [
+     "aya",
+     "26.1"
+    ],
+    [
+     "aya",
+     "26.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch27"
+    ]
+   }
+  },
+  {
+   "id": "ch26o",
+   "col": 26,
+   "num": 26,
+   "pos": 12.1,
+   "siege": true,
+   "title": {
+    "tr": "Şafak (Ordugâh)",
+    "en": "Dawn (the Camp)"
+   },
+   "sub": {
+    "tr": "29 Mayıs 1453 · hendeğin önü · gece 01.30",
+    "en": "29 May 1453 · before the moat · 1:30 at night"
+   },
+   "cover": "img/ch/ch26o.jpg",
+   "note": {
+    "tr": "Osmanlı tarafı (ordugâh)",
+    "en": "The Ottoman side (the camp)"
+   },
+   "nodes": [
+    {
+     "id": "waves",
+     "label": {
+      "tr": "Üç dalga: su ve merdiven",
+      "en": "Three waves: water and ladders"
+     },
+     "outcome": false
+    },
+    {
+     "id": "banner",
+     "label": {
+      "tr": "Hasan ve sancak",
+      "en": "Hasan and the banner"
+     },
+     "outcome": false
+    },
+    {
+     "id": "aya",
+     "label": {
+      "tr": "Ayasofya, öğleden sonra",
+      "en": "Hagia Sophia, afternoon"
+     },
+     "outcome": false
+    },
+    {
+     "id": "26.1",
+     "label": {
+      "tr": "26.1 Son kare çekildi",
+      "en": "26.1 The last frame taken"
+     },
+     "outcome": true
+    },
+    {
+     "id": "26.2",
+     "label": {
+      "tr": "26.2 Son kare çekilmedi",
+      "en": "26.2 No last frame"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "waves",
+     "banner"
+    ],
+    [
+     "banner",
+     "aya"
+    ],
+    [
+     "aya",
+     "26.1"
+    ],
+    [
+     "aya",
+     "26.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch27"
+    ]
+   }
+  },
+  {
+   "id": "ch27",
+   "col": 27,
+   "num": 27,
+   "pos": 12.11,
+   "siege": true,
+   "title": {
+    "tr": "Ahitname",
+    "en": "The Charter"
+   },
+   "sub": {
+    "tr": "1 Haziran 1453 · Galata · öğle",
+    "en": "1 June 1453 · Galata · noon"
+   },
+   "cover": "img/ch/ch27.jpg",
+   "note": {
+    "tr": "Kuşatma biter; Tolga bıraktığı ana, Bölüm 13'e (tutukluysa 14'e) döner",
+    "en": "The siege ends; Tolga returns to the moment he left, Chapter 13 (or 14 if arrested)"
+   },
+   "nodes": [
+    {
+     "id": "harbor",
+     "label": {
+      "tr": "Rıhtımda kararsızlar",
+      "en": "The undecided on the quay"
+     },
+     "outcome": false
+    },
+    {
+     "id": "ahd",
+     "label": {
+      "tr": "Kule meydanında ahitname",
+      "en": "The charter in the tower square"
+     },
+     "outcome": false
+    },
+    {
+     "id": "27.1",
+     "label": {
+      "tr": "27.1 Kalanlar",
+      "en": "27.1 Those who stayed"
+     },
+     "outcome": true
+    },
+    {
+     "id": "27.2",
+     "label": {
+      "tr": "27.2 Gidenler",
+      "en": "27.2 Those who left"
+     },
+     "outcome": true
+    }
+   ],
+   "edges": [
+    [
+     "harbor",
+     "ahd"
+    ],
+    [
+     "ahd",
+     "27.1"
+    ],
+    [
+     "ahd",
+     "27.2"
+    ]
+   ],
+   "next": {
+    "default": [
+     "ch13",
+     "ch14"
     ]
    }
   },
@@ -2588,6 +4236,8 @@
    "id": "ch13",
    "col": 13,
    "num": 13,
+   "pos": 13.5,
+   "siege": false,
    "title": {
     "tr": "Dönüş Penceresi",
     "en": "The Return Window"
@@ -2740,6 +4390,8 @@
    "id": "ch16",
    "col": 13,
    "num": 16,
+   "pos": 13.5,
+   "siege": false,
    "title": {
     "tr": "Gıdak",
     "en": "Cluck"
@@ -2799,6 +4451,8 @@
    "id": "ch14",
    "col": 14,
    "num": 14,
+   "pos": 14.5,
+   "siege": false,
    "title": {
     "tr": "Son Form",
     "en": "The Final Form"
@@ -3360,8 +5014,8 @@
    "en": "Every bit of help you gave Byzantium (the breach, Giustiniani, the chain) delays the Conquest: on to The Last Evening."
   },
   "11.1": {
-   "tr": "Tolga tutuklandı: doğrudan Nihat'ın son formuna.",
-   "en": "Tolga is arrested: straight to Nihat's final form."
+   "tr": "Tolga tutuklandı: kuşatmadan sonra doğrudan Nihat'ın son formuna.",
+   "en": "Tolga is arrested: after the siege, straight to Nihat's final form."
   },
   "12.1": {
    "tr": "Dünya: Tarih yerinde (W1).",

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hikâye Haritası — Gerçek Tarih Bu Değil</title>
-<meta name="description" content="Gerçek Tarih Bu Değil'in bütün dalları: 16 bölüm, her karar, her sonuç ve 23 final tek bir etkileşimli haritada. / Every branch of Not a History Game in one interactive map.">
+<meta name="description" content="Gerçek Tarih Bu Değil'in bütün dalları: 28 bölüm, iki taraflı kuşatma, her karar, her sonuç ve 23 final tek bir etkileşimli haritada. / Every branch of Not a History Game in one interactive map.">
 <meta property="og:title" content="Story map — Not a History Game">
 <meta property="og:image" content="img/og.jpg">
 <link rel="icon" href="img/icon.png">
@@ -69,6 +69,9 @@ html[lang=en] [data-en]{display:revert}
 #lines path.fin{stroke:rgba(224,68,75,.9);stroke-width:2.4;stroke-dasharray:6 5}
 .map.sel #lines path:not(.hl){opacity:.18}
 .col{display:flex;flex-direction:column;gap:22px;width:250px;position:relative;z-index:1}
+.col.siege .colhead{color:#e8705a}
+.stag{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:9px;background:#7a2a24;color:#ffe9c9;font-size:10px;letter-spacing:.08em;vertical-align:1px}
+.jump.sj{border-color:#7a2a24}
 .colhead{font:800 12px Nunito,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-left:4px}
 .card{background:var(--paper);color:var(--pink);border-radius:14px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.35);border:2px solid transparent;transition:border-color .2s,transform .2s,opacity .2s;scroll-margin:120px}
 .card.hl{border-color:var(--red)}
@@ -146,8 +149,8 @@ footer{padding:30px 20px 60px;text-align:center;color:var(--muted);font-size:14p
 <header class="intro">
   <div class="kicker"><span data-tr>Zaman Bürosu · Resmî akış şeması</span><span data-en>Time Bureau · Official flowchart</span></div>
   <h1><span data-tr>Hikâye Haritası</span><span data-en>Story Map</span></h1>
-  <p data-tr>Oyunun bütün dalları tek bir haritada: her bölüm, her karar, her sonuç ve 23 final. Bir <b>karara</b> ya da <b>sonuca</b> tıkla, oraya nasıl gelindiğini ve neye yol açtığını gör. Bir <b>finale</b> tıkla, hangi seçimlerin oraya götürdüğünü gör.</p>
-  <p data-en>Every branch of the game in one map: each chapter, each decision, each outcome and all 23 endings. Click a <b>decision</b> or an <b>outcome</b> to see how you get there and what it leads to. Click an <b>ending</b> to see which choices lead to it.</p>
+  <p data-tr>Oyunun bütün dalları tek bir haritada: her bölüm, her karar, her sonuç ve 23 final. Bir <b>karara</b> ya da <b>sonuca</b> tıkla, oraya nasıl gelindiğini ve neye yol açtığını gör. Bir <b>finale</b> tıkla, hangi seçimlerin oraya götürdüğünü gör. <b>Kuşatma</b> (Bölüm 17–27) Bölüm 12'den sonra oynanır; Büro'da Bizans ya da Osmanlı tarafını seçersin.</p>
+  <p data-en>Every branch of the game in one map: each chapter, each decision, each outcome and all 23 endings. Click a <b>decision</b> or an <b>outcome</b> to see how you get there and what it leads to. Click an <b>ending</b> to see which choices lead to it. <b>The siege</b> (Chapters 17–27) plays after Chapter 12; at the Bureau you pick the Byzantine or the Ottoman side.</p>
   <div class="stats" id="stats"></div>
 </header>
 
@@ -233,16 +236,20 @@ function nameOfTarget(t){
 
 // ------------------------------------------------------------------ çizim
 function build(){
+  // Sütunlar oynanış sırasıyla (pos): kuşatma (17-27) Bölüm 12 ile 13 arasında
   const cols = {};
-  D.chapters.forEach(c => (cols[c.col] = cols[c.col] || []).push(c));
+  D.chapters.forEach(c => { const p = c.pos ?? c.col; (cols[p] = cols[p] || []).push(c); });
   const jumps = $("#jumps"), sep = jumps.querySelector(".sep");
-  Object.keys(cols).map(Number).sort((a, b) => a - b).forEach(n => {
+  Object.keys(cols).map(Number).sort((a, b) => a - b).forEach(p => {
+    const n = cols[p][0].col, siege = cols[p][0].siege;
     const col = document.createElement("div");
-    col.className = "col"; col.id = "col-" + n;
-    col.innerHTML = `<div class="colhead">${bi({tr: "Bölüm " + n, en: "Chapter " + n})}</div>` + cols[n].map(card).join("");
+    col.className = "col" + (siege ? " siege" : ""); col.id = "col-" + n;
+    const head = n === 0 ? {tr: "Açılış", en: "Opening"} : {tr: "Bölüm " + n, en: "Chapter " + n};
+    const tag = siege ? `<span class="stag">${bi({tr: "Kuşatma", en: "Siege"})}</span>` : "";
+    col.innerHTML = `<div class="colhead">${bi(head)}${tag}</div>` + cols[p].map(card).join("");
     map.appendChild(col);
     const b = document.createElement("button");
-    b.className = "jump"; b.textContent = n; b.onclick = () => scrollToEl(col);
+    b.className = "jump" + (siege ? " sj" : ""); b.textContent = n; b.onclick = () => scrollToEl(col);
     jumps.insertBefore(b, sep);
   });
   const fc = document.createElement("div");
@@ -256,7 +263,7 @@ function build(){
 
   const nOut = D.chapters.reduce((s, c) => s + c.nodes.filter(n => n.outcome).length, 0);
   const nChoice = D.chapters.reduce((s, c) => s + c.nodes.filter(n => !n.outcome).length, 0);
-  $("#stats").innerHTML = [[16, "bölüm", "chapters"], [D.chapters.length, "bölüm sürümü", "chapter variants"], [nChoice, "karar ve sahne", "decisions & scenes"], [nOut, "bölüm sonucu", "chapter outcomes"], [D.finals.length, "final", "endings"]]
+  $("#stats").innerHTML = [[28, "bölüm", "chapters"], [D.chapters.length, "bölüm sürümü", "chapter variants"], [nChoice, "karar ve sahne", "decisions & scenes"], [nOut, "bölüm sonucu", "chapter outcomes"], [D.finals.length, "final", "endings"]]
     .map(s => `<span><b>${s[0]}</b>${bi({tr: s[1], en: s[2]})}</span>`).join("");
 }
 function card(c){

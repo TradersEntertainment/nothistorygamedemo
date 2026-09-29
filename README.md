@@ -25,7 +25,8 @@
 Tolga pitches a risk matrix to Sultan Mehmed, accidentally blows up Urban's giant cannon, fills out forms in seven copies in Byzantium, and still tries to make his Monday 9 a.m. meeting.
 
 - 🎙️ Fully voiced comedy adventure, in **English and Turkish**
-- 🔀 Every choice bends history: **23 different endings**, 16 chapters
+- 🔀 Every choice bends history: **23 different endings**, 27 chapters
+- ⚔️ **The siege of 1453 from both sides:** stand on the Byzantine walls or in the Ottoman camp
 - ⏱️ About 2–3 hours per playthrough, made for replays and streams
 - 🎮 Keyboard & mouse or gamepad · Windows · macOS · Linux / Steam Deck
 
@@ -36,7 +37,8 @@ Tolga pitches a risk matrix to Sultan Mehmed, accidentally blows up Urban's gian
 Tolga, Fatih'e risk tablosu sunuyor, Urban'ın topunu yanlışlıkla havaya uçuruyor, Bizans'ta yedi nüsha form dolduruyor ve pazartesi 09:00 toplantısına yetişmeye çalışıyor.
 
 - 🎙️ Tamamen **Türkçe ve İngilizce** seslendirilmiş komedi-macera
-- 🔀 Her seçim tarihi değiştirir: **23 farklı final**, 16 bölüm
+- 🔀 Her seçim tarihi değiştirir: **23 farklı final**, 27 bölüm
+- ⚔️ **1453 kuşatması iki taraftan:** Bizans surlarında ya da Osmanlı ordugâhında
 - ⏱️ İlk oynanış yaklaşık 2–3 saat
 - 🎮 Klavye-fare ya da gamepad · Windows · macOS · Linux / Steam Deck
 
@@ -48,22 +50,24 @@ Tolga, Fatih'e risk tablosu sunuyor, Urban'ın topunu yanlışlıkla havaya uçu
 
 | | |
 |:--:|:--:|
-| <img src="img/shots/sehir.jpg" alt="Byzantium"> | <img src="img/shots/fatih.jpg" alt="The Sultan's tent"> |
-| The streets of Byzantium · *Bizans sokakları* | Decision time in the Sultan's tent · *Fatih'in otağı* |
-| <img src="img/shots/patlama.jpg" alt="Urban's cannon"> | <img src="img/shots/kosu.jpg" alt="Greased slipway"> |
-| Urban's cannon went off bigger than planned · *Urban'ın topu* | Racing ships down the greased slipway · *Yağlı kızaklar* |
-| <img src="img/shots/mufide.jpg" alt="Time Bureau"> | <img src="img/shots/galata.jpg" alt="Galata"> |
-| The Time Bureau: a year behind every door · *Zaman Bürosu* | In Galata, information costs a glass of wine · *Galata* |
-| <img src="img/shots/zincir.jpg" alt="Sea walls"> | <img src="img/shots/pencere.jpg" alt="The return window"> |
-| Balancing on the sea walls at night · *Deniz surları* | The return window is open: pull the lever! · *Dönüş penceresi* |
+| <img src="img/shots/kosu.jpg" alt=""> | <img src="img/shots/donan_kare.jpg" alt=""> |
+| 29 May 1453, 1:30 AM: arrows on a borrowed shield · *Ok yağmuru* | Freeze frame. Yep, that's me. · *Donan kare* |
+| <img src="img/shots/yatak_oda.jpg" alt=""> | <img src="img/shots/garaj.jpg" alt=""> |
+| 3 AM. The phone rings. It's Uncle Hikmet. · *Gece 03.00* | "It's stuck! It needs a kick!" · *Zamanatör 3000* |
+| <img src="img/shots/otag_kitap.jpg" alt=""> | <img src="img/shots/patlama.jpg" alt=""> |
+| "Will this city fall?" · *Tarih kitabı otağda* | Urban's cannon went off bigger than planned · *Büyük Atış* |
+| <img src="img/shots/gozcu.jpg" alt=""> | <img src="img/shots/hucum.jpg" alt=""> |
+| "Smoke! The great gun! Take cover!" · *Surda gözcü* | The final assault at the breach · *Son hücum* |
+| <img src="img/shots/ordugah.jpg" alt=""> | <img src="img/shots/ayasofya.jpg" alt=""> |
+| The Ottoman camp before the walls · *Ordugâh* | Hagia Sophia and the rooftops of Constantinople · *Ayasofya* |
 
 <sub>Screenshots show the Turkish interface; the whole game is also fully playable and voiced in English.</sub>
 
 ## 🗂️ Chapters / Bölümler
 
 <p align="center">
-  <img src="img/ch/ch1.jpg" width="24%" alt="Chapter 1"> <img src="img/ch/ch2.jpg" width="24%" alt="Chapter 2"> <img src="img/ch/ch6a.jpg" width="24%" alt="Chapter 6"> <img src="img/ch/ch9.jpg" width="24%" alt="Chapter 9">
-  <img src="img/ch/ch10.jpg" width="24%" alt="Chapter 10"> <img src="img/ch/ch12.jpg" width="24%" alt="Chapter 12"> <img src="img/ch/ch3.jpg" width="24%" alt="Chapter 3"> <img src="img/ch/ch8.jpg" width="24%" alt="Chapter 8">
+  <img src="img/ch/ch1.jpg" width="24%" alt="Chapter 1"> <img src="img/ch/ch2.jpg" width="24%" alt="Chapter 2"> <img src="img/ch/ch6a.jpg" width="24%" alt="Chapter 6"> <img src="img/ch/ch10.jpg" width="24%" alt="Chapter 10">
+  <img src="img/ch/ch17.jpg" width="24%" alt="Chapter 17"> <img src="img/ch/ch20o.jpg" width="24%" alt="Chapter 20"> <img src="img/ch/ch24.jpg" width="24%" alt="Chapter 24"> <img src="img/ch/ch26.jpg" width="24%" alt="Chapter 26">
 </p>
 
 ## ⬇️ Download / İndir
