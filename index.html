@@ -56,6 +56,7 @@ h1.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 /* indir */
 .dl{display:flex;flex-direction:column;align-items:center;gap:10px}
+.updated{font-size:15px;color:var(--ink);opacity:.95}.updated b{color:var(--gold)}
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;text-decoration:none;font:700 21px Fredoka,sans-serif;padding:16px 34px;border-radius:14px;box-shadow:0 6px 0 #7d151b,0 12px 30px rgba(0,0,0,.4);transition:transform .08s,box-shadow .08s,background .15s}
 .btn:hover{background:var(--red2)}
 .btn:active{transform:translateY(4px);box-shadow:0 2px 0 #7d151b,0 6px 16px rgba(0,0,0,.4)}
@@ -172,6 +173,7 @@ footer em{color:var(--ink)}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>
         <span id="mainLabel"><span data-tr>Ücretsiz İndir</span><span data-en>Download Free</span></span>
       </a>
+      <div class="updated" id="updated" hidden></div>
       <div class="meta" id="meta">Windows · macOS · Linux / Steam Deck</div>
       <div class="others" id="others"></div>
       <div class="meta" id="dlcount" hidden></div>
@@ -505,8 +507,20 @@ fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
       document.getElementById("mainLabel").innerHTML =
         `<span data-tr>İndir: ${LABELS[k][0]}</span><span data-en>Download for ${LABELS[k][1]}</span>`;
     }
-    const meta = [ver && `v${ver}`, date, pick && mb(pick.size)].filter(Boolean).join(" · ");
+    const meta = [ver && `v${ver}`, pick && mb(pick.size)].filter(Boolean).join(" · ");
     if (meta) document.getElementById("meta").textContent = meta;
+    if (rel.published_at) {
+      // Son güncelleme: tarih ve "bugün / dün / N gün önce"
+      const d = new Date(rel.published_at);
+      const mins = Math.max(0, Math.floor((Date.now() - d.getTime()) / 60000));
+      const hrs = Math.floor(mins / 60), days = Math.floor(hrs / 24);
+      const relTr = mins < 60 ? `${mins} dk önce` : hrs < 24 ? `${hrs} saat önce` : days === 1 ? "dün" : `${days} gün önce`;
+      const relEn = mins < 60 ? `${mins} min ago` : hrs < 24 ? `${hrs} h ago` : days === 1 ? "yesterday" : `${days} days ago`;
+      const el = document.getElementById("updated");
+      el.innerHTML = `<span data-tr>🛠️ Son güncelleme: <b>${d.toLocaleString("tr-TR", {day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit"})}</b> (${relTr})</span>`
+        + `<span data-en>🛠️ Last updated: <b>${d.toLocaleString("en-GB", {day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit"})}</b> (${relEn})</span>`;
+      el.hidden = false;
+    }
     const others = Object.keys(LABELS).filter(k => files[k] && files[k] !== pick)
       .map(k => `<a href="${files[k].browser_download_url}">${bi(LABELS[k])}</a>`);
     document.getElementById("others").innerHTML = others.join("");
