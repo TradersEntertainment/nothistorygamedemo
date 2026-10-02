@@ -174,6 +174,7 @@ footer em{color:var(--ink)}
       </a>
       <div class="meta" id="meta">Windows · macOS · Linux / Steam Deck</div>
       <div class="others" id="others"></div>
+      <div class="meta" id="dlcount" hidden></div>
     </div>
     <div class="chips">
       <span data-tr>🎙️ Türkçe ve İngilizce seslendirme</span><span data-en>🎙️ Fully voiced in English &amp; Turkish</span>
@@ -511,6 +512,26 @@ fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
     document.getElementById("others").innerHTML = others.join("");
   })
   .catch(() => { document.getElementById("mainBtn").href = LATEST; });
+
+// İndirme sayacı: GitHub her sürüm dosyasının kaç kez indirildiğini sayar; bütün sürümlerin toplamı.
+async function downloadCount(){
+  let total = 0;
+  for (let page = 1; page <= 5; page++) {
+    const r = await fetch(`https://api.github.com/repos/${REPO}/releases?per_page=100&page=${page}`);
+    if (!r.ok) return null;
+    const rels = await r.json();
+    rels.forEach(rel => (rel.assets || []).forEach(a => { total += a.download_count || 0; }));
+    if (rels.length < 100) break;
+  }
+  return total;
+}
+downloadCount().then(n => {
+  if (!n) return;
+  const el = document.getElementById("dlcount");
+  const f = n.toLocaleString("tr-TR");
+  el.innerHTML = `<span data-tr>⬇ ${f} kez indirildi</span><span data-en>⬇ Downloaded ${n.toLocaleString("en-US")} times</span>`;
+  el.hidden = false;
+}).catch(() => {});
 </script>
 </body>
 </html>
