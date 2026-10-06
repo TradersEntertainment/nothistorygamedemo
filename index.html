@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gerçek Tarih Bu Değil — Not a History Game</title>
-<meta name="description" content="1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 26 farklı final, ücretsiz indir. / Istanbul, 1453. A time machine, an insurance salesman and 26 endings. Free download.">
+<meta name="description" content="1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 27 farklı final, ücretsiz indir. / Istanbul, 1453. A time machine, an insurance salesman and 26 endings. Free download.">
 <meta property="og:title" content="Not a History Game — Gerçek Tarih Bu Değil">
-<meta property="og:description" content="An insurance salesman falls into 1453 and pitches a risk matrix to Sultan Mehmed. 26 endings. Fully voiced in English and Turkish. Windows · macOS · Linux.">
+<meta property="og:description" content="An insurance salesman falls into 1453 and pitches a risk matrix to Sultan Mehmed. 27 endings. Fully voiced in English and Turkish. Windows · macOS · Linux.">
 <meta property="og:image" content="img/og.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -28,9 +28,7 @@ h1,h2,h3{font-family:Fredoka,Nunito,sans-serif;line-height:1.15;margin:0 0 .5em}
 .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 
 /* dil */
-[data-en]{display:none}
-html[lang=en] [data-tr]{display:none}
-html[lang=en] [data-en]{display:revert}
+html:not([lang=en]) [data-en],html[lang=en] [data-tr]{display:none!important}
 
 /* üst şerit */
 .nav{position:fixed;inset:0 0 auto 0;z-index:40;display:flex;align-items:center;gap:12px;padding:10px 20px;transition:background .25s,box-shadow .25s}
@@ -181,7 +179,7 @@ footer em{color:var(--ink)}
     <div class="chips">
       <span data-tr>🎙️ Türkçe ve İngilizce seslendirme</span><span data-en>🎙️ Fully voiced in English &amp; Turkish</span>
       <span data-tr>⚔️ İki taraflı kuşatma</span><span data-en>⚔️ The siege, from both sides</span>
-      <span data-tr>🔀 26 final</span><span data-en>🔀 26 endings</span>
+      <span data-tr>🔀 <b data-k="finals">27</b> final</span><span data-en>🔀 <b data-k="finals">27</b> endings</span>
       <span data-tr>🎮 Gamepad desteği</span><span data-en>🎮 Gamepad support</span>
     </div>
   </div>
@@ -193,8 +191,8 @@ footer em{color:var(--ink)}
       <p class="lead" data-tr>Tolga <b>Fatih'e risk tablosu sunuyor</b>, Urban'ın topunu yanlışlıkla havaya uçuruyor, Bizans'ta yedi nüsha form dolduruyor ve pazartesi 09:00 toplantısına yetişmeye çalışıyor. Sonra Zaman Bürosu onu kuşatmaya <b>tanık</b> olarak geri yolluyor.</p>
       <p class="lead" data-en>Tolga <b>pitches a risk matrix to Sultan Mehmed</b>, accidentally blows up Urban's giant cannon, fills out forms in seven copies in Byzantium, and still tries to make his Monday 9 a.m. meeting. Then the Time Bureau sends him back to the siege as an <b>official witness</b>.</p>
       <div class="feats">
-        <div class="feat"><div class="big">26</div><h3 data-tr>farklı final</h3><h3 data-en>different endings</h3><p data-tr>Her seçim tarihi değiştirir. Aynı İstanbul'u iki kez fethedemezsin.</p><p data-en>Every choice bends history. You'll never conquer the same Constantinople twice.</p></div>
-        <div class="feat"><div class="big">27</div><h3 data-tr>bölüm</h3><h3 data-en>chapters</h3><p data-tr>Garajdan otağa, Zaman Bürosu'nun koridorlarından kuşatmanın son gecesine.</p><p data-en>From a garage workshop to the Sultan's tent, the Time Bureau's corridors and the last night of the siege.</p></div>
+        <div class="feat"><div class="big" data-k="finals">27</div><h3 data-tr>farklı final</h3><h3 data-en>different endings</h3><p data-tr>Her seçim tarihi değiştirir. Aynı İstanbul'u iki kez fethedemezsin.</p><p data-en>Every choice bends history. You'll never conquer the same Constantinople twice.</p></div>
+        <div class="feat"><div class="big" data-k="scenes">56</div><h3 data-tr>bölüm</h3><h3 data-en>chapters</h3><p data-tr>Garajdan otağa, Zaman Bürosu'nun koridorlarından kuşatmanın iki tarafına. Hiçbir oynanış hepsini görmez.</p><p data-en>From a garage workshop to the Sultan's tent, the Time Bureau's corridors and both sides of the siege. No single playthrough sees them all.</p></div>
         <div class="feat"><div class="big">🎙️</div><h3 data-tr>tamamen seslendirilmiş</h3><h3 data-en>fully voiced</h3><p data-tr>Her replik Türkçe ve İngilizce seslendirildi. Hikmet Amca'nın telsizi dahil.</p><p data-en>Every line is voiced in both English and Turkish. Uncle Hikmet's crackly walkie-talkie included.</p></div>
         <div class="feat"><div class="big">🐔</div><h3 data-tr>tarihi doğruluk</h3><h3 data-en>historical accuracy</h3><p data-tr>Ayasofya, Galata, surlar ve kızak yolu gerçeğine sadık. Tavuklar değil.</p><p data-en>Hagia Sophia, Galata, the land walls and the famous overland ship slipway are faithful. The chickens are not.</p></div>
       </div>
@@ -225,9 +223,9 @@ footer em{color:var(--ink)}
       <img loading="lazy" src="img/shots/ordu.jpg" alt="">
       <div>
         <div class="stamp"><span data-tr>PERDE IV · KUŞATMA</span><span data-en>ACT IV · THE SIEGE</span></div>
-        <h2 style="text-align:left"><span data-tr>28 Nisan – 1 Haziran 1453. İki taraftan.</span><span data-en>28 April – 1 June 1453. From both sides.</span></h2>
-        <p data-tr>Zaman Bürosu, Tolga'yı kuşatmanın geçici tanığı yapar: on bir bölüm, her olayın bir fotoğrafı. Bizans surlarında mı durursun, Osmanlı ordugâhında mı? Tarafını sen seçersin.</p>
-        <p data-en>The Time Bureau makes Tolga a temporary witness to the siege: eleven chapters, one photograph of every event. Do you stand on the Byzantine walls or in the Ottoman camp? You pick the side.</p>
+        <h2 style="text-align:left"><span data-tr>Ağustos 1452 – 1 Haziran 1453. İki taraftan.</span><span data-en>August 1452 – 1 June 1453. From both sides.</span></h2>
+        <p data-tr>Zaman Bürosu, Tolga'yı kuşatmanın geçici tanığı yapar: Bizans tarafında <b data-k="siege_b">13</b>, Osmanlı tarafında <b data-k="siege_o">22</b> sayfa, her olayın bir fotoğrafı. Bizans surlarında mı durursun, Osmanlı ordugâhında mı? Tarafını sen seçersin.</p>
+        <p data-en>The Time Bureau makes Tolga a temporary witness to the siege: <b data-k="siege_b">13</b> pages on the Byzantine side, <b data-k="siege_o">22</b> on the Ottoman side, one photograph of every event. Do you stand on the Byzantine walls or in the Ottoman camp? You pick the side.</p>
         <p data-tr>Haliç'te kundak gemileriyle kürek çek, gedikte kovayla su taşı, Urban'ın topuna gülle sür, lağımda karşı lağım kaz, son hücumda merdiven daya. Galata'da ahitnamenin okunuşunu izle.</p>
         <p data-en>Row with the fire ships on the Golden Horn, haul water buckets to the breach, load Urban's great gun, dig counter-mines under the walls and plant ladders in the final assault. Then watch the charter of Galata being read out.</p>
         <blockquote><b>Tolga:</b> <span data-tr>Kuşatmada iş kazası kapsamda mı? Top güllesi mesela?</span><span data-en>Is a workplace accident covered during a siege? A cannonball, say?</span><br><b>Nihat:</b> <span data-tr>Büro personeli ölmez, Tolga Bey. Sadece geç kalır. Madde 9.</span><span data-en>Bureau staff don't die, Mr Tolga. They're just late. Article 9.</span></blockquote>
@@ -309,7 +307,7 @@ footer em{color:var(--ink)}
       <h2><span data-tr>Bölümler</span><span data-en>Chapters</span><small><span data-tr>Bazı bölümler yalnızca belli seçimlerden sonra açılır.</span><span data-en>Some chapters only open up after certain choices.</span></small></h2>
       <div class="strip" id="strip"></div>
       <p class="hint"><span data-tr>← kaydır →</span><span data-en>← scroll →</span></p>
-      <p style="text-align:center;margin-top:22px"><a class="btn" href="story.html" style="font-size:18px;padding:13px 26px"><span data-tr>🗺️ Hikâye haritası: bütün dallar ve 26 final</span><span data-en>🗺️ Story map: every branch and all 26 endings</span></a></p>
+      <p style="text-align:center;margin-top:22px"><a class="btn" href="story.html" style="font-size:18px;padding:13px 26px"><span data-tr>🧭 Hikâye akışı: bütün dallar, kuşatmanın iki tarafı ve <b data-k="finals">27</b> final</span><span data-en>🧭 Story flow: every branch, both sides of the siege and all <b data-k="finals">27</b> endings</span></a></p>
     </div>
   </section>
 
@@ -349,8 +347,8 @@ footer em{color:var(--ink)}
     <div class="wrap">
       <div class="stream">
         <h2>📺 <span data-tr>Yayıncılar ve içerik üreticileri</span><span data-en>Streamers &amp; creators</span></h2>
-        <p data-tr>Oyunu yayında ve videolarında dilediğin gibi kullanabilir, gelir elde edebilirsin. İzin almana gerek yok. 26 finalin hepsini bulan var mı, merak ediyoruz.</p>
-        <p data-en>Stream it, make videos, monetize them: no permission needed. We're curious whether anyone finds all 26 endings.</p>
+        <p data-tr>Oyunu yayında ve videolarında dilediğin gibi kullanabilir, gelir elde edebilirsin. İzin almana gerek yok. <span data-k="finals">27</span> finalin hepsini bulan var mı, merak ediyoruz.</p>
+        <p data-en>Stream it, make videos, monetize them: no permission needed. We're curious whether anyone finds all <span data-k="finals">27</span> endings.</p>
         <p style="margin-top:18px"><a class="btn" href="presskit.html" style="font-size:17px;padding:12px 22px"><span data-tr>Basın ve yayıncı kiti</span><span data-en>Press &amp; streamer kit</span></a></p>
       </div>
     </div>
@@ -368,7 +366,7 @@ footer em{color:var(--ink)}
 <footer>
   <div class="wrap">
     <p><em data-tr>Bu oyun gerçek tarih değildir. …ama biraz öyle.</em><em data-en>This is not real history. …well, a little bit.</em></p>
-    <p>© TradersEntertainment · <a href="https://github.com/TradersEntertainment/nothistorygamedemo/releases"><span data-tr>Tüm sürümler</span><span data-en>All releases</span></a> · <a href="story.html"><span data-tr>Hikâye haritası</span><span data-en>Story map</span></a> · <a href="presskit.html"><span data-tr>Basın kiti</span><span data-en>Press kit</span></a></p>
+    <p>© TradersEntertainment · <a href="https://github.com/TradersEntertainment/nothistorygamedemo/releases"><span data-tr>Tüm sürümler</span><span data-en>All releases</span></a> · <a href="story.html"><span data-tr>Hikâye akışı</span><span data-en>Story flow</span></a> · <a href="presskit.html"><span data-tr>Basın kiti</span><span data-en>Press kit</span></a></p>
   </div>
 </footer>
 
@@ -389,32 +387,34 @@ const LATEST = `https://github.com/${REPO}/releases/latest`;
 
 const TEXT = {
   tr: {title: "Gerçek Tarih Bu Değil — Not a History Game", logo: "img/logo.png", logoAlt: "Gerçek Tarih Bu Değil",
-       desc: "1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 27 bölüm, iki taraflı kuşatma, 23 farklı final, ücretsiz indir."},
+       desc: "1453, İstanbul. Pijamalı mucit Hikmet Amca'nın zaman makinesi çalışıyor. Tek sorun: gönderdiği kişi bir sigortacı. 56 bölüm, iki taraflı kuşatma, 27 farklı final, ücretsiz indir."},
   en: {title: "Not a History Game — Istanbul, 1453 · Free download", logo: "img/logo_en.png", logoAlt: "Not a History Game",
-       desc: "Istanbul, 1453. A duct-taped time machine sends an insurance salesman to the conquest of Constantinople. 27 chapters, the siege from both sides, 26 endings, fully voiced in English. Free for Windows, macOS and Linux."},
+       desc: "Istanbul, 1453. A duct-taped time machine sends an insurance salesman to the conquest of Constantinople. 56 chapters, the siege from both sides, 27 endings, fully voiced in English. Free for Windows, macOS and Linux."},
 };
 
-// Bölümler (oyundaki kapak çizimleri)
-const CHAPTERS = [
-  ["ch0", "Soğuk Açılış", "Cold Open"], ["ch1", "Zamanatör", "The Chrono-Matic"], ["ch2", "Yağlı Kızaklar", "Greased Slipways"],
-  ["ch3", "Vaka 1453-T", "Case 1453-T"], ["ch4a", "İlk Gece", "The First Night"],
-  ["ch5", "Garajda Gece", "Night in the Garage"], ["ch6a", "Ordugâh", "The Camp"],
-  ["ch7", "Saha Çalışması", "Fieldwork"], ["ch8", "Hırdavatçı", "The Hardware Shop"],
-  ["ch9", "Teklifler", "Offers"], ["ch10", "Otağ Kapısı", "The Imperial Gate"],
-  ["ch11", "Yüzleşme", "The Confrontation"], ["ch12", "Huzur", "The Audience"],
-  ["ch13", "Dönüş Penceresi", "The Return Window"], ["ch14", "Son Form", "The Final Form"],
-  ["ch15", "Pazartesi", "Monday"], ["ch16", "Gıdak", "Cluck"],
-  ["ch17", "Kundak", "Fire Ships"], ["ch18", "Fıçı Köprü", "The Barrel Bridge"],
-  ["ch19", "Brigantin", "The Brigantine"], ["ch20", "Gedik", "The Breach"],
-  ["ch21", "Lağım", "The Mines"], ["ch22", "Kule", "The Tower"],
-  ["ch23", "Elçi", "The Envoy"], ["ch24", "Alametler", "Omens"],
-  ["ch25", "Son Akşam", "The Last Evening"], ["ch26", "Şafak", "Dawn"],
-  ["ch27", "Ahitname", "The Charter"],
-];
-document.getElementById("strip").innerHTML = CHAPTERS.map((c, i) =>
-  `<figure class="ch"><img loading="lazy" src="img/ch/${c[0]}.jpg" alt=""><figcaption>` +
-  (i === 0 ? `<i><span data-tr>Açılış</span><span data-en>Opening</span></i>` : `<i><span data-tr>Bölüm ${i}</span><span data-en>Chapter ${i}</span></i>`) +
-  `<span data-tr>${c[1]}</span><span data-en>${c[2]}</span></figcaption></figure>`).join("");
+// Bölüm şeridi ve sayılar: hikâye akışı verisinden (tools/story_map.py oyunun kodundan üretir; elle güncellenmez)
+const escH = x => String(x ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+fetch("data/story.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
+  const k = d.meta.counts;
+  document.querySelectorAll("[data-k]").forEach(el => { if (k[el.dataset.k] !== undefined) el.textContent = k[el.dataset.k]; });
+  const items = [];
+  d.rows.forEach(r => (r.cells || []).forEach(([id]) => {
+    const c = d.chapters[id], n = (c && c.num) || {};
+    if (!c || !c.cover || id === "ch15y") return;
+    let tr, en;
+    const x = c.tag || n.all;
+    if (id === "bureau") { tr = "Büro"; en = "The Bureau"; }
+    else if (x === "0") { tr = "Açılış"; en = "Opening"; }
+    else if (x === "G") { tr = "Gizli bölüm"; en = "Secret chapter"; }
+    else if (x) { tr = "Bölüm " + x; en = "Chapter " + x; }
+    else if (n.B && n.O) { tr = `Bölüm ${n.B} · ${n.O}`; en = `Chapter ${n.B} · ${n.O}`; }
+    else if (n.B) { tr = `Bizans · Bölüm ${n.B}`; en = `Byzantine · Chapter ${n.B}`; }
+    else { tr = `Osmanlı · Bölüm ${n.O}`; en = `Ottoman · Chapter ${n.O}`; }
+    items.push(`<figure class="ch"><a href="story.html#c-${id}"><img loading="lazy" src="${c.cover}" alt=""></a><figcaption><i><span data-tr>${tr}</span><span data-en>${en}</span></i>` +
+      `<span data-tr>${escH(c.title.tr)}</span><span data-en>${escH(c.title.en)}</span></figcaption></figure>`);
+  }));
+  document.getElementById("strip").innerHTML = items.join("");
+}).catch(() => {});
 
 // Dil: ?lang=en > son seçim > tarayıcı dili
 function setLang(l){

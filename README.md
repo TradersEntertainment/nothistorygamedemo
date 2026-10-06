@@ -12,7 +12,7 @@
   <a href="https://github.com/TradersEntertainment/nothistorygamedemo/releases/latest"><b>⬇️ Download / İndir</b></a> ·
   <a href="https://tradersentertainment.github.io/nothistorygamedemo/?lang=en">🌐 Website</a> ·
   <a href="https://www.youtube.com/watch?v=Q5apIK1dYms">🎬 Trailer / Fragman</a> ·
-  <a href="https://tradersentertainment.github.io/nothistorygamedemo/story.html">🗺️ Story map / Hikâye haritası</a> ·
+  <a href="https://tradersentertainment.github.io/nothistorygamedemo/story.html">🧭 Story flow / Hikâye akışı</a> ·
   <a href="https://tradersentertainment.github.io/nothistorygamedemo/presskit.html">📰 Press kit / Basın kiti</a>
 </p>
 
@@ -25,7 +25,7 @@
 Tolga pitches a risk matrix to Sultan Mehmed, accidentally blows up Urban's giant cannon, fills out forms in seven copies in Byzantium, and still tries to make his Monday 9 a.m. meeting.
 
 - 🎙️ Fully voiced comedy adventure, in **English and Turkish**
-- 🔀 Every choice bends history: **26 different endings**, 27 chapters
+- 🔀 Every choice bends history: **27 different endings**, 56 chapters
 - ⚔️ **The siege of 1453 from both sides:** stand on the Byzantine walls or in the Ottoman camp
 - ⏱️ About 2–3 hours per playthrough, made for replays and streams
 - 🎮 Keyboard & mouse or gamepad · Windows · macOS · Linux / Steam Deck
@@ -37,7 +37,7 @@ Tolga pitches a risk matrix to Sultan Mehmed, accidentally blows up Urban's gian
 Tolga, Fatih'e risk tablosu sunuyor, Urban'ın topunu yanlışlıkla havaya uçuruyor, Bizans'ta yedi nüsha form dolduruyor ve pazartesi 09:00 toplantısına yetişmeye çalışıyor.
 
 - 🎙️ Tamamen **Türkçe ve İngilizce** seslendirilmiş komedi-macera
-- 🔀 Her seçim tarihi değiştirir: **26 farklı final**, 27 bölüm
+- 🔀 Her seçim tarihi değiştirir: **27 farklı final**, 56 bölüm
 - ⚔️ **1453 kuşatması iki taraftan:** Bizans surlarında ya da Osmanlı ordugâhında
 - ⏱️ İlk oynanış yaklaşık 2–3 saat
 - 🎮 Klavye-fare ya da gamepad · Windows · macOS · Linux / Steam Deck
@@ -67,7 +67,7 @@ Tolga, Fatih'e risk tablosu sunuyor, Urban'ın topunu yanlışlıkla havaya uçu
 
 <p align="center">
   <img src="img/ch/ch1.jpg" width="24%" alt="Chapter 1"> <img src="img/ch/ch2.jpg" width="24%" alt="Chapter 2"> <img src="img/ch/ch6a.jpg" width="24%" alt="Chapter 6"> <img src="img/ch/ch10.jpg" width="24%" alt="Chapter 10">
-  <img src="img/ch/ch17.jpg" width="24%" alt="Chapter 13"> <img src="img/ch/ch20o.jpg" width="24%" alt="Chapter 16"> <img src="img/ch/ch24.jpg" width="24%" alt="Chapter 20"> <img src="img/ch/ch26.jpg" width="24%" alt="Chapter 22">
+  <img src="img/ch/ch17.jpg" width="24%" alt="Chapter 14 (Byzantine)"> <img src="img/ch/ch20o.jpg" width="24%" alt="Chapter 22 (Ottoman)"> <img src="img/ch/ch24.jpg" width="24%" alt="Chapter 22 (Byzantine)"> <img src="img/ch/ch26.jpg" width="24%" alt="Chapter 24 (Byzantine)">
 </p>
 
 ## ⬇️ Download / İndir
@@ -84,7 +84,7 @@ Language and voice-over can be switched any time in the in-game Settings. · *Di
 
 ## 📺 Streamers & creators / Yayıncılar
 
-Stream it, make videos, monetize them: no permission needed. We're curious whether anyone finds all 26 endings.
+Stream it, make videos, monetize them: no permission needed. We're curious whether anyone finds all 27 endings.
 
 Oyunu yayında ve videolarında dilediğin gibi kullanabilir, gelir elde edebilirsin. İzin almana gerek yok.
 
