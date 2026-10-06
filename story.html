@@ -857,9 +857,9 @@ function renderChart(){
   $$("#mside button").forEach(b => b.classList.toggle("on", b.dataset.ms === MSIDE));
   const nm = chName(c.id, MSIDE);
   $("#mtitle").innerHTML = bi(nm);
-  // Bizans tarafı Bölüm 25'te dört düğüm daha gösterir (ayin ve mum); Osmanlı tarafında ilk üçü
+  // Bölüm 25: Bizans tarafı ayini ve mumu gösterir, Osmanlı tarafı meclisten sonra ordugâhtaki son geceyi
   let nodes = c.nodes;
-  if (c.id === "ch25" && MSIDE === "O") nodes = nodes.slice(0, 3);
+  if (c.id === "ch25" && MSIDE === "O") nodes = nodes.slice(0, 4);
   const pos = n => ({x: Math.max(NW / 2 + 8, Math.min(Wd - NW / 2 - 8, n.pos[0] * Wd)), y: n.pos[1] * Ht + 40});
   const by = {};
   const html = nodes.map(n => {
