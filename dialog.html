@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diyalog Ağacı — Gerçek Tarih Bu Değil</title>
+<meta name="description" content="Gerçek Tarih Bu Değil'in bütün diyalogları: her bölüm, her sahne, her dal (başarı, başarısızlık, seçim, eşya, önceki sayfaların izi). / Every line of dialogue in Not a History Game, branch by branch.">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#23253a;--deep:#17182b;--ink:#f4ecd8;--muted:#b9b3a3;--line:#3b3f63;--card:#2a2d47;
+  --gold:#e3b245;--red:#c8262e;--byz:#a77ce8;--osm:#ef5a50;--ok:#6fcf8a;--bad:#ef7a6a;--choice:#5fb6e8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--deep);color:var(--ink);font:16px/1.5 Nunito,system-ui,sans-serif;overflow-x:hidden}
+a{color:var(--gold)}
+h1,h2,h3{font-family:Fredoka,Nunito,system-ui,sans-serif;line-height:1.12;margin:0}
+html:not([lang=en]) [data-en],html[lang=en] [data-tr]{display:none!important}
+button,select,input{font:inherit;color:inherit}
+.nav{position:sticky;top:0;z-index:60;display:flex;align-items:center;gap:14px;padding:9px 20px;background:rgba(23,24,43,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav img{height:32px;display:block}
+.nav .sp{flex:1}
+.nav a.lnk{color:var(--ink);text-decoration:none;font:800 14px Nunito,system-ui,sans-serif;white-space:nowrap}
+.nav a.lnk:hover{color:var(--gold)}
+.lang{display:flex;gap:6px}
+.lang button{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:5px 12px;font:800 13px Nunito,system-ui,sans-serif;cursor:pointer}
+.lang button.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.hero{background:radial-gradient(120% 90% at 70% 30%,#2c2f55 0%,var(--deep) 62%);padding:54px 24px 30px}
+.hin{max-width:1100px;margin:0 auto}
+.kicker{font:800 13px Nunito,system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(40px,7vw,78px);margin:10px 0 14px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.lead{max-width:820px;font-size:clamp(16px,2vw,19px);margin:0 0 18px;color:#efe7d4}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.stats>span{background:rgba(42,45,71,.8);border:1px solid var(--line);border-radius:14px;padding:9px 15px;font-size:14px;color:var(--muted)}
+.stats b{display:block;font:700 26px/1.05 Fredoka,Nunito,system-ui,sans-serif;color:var(--gold)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.bar{position:sticky;top:51px;z-index:55;background:rgba(23,24,43,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);border-top:1px solid var(--line)}
+.bin{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:8px 16px;flex-wrap:wrap}
+.bar select,.bar input{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:14px;min-width:0}
+.bar select{max-width:280px;cursor:pointer}
+.bar input{flex:1;min-width:150px}
+.bar option{background:var(--navy);color:var(--ink)}
+.bar button{background:rgba(0,0,0,.3);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font:800 13px Nunito,system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+.bar button:hover{border-color:var(--gold)}
+.bar .cnt{font-size:13px;color:var(--muted);white-space:nowrap}
+main{max-width:1100px;margin:0 auto;padding:18px 16px 80px}
+.ch{margin:28px 0 0;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.ch>header{padding:18px 20px 12px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),transparent)}
+.ch>header .num{font:800 12px Nunito,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.ch>header .side{display:inline-block;margin-left:8px;padding:1px 9px;border-radius:999px;font:800 11px Nunito,system-ui,sans-serif}
+.side.B{background:var(--byz);color:#1b1230}.side.O{background:var(--osm);color:#2b0d0a}
+.ch>header h2{font-size:26px;margin:4px 0 2px}
+.ch>header .sub{color:var(--muted);font-size:14px}
+.ch>header .desc{margin:10px 0 0;font-size:14px;color:#dcd3bf;white-space:pre-line}
+.ch>header .desc.clip{max-height:4.6em;overflow:hidden;-webkit-mask:linear-gradient(#000 60%,transparent);mask:linear-gradient(#000 60%,transparent)}
+.more{background:none;border:0;color:var(--gold);cursor:pointer;font:800 13px Nunito,system-ui,sans-serif;padding:4px 0}
+.tree{padding:10px 14px 16px}
+details{margin:6px 0}
+summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-items:baseline;padding:5px 8px;border-radius:8px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"▸";color:var(--muted);flex:none;transition:transform .15s}
+details[open]>summary::before{transform:rotate(90deg)}
+summary:hover{background:rgba(255,255,255,.04)}
+.kids{margin-left:14px;padding-left:12px;border-left:2px solid var(--line)}
+.scene>summary{font:600 16px Fredoka,Nunito,system-ui,sans-serif;color:var(--ink)}
+.scene>summary .ic{color:var(--gold)}
+.scene>.kids>.sdesc{font-size:13px;color:var(--muted);font-style:italic;margin:2px 0 6px}
+.arm>summary{font-size:14px;font-weight:800}
+.arm.c0>summary{color:var(--ok)} .arm.c1>summary{color:var(--bad)} .arm.c2>summary{color:#e8c35f} .arm.c3>summary{color:#9ec5ff} .arm.c4>summary{color:#d6a2ff}
+.arm>.kids{border-left-style:dashed}
+.arm.c0>.kids{border-color:rgba(111,207,138,.5)} .arm.c1>.kids{border-color:rgba(239,122,106,.5)}
+.arm code,.loop code{font:13px ui-monospace,Menlo,Consolas,monospace;font-weight:400;color:#cfc6b0;background:rgba(0,0,0,.25);padding:1px 6px;border-radius:6px}
+.branch-h{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:10px 0 0 4px;font-weight:800}
+.ln{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;padding:4px 8px;border-radius:8px;align-items:baseline}
+.ln:hover{background:rgba(255,255,255,.035)}
+.ln .who{font:800 13px Nunito,system-ui,sans-serif;white-space:nowrap;padding:1px 8px;border-radius:999px;background:rgba(0,0,0,.28)}
+.ln .txt{font-size:15px}
+.ln.bark .txt{font-style:italic;color:#e6dcc4}
+.ln.bark .who::after{content:" ·  ";opacity:.4}
+.ln .k{font:11px ui-monospace,Menlo,Consolas,monospace;color:#6f6a88;margin-left:6px;white-space:nowrap}
+.alt{display:block;margin:2px 0}
+.alt .or{font:800 11px Nunito,system-ui,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-right:6px}
+.choice{margin:6px 8px;padding:8px 12px;border:1px solid rgba(95,182,232,.5);border-radius:12px;background:rgba(95,182,232,.08)}
+.choice b{color:var(--choice);font:800 12px Nunito,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.choice ol{margin:4px 0 0;padding-left:22px}
+.ref{font-size:13px;color:var(--muted);padding:3px 8px}
+.loop>summary{font-size:13px;color:var(--muted)}
+mark{background:rgba(227,178,69,.45);color:inherit;border-radius:3px;padding:0 1px}
+.hide{display:none!important}
+.other h3{font-size:18px;margin:16px 0 4px}
+.empty{color:var(--muted);padding:10px 14px}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 16px 50px;border-top:1px solid var(--line)}
+@media (max-width:640px){.ln{grid-template-columns:1fr}.kids{margin-left:6px;padding-left:8px}.ln .k{display:none}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" aria-label="Ana sayfa / Home"><img src="img/logo.png" data-logo alt=""></a>
+  <span class="sp"></span>
+  <a class="lnk" href="index.html"><span data-tr>Ana sayfa</span><span data-en>Home</span></a>
+  <a class="lnk" href="story.html"><span data-tr>Hikâye akışı</span><span data-en>Story flow</span></a>
+  <div class="lang" role="group" aria-label="Dil / Language">
+    <button type="button" data-l="tr">TR</button>
+    <button type="button" data-l="en">EN</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hin">
+    <div class="kicker"><span data-tr>Diyalog ağacı</span><span data-en>Dialogue tree</span></div>
+    <h1><span data-tr>Oyunda geçen <em>her söz</em></span><span data-en><em>Every line</em> in the game</span></h1>
+    <p class="lead"><span data-tr>Bölüm bölüm, oynandığı sırayla bütün diyaloglar. Her sahnenin tarifi, her dal (başardın / başaramadın, seçimler, cepteki eşya, önceki sayfaların izi) ayrı bir kol olarak açılır. Metinler doğrudan oyunun kendi kodundan ve metin dosyasından çıkarıldı; oyunla birlikte güncellenir.</span><span data-en>Every conversation, chapter by chapter, in play order. Each scene has its description and every branch (success / failure, choices, items in your pocket, the trail of earlier pages) opens as its own arm. Extracted straight from the game's own code and text tables; it updates with the game.</span></p>
+    <div class="stats" id="stats"></div>
+    <div class="legend">
+      <span><i style="background:var(--gold)"></i><span data-tr>Sahne</span><span data-en>Scene</span></span>
+      <span><i style="background:var(--ok)"></i><span data-tr>Koşulun ilk kolu (çoğunlukla başarı)</span><span data-en>First arm of a condition (usually success)</span></span>
+      <span><i style="background:var(--bad)"></i><span data-tr>Aksi hâlde (çoğunlukla başarısızlık)</span><span data-en>Otherwise (usually failure)</span></span>
+      <span><i style="background:var(--choice)"></i><span data-tr>Oyuncunun seçimi</span><span data-en>Player choice</span></span>
+      <span><i style="background:#e6dcc4"></i><span data-tr><i style="all:unset;font-style:italic">İtalik</i>: ayak üstü söz (oyun akarken)</span><span data-en><i style="all:unset;font-style:italic">Italic</i>: bark (said while playing)</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="bar"><div class="bin">
+  <select id="jump" aria-label="Bölüm"></select>
+  <input id="q" type="search" placeholder="Ara: söz, kişi, anahtar… / Search: line, speaker, key…">
+  <button type="button" id="open"><span data-tr>Hepsini aç</span><span data-en>Expand all</span></button>
+  <button type="button" id="close"><span data-tr>Kapat</span><span data-en>Collapse</span></button>
+  <span class="cnt" id="cnt"></span>
+</div></div>
+
+<main id="main"><p class="empty">…</p></main>
+<footer><span data-tr>Kaynak: oyunun bölüm betikleri ve i18n/strings.csv (tools/dialog_tree.py).</span><span data-en>Source: the game's chapter scripts and i18n/strings.csv (tools/dialog_tree.py).</span> <span id="ver"></span></footer>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const bi = (o) => `<span data-tr>${esc(o.tr)}</span><span data-en>${esc(o.en)}</span>`;
+let LANG = (navigator.language || "tr").startsWith("tr") ? "tr" : "en";
+try { LANG = localStorage.getItem("lang") || LANG } catch (e) {}
+function setLang(l) {
+  LANG = l; document.documentElement.lang = l;
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.l === l));
+  const lg = $("[data-logo]"); if (lg) lg.src = l === "en" ? "img/logo_en.png" : "img/logo.png";
+  try { localStorage.setItem("lang", l) } catch (e) {}
+  fillJump();
+}
+document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.l));
+
+// Kişi rengi: adın karmasından sabit bir ton
+const hue = s => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) % 360; return h };
+const who = (spk, sn) => `<span class="who" style="color:hsl(${hue(spk)} 70% 72%)">${bi(sn)}</span>`;
+
+function line(n) {
+  const alts = n.alts.map((a, i) => `<span class="alt">${n.alts.length > 1 && i > 0 ? `<span class="or"><span data-tr>ya da</span><span data-en>or</span></span>` : ""}` +
+    (n.alts.length > 1 && i > 0 && a.s !== n.alts[0].s ? who(a.s, a.sn) + " " : "") +
+    `<span data-tr>${esc(a.tr)}</span><span data-en>${esc(a.en)}</span><span class="k">${esc(a.k)}</span></span>`).join("");
+  const cond = n.cond ? `<span class="alt"><span class="or"><span data-tr>hangisi:</span><span data-en>which:</span></span><code style="font:12px ui-monospace,monospace;color:#9a94b0">${esc(n.cond)}</code></span>` : "";
+  return `<div class="ln${n.bark ? " bark" : ""}" data-s="${esc((n.alts.map(a => a.tr + " " + a.en + " " + a.k + " " + a.sn.tr + " " + a.sn.en).join(" ")).toLowerCase())}">${who(n.alts[0].s, n.alts[0].sn)}<span class="txt">${alts}${cond}</span></div>`;
+}
+
+function nodes(list, depth) {
+  return list.map(n => node(n, depth)).join("");
+}
+
+function node(n, depth) {
+  switch (n.t) {
+    case "line": return line(n);
+    case "choice":
+      return `<div class="choice"><b><span data-tr>Oyuncu seçer</span><span data-en>Player chooses</span></b><ol>${n.opts.map(o => `<li>${bi(o)}</li>`).join("")}</ol></div>`;
+    case "scene":
+      if (!n.body.length) return "";
+      return `<details class="scene" ${depth < 1 ? "open" : ""}><summary><span class="ic">🎬</span>${esc(n.title)}</summary><div class="kids">` +
+        (n.desc ? `<div class="sdesc">${esc(n.desc)}</div>` : "") + nodes(n.body, depth + 1) + `</div></details>`;
+    case "ref":
+      return `<div class="ref">↻ <span data-tr>yukarıdaki sahne tekrar:</span><span data-en>scene above, again:</span> ${esc(n.title)}</div>`;
+    case "if": {
+      const arms = n.arms.filter(a => a.body.length);
+      if (!arms.length) return "";
+      return `<div class="branch-h"><span data-tr>Dallanma</span><span data-en>Branch</span></div>` + n.arms.map((a, i) => {
+        const lab = a.cond === null ? `<span data-tr>Aksi hâlde</span><span data-en>Otherwise</span>` : `<span data-tr>${i ? "Değilse, eğer" : "Eğer"}</span><span data-en>${i ? "Else if" : "If"}</span> <code>${esc(a.cond)}</code>`;
+        const cls = a.cond === null ? "c1" : "c" + Math.min(i === 0 ? 0 : i + 1, 4);
+        return `<details class="arm ${cls}" open><summary>${lab}</summary><div class="kids">${a.body.length ? nodes(a.body, depth + 1) : `<div class="ref"><span data-tr>(bu kolda söz yok)</span><span data-en>(no lines on this arm)</span></div>`}</div></details>`;
+      }).join("");
+    }
+    case "match":
+      return `<div class="branch-h"><span data-tr>Duruma göre</span><span data-en>Depending on</span> <code>${esc(n.cond)}</code></div>` + n.arms.map((a, i) =>
+        `<details class="arm c${Math.min(i, 4)}" open><summary>= <code>${esc(a.cond)}</code></summary><div class="kids">${nodes(a.body, depth + 1)}</div></details>`).join("");
+    case "loop":
+      return `<details class="loop" open><summary>⟳ <span data-tr>tekrar eder:</span><span data-en>repeats:</span>&nbsp;<code>${esc(n.cond)}</code></summary><div class="kids">${nodes(n.body, depth + 1)}</div></details>`;
+    case "extra":
+      return `<details class="scene"><summary><span class="ic">🧩</span><span data-tr>Etkileşimler ve ara anlar (oyuncunun yaptığına göre)</span><span data-en>Interactions and in-between moments (depending on what you do)</span></summary><div class="kids">${nodes(n.body, depth + 1)}</div></details>`;
+  }
+  return "";
+}
+
+const OTHER = {
+  REACT: {tr: "Eşyalara ve olaylara Tolga'nın tepkileri", en: "Tolga's reactions to items and events"},
+  DSET: {tr: "Ayarlar menüsünde Tolga'nın yorumları", en: "Tolga's comments in the settings menu"},
+  MG: {tr: "Mini oyunlar", en: "Mini-games"}, NPC: {tr: "Genel halk sözleri", en: "Generic townsfolk lines"},
+  QUEST: {tr: "Görev sözleri", en: "Quest lines"}, ITEM: {tr: "Eşya sözleri", en: "Item lines"}, EV: {tr: "Olay sözleri", en: "Event lines"},
+};
+
+let DATA = null;
+function fillJump() {
+  if (!DATA) return;
+  const sel = $("#jump");
+  const v = sel.value;
+  sel.innerHTML = `<option value="">${LANG === "en" ? "Jump to chapter…" : "Bölüme git…"}</option>` + DATA.order.map(id => {
+    const c = DATA.chapters[id];
+    const num = c.num && (c.num.all || c.num.B || c.num.O) ? (c.num.all || [c.num.B, c.num.O].filter(Boolean).join("/")) + " · " : "";
+    return `<option value="${id}">${esc(num + c.title[LANG])}</option>`;
+  }).join("") + `<option value="other">${LANG === "en" ? "Lines outside the tree" : "Ağaç dışındaki sözler"}</option>`;
+  sel.value = v;
+}
+
+function render() {
+  const d = DATA;
+  $("#stats").innerHTML =
+    `<span><b>${d.meta.total}</b><span data-tr>söz</span><span data-en>lines</span></span>` +
+    `<span><b>${d.order.length}</b><span data-tr>bölüm</span><span data-en>chapters</span></span>` +
+    `<span><b>${d.meta.in_tree}</b><span data-tr>ağaçta, sırasıyla</span><span data-en>in the tree, in order</span></span>` +
+    `<span><b>v${esc(d.meta.version)}</b>${esc(d.meta.date)}</span>`;
+  $("#ver").textContent = "· v" + d.meta.version + " · " + d.meta.date;
+  let html = "";
+  for (const id of d.order) {
+    const c = d.chapters[id];
+    const num = c.num && (c.num.all || c.num.B || c.num.O);
+    const sides = c.num ? Object.keys(c.num).filter(k => k === "B" || k === "O") : [];
+    html += `<section class="ch" id="c-${id}"><header>` +
+      `<div class="num">${num ? `<span data-tr>Bölüm</span><span data-en>Chapter</span> ${esc(c.num.all || [c.num.B, c.num.O].filter(Boolean).join(" / "))}` : esc(id)}` +
+      sides.map(s => `<span class="side ${s}">${s === "B" ? "Bizans" : "Osmanlı"}</span>`).join("") + `</div>` +
+      `<h2>${bi(c.title)}</h2><div class="sub">${bi(c.sub)} · ${c.lines} <span data-tr>söz</span><span data-en>lines</span></div>` +
+      (c.desc ? `<div class="desc clip">${esc(c.desc)}</div><button class="more" type="button"><span data-tr>Sahnenin tarifi ▾</span><span data-en>Scene description ▾</span></button>` : "") +
+      `</header><div class="tree">${c.tree.length ? nodes(c.tree, 0) : `<p class="empty"><span data-tr>Bu bölümde söz yok.</span><span data-en>No lines in this chapter.</span></p>`}</div></section>`;
+  }
+  // Ağaç dışında kalanlar
+  let oh = "";
+  const groups = {};
+  for (const [ch, rows] of Object.entries(d.other)) for (const r of rows) {
+    const pre = ch === "?" ? (r.k.split("_")[0] in OTHER ? r.k.split("_")[0] : "?") : "ch" + ch;
+    (groups[pre] = groups[pre] || []).push(r);
+  }
+  const order = Object.keys(groups).sort((a, b) => (a.startsWith("ch") - b.startsWith("ch")) || a.localeCompare(b, "tr", {numeric: true}));
+  for (const g of order) {
+    const title = OTHER[g] ? bi(OTHER[g]) : g === "?" ? `<span data-tr>Diğer</span><span data-en>Other</span>` :
+      `<span data-tr>Bölüm ${esc(g.slice(2))} (başka betiklerden: seviyeler, ortak sahneler)</span><span data-en>Chapter ${esc(g.slice(2))} (from other scripts: levels, shared scenes)</span>`;
+    oh += `<details class="scene"><summary><span class="ic">🗂</span>${title} · ${groups[g].length}</summary><div class="kids">` +
+      groups[g].map(r => line({alts: [r], bark: false})).join("") + `</div></details>`;
+  }
+  html += `<section class="ch other" id="c-other"><header><div class="num"><span data-tr>Ek</span><span data-en>Appendix</span></div>` +
+    `<h2><span data-tr>Ağaç dışındaki sözler</span><span data-en>Lines outside the tree</span></h2>` +
+    `<div class="sub"><span data-tr>Oyunun her yerinde duyulabilen tepkiler, ayarlar menüsü, seviye betiklerinden çağrılanlar. Sırası yok; konuyla gruplanmıştır.</span><span data-en>Reactions that can play anywhere, the settings menu, lines called from level scripts. No fixed order; grouped by topic.</span></div></header>` +
+    `<div class="tree">${oh}</div></section>`;
+  $("#main").innerHTML = html;
+  document.querySelectorAll(".more").forEach(b => b.onclick = () => { const d = b.previousElementSibling; d.classList.toggle("clip") });
+  fillJump();
+  count();
+}
+
+function count(vis) {
+  const all = document.querySelectorAll(".ln").length;
+  $("#cnt").textContent = vis === undefined ? `${all}` : `${vis} / ${all}`;
+}
+
+let tmr = 0;
+$("#q").addEventListener("input", () => { clearTimeout(tmr); tmr = setTimeout(search, 180) });
+function search() {
+  const q = $("#q").value.trim().toLowerCase();
+  document.querySelectorAll("mark").forEach(m => m.replaceWith(...m.childNodes));
+  if (!q) {
+    document.querySelectorAll(".hide").forEach(e => e.classList.remove("hide"));
+    count(); return;
+  }
+  let vis = 0;
+  document.querySelectorAll(".ln").forEach(l => {
+    const hit = l.dataset.s.includes(q);
+    l.classList.toggle("hide", !hit);
+    if (hit) {
+      vis++;
+      for (let p = l.parentElement; p; p = p.parentElement) if (p.tagName === "DETAILS") p.open = true;
+      l.querySelectorAll(".txt span[data-tr],.txt span[data-en]").forEach(s => {
+        const i = s.textContent.toLowerCase().indexOf(q);
+        if (i >= 0 && s.childNodes.length === 1) {
+          const t = s.textContent;
+          s.innerHTML = esc(t.slice(0, i)) + "<mark>" + esc(t.slice(i, i + q.length)) + "</mark>" + esc(t.slice(i + q.length));
+        }
+      });
+    }
+  });
+  // Eşleşmesi olmayan bölümleri gizle
+  document.querySelectorAll(".ch").forEach(c => c.classList.toggle("hide", !c.querySelector(".ln:not(.hide)")));
+  count(vis);
+}
+
+$("#jump").onchange = e => { const v = e.target.value; if (v) { const s = $("#c-" + v); if (s) s.scrollIntoView() } };
+$("#open").onclick = () => document.querySelectorAll("main details").forEach(d => d.open = true);
+$("#close").onclick = () => document.querySelectorAll("main details").forEach(d => d.open = false);
+
+setLang(LANG);
+fetch("data/dialog.json").then(r => r.json()).then(d => { DATA = d; render(); if (location.hash) { const s = $(location.hash); if (s) s.scrollIntoView() } })
+  .catch(e => { $("#main").innerHTML = `<p class="empty">data/dialog.json: ${esc(e)}</p>` });
+</script>
+</body>
+</html>
