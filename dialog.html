@@ -134,6 +134,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:30px 16px 50p
   <input id="q" type="search" placeholder="Ara: söz, kişi, anahtar… / Search: line, speaker, key…">
   <button type="button" id="open"><span data-tr>Hepsini aç</span><span data-en>Expand all</span></button>
   <button type="button" id="close"><span data-tr>Kapat</span><span data-en>Collapse</span></button>
+  <button type="button" id="txt" title="Senaryonun tamamı, düz metin / The whole script as plain text"><span data-tr>⬇ Senaryo (TXT)</span><span data-en>⬇ Script (TXT)</span></button>
   <span class="cnt" id="cnt"></span>
 </div></div>
 
@@ -201,6 +202,86 @@ function node(n, depth) {
       return `<details class="scene"><summary><span class="ic">🧩</span><span data-tr>Etkileşimler ve ara anlar (oyuncunun yaptığına göre)</span><span data-en>Interactions and in-between moments (depending on what you do)</span></summary><div class="kids">${nodes(n.body, depth + 1)}</div></details>`;
   }
   return "";
+}
+
+// ---------------------------------------------------------------- düz metin senaryo (indir)
+function scriptText(L) {
+  const d = DATA, T = o => (o && (o[L] || o.tr)) || "", out = [];
+  const tx = (tr, en) => L === "en" ? en : tr;
+  const UP = s => s.toLocaleUpperCase(L === "en" ? "en" : "tr");
+  const pad = n => "    ".repeat(n);
+  const say = (n, dep) => {
+    n.alts.forEach((a, i) => {
+      const who = UP(T(a.sn));
+      const lead = i === 0 ? "" : tx("  ya da  ", "  or  ");
+      out.push(pad(dep) + lead + who + (n.bark ? tx(" (ayak üstü)", " (bark)") : "") + ": " + (L === "en" ? a.en : a.tr));
+    });
+  };
+  const walk = (list, dep) => { for (const n of list) one(n, dep) };
+  const one = (n, dep) => {
+    switch (n.t) {
+      case "line": say(n, dep); break;
+      case "choice":
+        out.push(pad(dep) + tx("[OYUNCU SEÇER]", "[PLAYER CHOOSES]"));
+        n.opts.forEach((o, i) => out.push(pad(dep + 1) + (i + 1) + ". " + T(o)));
+        break;
+      case "scene":
+        if (!n.body.length) break;
+        out.push("", pad(dep) + "— " + tx("SAHNE", "SCENE") + ": " + n.title + " —");
+        if (n.desc) out.push(pad(dep) + "(" + n.desc + ")");
+        walk(n.body, dep);
+        break;
+      case "ref": out.push(pad(dep) + tx("(yukarıdaki sahne tekrar: ", "(scene above, again: ") + n.title + ")"); break;
+      case "if":
+        if (!n.arms.some(a => a.body.length)) break;
+        n.arms.forEach((a, i) => {
+          out.push(pad(dep) + "[" + (a.cond === null ? tx("AKSİ HÂLDE", "OTHERWISE") : (i ? tx("DEĞİLSE, EĞER ", "ELSE IF ") : tx("EĞER ", "IF ")) + a.cond) + "]");
+          if (a.body.length) walk(a.body, dep + 1); else out.push(pad(dep + 1) + tx("(bu kolda söz yok)", "(no lines on this arm)"));
+        });
+        break;
+      case "match":
+        out.push(pad(dep) + "[" + tx("DURUMA GÖRE ", "DEPENDING ON ") + n.cond + "]");
+        n.arms.forEach(a => { out.push(pad(dep + 1) + "= " + a.cond); walk(a.body, dep + 2) });
+        break;
+      case "loop":
+        out.push(pad(dep) + "[" + tx("TEKRAR EDER: ", "REPEATS: ") + n.cond + "]");
+        walk(n.body, dep + 1);
+        break;
+      case "extra":
+        out.push("", pad(dep) + tx("— ETKİLEŞİMLER VE ARA ANLAR (oyuncunun yaptığına göre) —", "— INTERACTIONS AND IN-BETWEEN MOMENTS (depending on what you do) —"));
+        walk(n.body, dep);
+        break;
+    }
+  };
+  const rule = "=".repeat(72);
+  out.push(tx("GERÇEK TARİH BU DEĞİL — SENARYO", "NOT A HISTORY GAME — SCRIPT"),
+    tx("Bütün diyaloglar, bölüm bölüm oynanış sırasıyla. Dallar [EĞER …] / [AKSİ HÂLDE] olarak girintili.",
+       "Every line, chapter by chapter in play order. Branches are indented under [IF …] / [OTHERWISE]."),
+    "v" + d.meta.version + " · " + d.meta.date + " · " + d.meta.total + tx(" söz", " lines"), rule);
+  for (const id of d.order) {
+    const c = d.chapters[id];
+    const num = c.num ? (c.num.all || [c.num.B, c.num.O].filter(Boolean).join(" / ")) : id;
+    out.push("", rule, tx("BÖLÜM ", "CHAPTER ") + num + " — " + UP(T(c.title)), T(c.sub), rule);
+    if (c.desc) out.push("", tx("Sahnenin tarifi: ", "Scene description: ") + c.desc);
+    walk(c.tree, 0);
+  }
+  out.push("", rule, tx("EK — AĞAÇ DIŞINDAKİ SÖZLER", "APPENDIX — LINES OUTSIDE THE TREE"), rule);
+  for (const [ch, rows] of Object.entries(d.other)) {
+    out.push("", "— " + (ch === "?" ? tx("Genel", "General") : tx("Bölüm ", "Chapter ") + ch) + " —");
+    for (const r of rows) out.push(UP(T(r.sn)) + ": " + (L === "en" ? r.en : r.tr));
+  }
+  return out.join("\n") + "\n";
+}
+
+function downloadScript() {
+  if (!DATA) return;
+  const blob = new Blob(["\ufeff" + scriptText(LANG)], {type: "text/plain;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = (LANG === "en" ? "not-a-history-game_script_v" : "gercek-tarih-bu-degil_senaryo_v") + DATA.meta.version + "_" + LANG + ".txt";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove() }, 500);
 }
 
 const OTHER = {
@@ -307,6 +388,7 @@ function search() {
 $("#jump").onchange = e => { const v = e.target.value; if (v) { const s = $("#c-" + v); if (s) s.scrollIntoView() } };
 $("#open").onclick = () => document.querySelectorAll("main details").forEach(d => d.open = true);
 $("#close").onclick = () => document.querySelectorAll("main details").forEach(d => d.open = false);
+$("#txt").onclick = downloadScript;
 
 setLang(LANG);
 fetch("data/dialog.json").then(r => r.json()).then(d => { DATA = d; render(); if (location.hash) { const s = $(location.hash); if (s) s.scrollIntoView() } })
