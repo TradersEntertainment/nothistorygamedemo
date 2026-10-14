@@ -63,6 +63,21 @@ h1.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .others{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:4px}
 .others a{font-size:14px;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:rgba(0,0,0,.3);padding:6px 12px;border-radius:999px}
 .others a:hover{border-color:var(--gold);color:var(--gold)}
+.note{max-width:560px;font-size:15px;color:var(--ink);background:rgba(0,0,0,.35);border-left:3px solid var(--gold);padding:8px 14px;border-radius:8px;text-align:left}
+.note b{color:var(--gold)}
+.vers{width:min(620px,92vw);margin-top:6px;text-align:left}
+.vers summary{cursor:pointer;font-size:14px;color:var(--muted);text-align:center;list-style:none}
+.vers summary::-webkit-details-marker{display:none}
+.vers summary:hover{color:var(--gold)}
+.vlist{max-height:340px;overflow-y:auto;margin-top:10px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.45);scrollbar-width:thin}
+.vrow{display:flex;gap:12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line)}
+.vrow:last-child{border-bottom:0}
+.vrow .vt{flex:1;min-width:0}
+.vrow .vn{font:700 16px Fredoka,sans-serif;color:var(--gold)}
+.vrow .vd{font-size:12px;color:var(--muted);margin-left:6px}
+.vrow .vs{font-size:14px;color:var(--ink);opacity:.9;margin-top:2px}
+.vrow a{flex:none;font-size:13px;color:#fff;text-decoration:none;background:var(--red);padding:6px 12px;border-radius:999px}
+.vrow a:hover{background:var(--red2)}
 .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:18px}
 .chips span{font:700 13px Nunito,system-ui,sans-serif;letter-spacing:.02em;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.14);padding:5px 12px;border-radius:999px}
 
@@ -175,6 +190,11 @@ footer em{color:var(--ink)}
       <div class="meta" id="meta">Windows · macOS · Linux / Steam Deck</div>
       <div class="others" id="others"></div>
       <div class="meta" id="dlcount" hidden></div>
+      <div class="note" id="latestNote" hidden></div>
+      <details class="vers" id="vers" hidden>
+        <summary><span data-tr>▾ Önceki sürümler ve neler değişti</span><span data-en>▾ Earlier versions and what changed</span></summary>
+        <div class="vlist" id="vlist"></div>
+      </details>
     </div>
     <div class="chips">
       <span data-tr>🎙️ Türkçe ve İngilizce seslendirme</span><span data-en>🎙️ Fully voiced in English &amp; Turkish</span>
@@ -527,6 +547,37 @@ fetch(`https://api.github.com/repos/${REPO}/releases/latest`)
     document.getElementById("others").innerHTML = others.join("");
   })
   .catch(() => { document.getElementById("mainBtn").href = LATEST; });
+
+// Sürüm notları (data/changelog.json: her sürüme tek cümle, TR + EN) ve sürüm sürüm indirme listesi
+const fmtDate = (iso, loc) => new Date(iso).toLocaleDateString(loc, {day: "numeric", month: "long", year: "numeric"});
+Promise.all([
+  fetch("data/changelog.json").then(r => r.ok ? r.json() : {}).catch(() => ({})),
+  fetch(`https://api.github.com/repos/${REPO}/releases?per_page=40`).then(r => r.ok ? r.json() : [])
+]).then(([notes, rels]) => {
+  if (!rels.length) return;
+  const os = detectOS();
+  const latest = rels[0], lv = (latest.tag_name || "").replace(/^v/, "");
+  if (notes[lv]) {
+    const el = document.getElementById("latestNote");
+    el.innerHTML = `<span data-tr><b>v${lv} ile gelenler:</b> ${notes[lv].tr}</span><span data-en><b>New in v${lv}:</b> ${notes[lv].en}</span>`;
+    el.hidden = false;
+  }
+  const rows = rels.map(rel => {
+    const v = (rel.tag_name || "").replace(/^v/, "");
+    const files = {};
+    (rel.assets || []).forEach(a => { const k = kind(a.name); if (k) files[k] = a; });
+    const pick = (os === "win" ? (files.setup || files.win) : files[os]);
+    const href = pick ? pick.browser_download_url : rel.html_url;
+    const n = notes[v];
+    const sub = n ? `<div class="vs"><span data-tr>${n.tr}</span><span data-en>${n.en}</span></div>` : "";
+    const d = rel.published_at ? `<span class="vd"><span data-tr>${fmtDate(rel.published_at, "tr-TR")}</span><span data-en>${fmtDate(rel.published_at, "en-GB")}</span></span>` : "";
+    return `<div class="vrow"><div class="vt"><span class="vn">v${v}</span>${d}${sub}</div>`
+      + `<a href="${href}"><span data-tr>İndir</span><span data-en>Download</span></a></div>`;
+  });
+  rows.push(`<div class="vrow"><div class="vt vs"><a style="background:none;padding:0;color:var(--gold)" href="https://github.com/${REPO}/releases"><span data-tr>Bütün sürümler →</span><span data-en>All releases →</span></a></div></div>`);
+  document.getElementById("vlist").innerHTML = rows.join("");
+  document.getElementById("vers").hidden = false;
+}).catch(() => {});
 
 // İndirme sayacı: GitHub her sürüm dosyasının kaç kez indirildiğini sayar; bütün sürümlerin toplamı.
 async function downloadCount(){

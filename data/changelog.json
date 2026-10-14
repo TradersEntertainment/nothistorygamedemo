@@ -1,0 +1,98 @@
+{
+ "0.99.16": {
+  "tr": "Yükleme ekranı yenilendi: bölümün kapağı, adı ve tarihi, dönen çark, gerçek ilerleme çubuğu ve tarihten bilgiler.",
+  "en": "New loading screen: the chapter's cover art, title and date, a spinning dial, a real progress bar and historical tidbits."
+ },
+ "0.99.15": {
+  "tr": "\"Yükleniyor\" ekranında takılma giderildi; talim hocaları Hızır ve Leon sonraki savaşlarda yanında dövüşüp sana öğrettiklerini hatırlatıyor.",
+  "en": "Fixed getting stuck on the \"Loading\" screen; drill masters Hızır and Leon now fight beside you in later battles and remind you what they taught."
+ },
+ "0.99.13": {
+  "tr": "İki yeni talim bölümü: kılıç, kalkan, tekme ve üç tür bitirici dersi; Tolga'nın sesi baştan, duygulu seslendirildi.",
+  "en": "Two new drill chapters teaching sword, shield, kick and three kinds of finisher; Tolga's voice fully re-recorded with emotion."
+ },
+ "0.99.12": {
+  "tr": "Duygulu seslendirme Edirne'ye ve eksik 80 repliğe yayıldı; İngilizce seslendirme tamamlandı.",
+  "en": "Emotional voice acting extended to Edirne and 80 missing lines; English voice-over is now complete."
+ },
+ "0.99.11": {
+  "tr": "Oyuncu notlarından düzeltmeler: taşan eşya açıklamaları, oyuna özel imleç ve Edirne Yolu köprüsü.",
+  "en": "Fixes from player notes: overflowing item descriptions, a custom in-game cursor and the Edirne Road bridge."
+ },
+ "0.99.10": {
+  "tr": "Huruç rotasında hikâye tutarlılığı ve seslendirme hazırlığı.",
+  "en": "Story consistency on the sally route and voice-over groundwork."
+ },
+ "0.99.9": {
+  "tr": "Edirne'de havada yürüyen karakterler düzeltildi.",
+  "en": "Fixed characters walking on air in Edirne."
+ },
+ "0.99.7": {
+  "tr": "Yeni ara bölüm: \"Arıza · Edirne Sarayı, 1444\" ve yenilenen ışınlanma sahneleri.",
+  "en": "New interlude: \"Malfunction · Edirne Palace, 1444\" and reworked time-jump scenes."
+ },
+ "0.99.5": {
+  "tr": "Şafak savaşında kalabalığın surun içinde belirmesi düzeltildi; panik inişi artık oynanabilir.",
+  "en": "Fixed the dawn battle crowd spawning inside the wall; the panicked descent is now playable."
+ },
+ "0.99.3": {
+  "tr": "Oyuncu notlarından düzeltmeler: Blaherna'da tüfekçi ve geri çekilme, lağımdan kaçış, hendek ve kule tüfeği.",
+  "en": "Fixes from player notes: Blachernae rifleman and retreat, tunnel escape, moat filling and the tower gun."
+ },
+ "0.99.2": {
+  "tr": "Sur içindeki askerler artık boş durmuyor, iş yapıyor.",
+  "en": "Soldiers inside the walls no longer stand idle; they get to work."
+ },
+ "0.99.1": {
+  "tr": "Sur içinde kaos ve kalabalık savunma; şehirde çıkmaz sokak düzeltmeleri.",
+  "en": "Chaos and crowded defence inside the walls; dead-end street fixes in the city."
+ },
+ "0.99.0": {
+  "tr": "Yeni Huruç bölümü, daha uzun şafak savaşı, Fatih'in yolu ve alevler.",
+  "en": "New Sally chapter, a longer dawn battle, the Sultan's route and fires."
+ },
+ "0.98.3": {
+  "tr": "Tolga'nın \"Ben casus değilim\" repliği yeniden kaydedildi.",
+  "en": "Re-recorded Tolga's \"I'm not a spy\" line."
+ },
+ "0.98.2": {
+  "tr": "Finaller için Detroit tarzı yolculuk şeması.",
+  "en": "A Detroit-style journey chart for the endings."
+ },
+ "0.97.0": {
+  "tr": "Ultra savaş modu: bölük hâlinde gelen düşmanlar, ayaklanan askerler ve surdan atma.",
+  "en": "Ultra battle mode: enemies charge in companies, soldiers rally, and you can throw foes off the wall."
+ },
+ "0.96.10": {
+  "tr": "Urban'ın topu bölümü görsel ve oynanış olarak yenilendi.",
+  "en": "Urban's cannon chapter overhauled in looks and gameplay."
+ },
+ "0.96.9": {
+  "tr": "Gerçek oynanıştan kurgulanmış yeni fragman.",
+  "en": "A new trailer cut from real gameplay."
+ },
+ "0.96.8": {
+  "tr": "Fragmandaki yarıda kesilen replikler düzeltildi.",
+  "en": "Fixed lines cut short in the trailer."
+ },
+ "0.96.7": {
+  "tr": "Fragmandaki yanlış okunan kayıt değiştirildi.",
+  "en": "Replaced a misread recording in the trailer."
+ },
+ "0.96.6": {
+  "tr": "Sahne geçişlerinde boşluğa ışınlanma hatası giderildi.",
+  "en": "Fixed being teleported into the void during scene changes."
+ },
+ "0.96.0": {
+  "tr": "İlk beş bölüm daha akıcı: yürürken konuşma ve kısa soluklanmalar.",
+  "en": "The first five chapters flow better: talking while walking and shorter pauses."
+ },
+ "0.95.2": {
+  "tr": "Basamak kenarında havada kalan taşıyıcılar ve Galata'daki boşluk düzeltildi.",
+  "en": "Fixed porters floating on step edges and a gap in Galata."
+ },
+ "0.94.1": {
+  "tr": "Eksik 146 Türkçe replik duygulu seslendirildi.",
+  "en": "146 missing Turkish lines voiced with emotion."
+ }
+}
