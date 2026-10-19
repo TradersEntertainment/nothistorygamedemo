@@ -1,4 +1,8 @@
 {
+ "0.99.24": {
+  "tr": "Şafak bölümünde (26) bazı askerler moloz yüksekliğinde havada kalıyordu, yaralı taşıyanlar duvarın içinden geçiyordu, merdivenden çıkanlar aynı yere iniyordu: düzeltildi.",
+  "en": "Dawn (chapter 26): fixed soldiers hovering at rubble height, wounded-carriers walking through a wall and ladder climbers landing on top of each other."
+ },
  "0.99.23": {
   "tr": "Harita açıkken bölge ya da bölüm değişince oyun donuyordu, düzeltildi. Oyunu rastgele girdilerle zorlayan yeni bir test botu eklendi.",
   "en": "Fixed a freeze when the region or chapter changed while the map was open. Added a new test bot that stress-tests the game with random input."
