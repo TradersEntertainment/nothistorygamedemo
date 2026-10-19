@@ -1,4 +1,8 @@
 {
+ "0.99.23": {
+  "tr": "Harita açıkken bölge ya da bölüm değişince oyun donuyordu, düzeltildi. Oyunu rastgele girdilerle zorlayan yeni bir test botu eklendi.",
+  "en": "Fixed a freeze when the region or chapter changed while the map was open. Added a new test bot that stress-tests the game with random input."
+ },
  "0.99.22": {
   "tr": "Surlardaki dalgalı çarpışmalarda kılıç artık kaybolmuyor: dalga arasında ve yeni rakipler koşup gelirken de elde kalıyor.",
   "en": "Your sword no longer vanishes in the wave battles on the walls: it stays in hand between waves and while new attackers run in."
