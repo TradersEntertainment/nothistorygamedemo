@@ -1,4 +1,8 @@
 {
+ "0.99.25": {
+  "tr": "Cuma bölümünde (31o) hasıra yürüyen cemaat kapıda üst üste doğuyordu, düzeltildi. Test botu iyileştirildi.",
+  "en": "Friday (31o): the congregation walking to the mats no longer spawns on top of each other at the door. Test bot improvements."
+ },
  "0.99.24": {
   "tr": "Şafak bölümünde (26) bazı askerler moloz yüksekliğinde havada kalıyordu, yaralı taşıyanlar duvarın içinden geçiyordu, merdivenden çıkanlar aynı yere iniyordu: düzeltildi.",
   "en": "Dawn (chapter 26): fixed soldiers hovering at rubble height, wounded-carriers walking through a wall and ladder climbers landing on top of each other."
