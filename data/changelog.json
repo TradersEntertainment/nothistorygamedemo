@@ -1,4 +1,8 @@
 {
+ "0.99.29": {
+  "tr": "Sur içindeki talim artık dizili değil, dağınık: tahta kılıçla dövüşen çiftler, saman kuklaya vuranlar, kendi temposunda çalışanlar, aralarında dolaşıp gösteren eğitmen ve kenarda izleyenler.",
+  "en": "Training inside the walls is no longer in rigid ranks: pairs sparring with wooden swords, men hitting straw dummies, soldiers drilling at their own pace, an instructor walking between them and onlookers at the edge."
+ },
  "0.99.28": {
   "tr": "Sur içindeki askerler yakından bakınca artık gerçek karakter: bölükler komutla mızrak talimi yapıyor, kalkanlılar çöküp kalkıyor, okçular hedefe ok atıyor, işçiler yükü omuzlayıp sur dibine taşıyor, aşçılar kazan karıştırıyor.",
   "en": "Soldiers inside the walls are now fully animated up close: companies drill with spears on command, shield men crouch and rise, archers shoot at targets, porters carry loads to the wall and cooks stir the cauldrons."
