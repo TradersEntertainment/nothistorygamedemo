@@ -1,4 +1,8 @@
 {
+ "0.99.33": {
+  "tr": "Kuşbakışı'nda kumanda artık gerçekten Sultan'ın eline geçiyor ve son uçuşta geri veriliyor; kötü sonda Tolga'nın zincire vurulduğu ve Nihat'ın zinciri çözdüğü sahne eklendi. Bölüm 1'deki zaman makinesi tuş takımı kolla da kullanılabiliyor. Top talimi ekranında tüfek talimatlarının çıkması düzeltildi.",
+  "en": "In Bird's-Eye the remote now actually passes into the Sultan's hands and comes back for the last flight; the bad ending now shows Tolga being chained and Nihat freeing him. The time machine keypad in Chapter 1 works with a gamepad. The cannon drill screen no longer shows musket instructions."
+ },
  "0.99.32": {
   "tr": "Kuşbakışı'nda Kadri'nin kazanının üstündeki işaret artık mutfak tentesinin altında kaybolmuyor: kalın, parlak bir ışık sütunu ve tentenin üstünde dönen bir elmas. Son Akşam'da tepsi verildikten sonra eski etkileşim yazısı ekranda kalmıyor.",
   "en": "In Bird's-Eye the marker over Kadri's cauldron no longer hides under the kitchen awning: a thick, bright light pillar and a diamond spinning above the awning. In The Last Evening the old interaction prompt no longer lingers after the tray is handed over."
