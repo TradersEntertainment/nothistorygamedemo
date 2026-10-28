@@ -1,4 +1,8 @@
 {
+ "0.99.67": {
+  "tr": "Konuşmalar %10 daha hızlı (sesin perdesi değişmeden). Ayarlar'a \"Konuşma hızı\" eklendi: %80 ile %180 arasında istediğiniz gibi yavaşlatıp hızlandırabilirsiniz, altyazılar ve sahneler sese göre ayarlanır. Zaman Bürosu'nda yeni isimler: Başdenetçi Saniye Hanım ve Depo Memuru Asır Bey. Osmanlı marşı yenilendi: ağır, görkemli bir mehter; askerlerin narası uzaktan, rüzgârla gelip gidiyor.",
+  "en": "Dialogue is 10% faster (without changing the pitch). Settings now has \"Speech speed\": slow it down or speed it up anywhere from 80% to 180%, and subtitles and scenes follow the voice. New names at the Time Bureau: Chief Inspector Saniye and Storeroom Clerk Asır. New Ottoman march: a heavy, stately mehter, with the soldiers' shouts carried from afar on the wind."
+ },
  "0.99.66": {
   "tr": "Eksik ve değişen bütün replikler seslendirildi (Türkçe ve İngilizce, yaklaşık 780 satır). Kuşatmada her tarafın kendi müziği var: Osmanlı tarafında mehterli hücum, kürekli donanma, top taşıma ve fetihten sonraki şehir; Bizans tarafında ison ve semantronlu sur savunması ve Haliç'teki gemiler. Savaş sahnelerinde yeni ortam sesleri: uzaktan mehter ve nara, surda alarm çanları, denizde kürek ve top.",
   "en": "All missing and changed lines are now voiced (Turkish and English, about 780 lines). Each side of the siege has its own music: on the Ottoman side a mehter-band assault, the rowing fleet, hauling the great gun and the city after the conquest; on the Byzantine side a wall defence with ison drone and semantron, and the ships in the Golden Horn. Battle scenes have new ambience: a distant mehter and war cries, alarm bells on the walls, oars and cannon at sea."
