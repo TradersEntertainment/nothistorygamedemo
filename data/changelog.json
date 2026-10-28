@@ -1,4 +1,8 @@
 {
+ "0.99.64": {
+  "tr": "v0.99.63'teki bütün düzeltmeleri içerir; o sürümün yayınını durduran test hatası giderildi.",
+  "en": "Includes all the fixes from v0.99.63; the test failure that held that release back is fixed."
+ },
  "0.99.63": {
   "tr": "Bütün oyunda duraklatma menüsü açıkken sayaçlar artık duruyor ve kol kullanırken ipuçları klavye tuşu yerine kol düğmesini gösteriyor. Kürek çekerken iki elin kürekte, ayağa kalkınca elin açık. 1. bölümde telefonu almadıysan kuşatmada Büro sana zimmet telefonu veriyor; telefonsuz oyunda Urban'ın hesabı, deprem göstergesi ve Edirne sahnesi buna göre değişiyor. Yaralı Giustiniani'nin yarasına kolonya dökebilir ya da bantla sarabilirsin. Bizans yolunda 26. bölüm artık 25'te surdan gördüklerini anıyor; birkaç tarih ve tanışıklık hatası da düzeldi.",
   "en": "Across the game, timers now stop while the pause menu is open, and with a controller the hints show controller buttons instead of keyboard keys. While rowing both your hands are on the oar; standing up frees your hand. If you didn't take your phone in chapter 1, the Bureau issues you one for the siege, and Urban's sums, the tremor gauge and the Edirne scene adapt when you have none. You can pour cologne on wounded Giustiniani's wound or bind it with tape. On the Byzantine route chapter 26 now recalls what you saw from the walls in 25, and several date and acquaintance slips are fixed."
