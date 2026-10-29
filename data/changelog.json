@@ -1,4 +1,8 @@
 {
+ "0.99.69": {
+  "tr": "Ekranda üst üste binen yazılar düzeltildi: düello ipuçları artık altyazının arkasında kalmıyor, sayaçlar ve uyarılar hedef kutusuna binmiyor, seçenekler hedefin ve Tarih Defteri kartının altında kalmıyor. Hızlı oynayınca ayak üstü sözlerin replikleri kesmesi ve iki repliğin üst üste binmesi düzeltildi.",
+  "en": "Overlapping on-screen text fixed: duel hints no longer hide behind subtitles, timers and warnings no longer cover the objective box, and choices no longer sit under the objective or the History Notebook card. Quick remarks no longer cut off dialogue when you play fast, and two lines no longer talk over each other."
+ },
  "0.99.68": {
   "tr": "Drone bölümünde kuş artık surların üstünden şehrin içine, Ayasofya'ya kadar uçabiliyor; alçaktan geçerseniz Bizans okçuları sizi görüp ateş ediyor (oklardan kaçana ödül var). Oyun içi \"Hata bildir\" (F8): ekran görüntüsü ve durum bir klasöre kaydedilir. Israrcı oyunculara Tolga'dan yeni sözler ve gizli başarımlar. Sesler: yarıda kesilen replikler, sessiz kalan müzik ve kayıtların başındaki ölü sessizlikler düzeltildi; konuşurken müzik kendiliğinden kısılıyor.",
   "en": "In the drone chapter the bird can now fly over the walls and into the city, all the way to Hagia Sophia; fly low and Byzantine archers spot it and open fire (dodging pays off). New in-game \"Report a bug\" (F8): a screenshot and the game state are saved to a folder. Persistent players get new lines from Tolga and secret achievements. Audio: lines that were cut off, music that went silent and dead air at the start of recordings are fixed; music now dips automatically while someone speaks."
