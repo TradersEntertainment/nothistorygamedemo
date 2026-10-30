@@ -1,4 +1,8 @@
 {
+ "0.99.70": {
+  "tr": "Eldeki eşyalar artık gerçekten tutuluyor: yeni el modeli (eklemli parmaklar, başparmak, yumuşak avuç) ve her eşyaya özel tutuş. Çakmak, termos ve kolonya avuçta sarılı; telefon ve kitap ekranı size dönük tutuluyor; selfie çubuğu sapından, leblebi kesesi ağzından tutuluyor; telsizli kumanda yumrukta. Yük taşırken ve bir şeye tutunurken görünen sol el de aynı modelle yenilendi.",
+  "en": "Held items now feel actually held: a new hand model (jointed fingers, thumb, soft palm) and a grip made for each item. The lighter, thermos and cologne sit wrapped in the palm; the phone and book face you; the selfie stick is held by its handle and the chickpea bag by its neck; the remote and radio sit in a fist. The left hand you see when carrying or grabbing things now uses the same model."
+ },
  "0.99.69": {
   "tr": "Ekranda üst üste binen yazılar düzeltildi: düello ipuçları artık altyazının arkasında kalmıyor, sayaçlar ve uyarılar hedef kutusuna binmiyor, seçenekler hedefin ve Tarih Defteri kartının altında kalmıyor. Hızlı oynayınca ayak üstü sözlerin replikleri kesmesi ve iki repliğin üst üste binmesi düzeltildi.",
   "en": "Overlapping on-screen text fixed: duel hints no longer hide behind subtitles, timers and warnings no longer cover the objective box, and choices no longer sit under the objective or the History Notebook card. Quick remarks no longer cut off dialogue when you play fast, and two lines no longer talk over each other."
