@@ -1,4 +1,8 @@
 {
+ "0.99.74": {
+  "tr": "Oyun daha akıcı: 60 Hz'den hızlı ekranlarda kamera artık adım adım değil, her karede kayarak ilerliyor (dron da). Şehre girerken kalabalığın kurulmasından gelen takılmalar azaldı. Duran karakterler artık dikili kalmıyor: belirgin nefes alıp ağırlık değiştiriyor, arada başını kaşıyor, ellerini ovuşturuyor, geriniyor; yanlarından geçince size dönüp bakıyorlar. Yük taşıyanlar da nefes alıyor.",
+  "en": "Smoother play: on displays faster than 60 Hz the camera now glides every frame instead of stepping (the drone too). Fewer hitches when the city crowd is built as you arrive. Standing characters are no longer stiff: they breathe and shift their weight visibly, now and then scratch their head, rub their hands or stretch, and turn to look at you as you pass. People carrying loads breathe too."
+ },
  "0.99.73": {
   "tr": "Erişilebilirlik ayarları eklendi: arayüz ölçeği, kamera ve el sallanmasını kapatma, koşma ve nişan için basılı tutmak yerine aç/kapa, düelloda daha uzun tepki süresi, seslendirmesiz repliklerde daha uzun okuma süresi; vuruş efektleri kapalıyken kırmızı ekran kenarı artık parlamıyor. Zayıf bilgisayarlarda (düşük kare hızında) top güllesinin hedefin içinden geçip ıska sayılması ve düelloda kusursuz karşılamanın hiç tutmaması düzeltildi.",
   "en": "New accessibility settings: interface scale, turning off camera and hand bob, toggle instead of hold for sprint and aim, longer duel reaction time, and longer reading time for unvoiced lines; with hit effects off, the red screen edge no longer flashes. On slower computers (low frame rates), cannonballs no longer pass through their target and count as misses, and perfect parries in duels work again."
