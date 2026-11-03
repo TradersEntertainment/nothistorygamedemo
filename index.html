@@ -580,13 +580,16 @@ Promise.all([
 }).catch(() => {});
 
 // İndirme sayacı: GitHub her sürüm dosyasının kaç kez indirildiğini sayar; bütün sürümlerin toplamı.
+// Her dosyanın ilk indirmesi sayılmaz: otomatik tarayıcılar (virüs tarama, arşiv, ayna siteleri) her yeni dosyayı
+// bir kez çekiyor. 206 sürümün 824 dosyasının hepsi en az bir kez indirilmişti (eski sürümlerin macOS/Linux
+// zip'leri dahil), sayaç 1.027 gösteriyordu; gerçek oyuncu ancak birinciden sonrakilerde olabilir.
 async function downloadCount(){
   let total = 0;
   for (let page = 1; page <= 5; page++) {
     const r = await fetch(`https://api.github.com/repos/${REPO}/releases?per_page=100&page=${page}`);
     if (!r.ok) return null;
     const rels = await r.json();
-    rels.forEach(rel => (rel.assets || []).forEach(a => { total += a.download_count || 0; }));
+    rels.forEach(rel => (rel.assets || []).forEach(a => { total += Math.max(0, (a.download_count || 0) - 1); }));
     if (rels.length < 100) break;
   }
   return total;
@@ -596,6 +599,8 @@ downloadCount().then(n => {
   const el = document.getElementById("dlcount");
   const f = n.toLocaleString("tr-TR");
   el.innerHTML = `<span data-tr>⬇ ${f} kez indirildi</span><span data-en>⬇ Downloaded ${n.toLocaleString("en-US")} times</span>`;
+  el.title = document.documentElement.lang === "en" ? "Automated scans (each file's first download) are not counted"
+                                                    : "Otomatik taramalar (her dosyanın ilk indirmesi) sayılmaz";
   el.hidden = false;
 }).catch(() => {});
 </script>
