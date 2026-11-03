@@ -1,4 +1,8 @@
 {
+ "0.99.77": {
+  "tr": "Oyun testine katılanlar artık dosya aramıyor: oyundan çıkarken gönderilmemiş cevap varsa küçük bir kart çıkıyor. \"Kopyala\"ya basınca bütün cevaplar panoya alınıyor; WhatsApp, Discord ya da e-postayla bize yapıştırıp göndermek yeterli. \"Geri\" çıkıştan vazgeçirir. Pencereyi kapatınca da aynı kart çıkıyor; oyun testi kapalıysa çıkış eskisi gibi. Cevaplar yine yalnız sizin bilgisayarınızda; oyun internete bir şey göndermiyor. Şehirde iki kişi artık aynı köşede iç içe durup beklemiyor.",
+  "en": "Playtesters no longer have to dig for files: if there are unsent answers when you quit, a small card appears. Press \"Copy\" and all your answers go to the clipboard; just paste them to us on WhatsApp, Discord or email. \"Back\" cancels quitting. Closing the window shows the same card; with the playtest off, quitting works as before. Your answers still stay on your computer; the game sends nothing online. Two townsfolk no longer stop and wait inside each other on the same street corner."
+ },
  "0.99.76": {
   "tr": "Kılıç dalgası, düello ya da tüfek atışı sürerken bölümden çıkınca (ana menüye dönüş, kayıt yükleme) arkada kalan dövüş artık kapanmış sahneye dokunmadan duruyor; hata kaydı bırakmıyor. Oyunun yeni fragmanı ve dikey tanıtım videoları oyunun içinden çekildi.",
   "en": "Leaving a chapter in the middle of a sword wave, duel or matchlock range (back to the main menu, loading a save) now stops the fight cleanly instead of touching the closed scene and logging an error. The new trailer and vertical clips were captured in-game."
