@@ -1,4 +1,8 @@
 {
+ "0.99.80": {
+  "tr": "Bazı Windows bilgisayarlarda (özellikle iki ekran kartlı dizüstülerde) oyun açılınca müzik çalıp pencerenin gri kalması düzeltildi: oyun Windows'ta artık Direct3D üzerinden çiziliyor.",
+  "en": "Fixed a grey window with music playing on some Windows PCs (especially laptops with two graphics cards): on Windows the game now draws through Direct3D."
+ },
  "0.99.79": {
   "tr": "Leblebi kesesi yenilendi: sarı top ve havada duran kırmızı etiket gitti, yerine ağzı kıvrık, üstü tepeleme leblebili, üzerinde \"Leblebi · Çorum\" basılı bir kese kağıdı geldi. Tolga'nın elinde artık her bölümde leblebi durmuyor: o bölümde işe yarayan eşya tutuluyor (sur onarımında bant, kule yakarken çakmak, gece nöbetinde termos, tavukların bölümünde leblebi). Uyan eşya yoksa Büro'nun kumandası elde. Kendi seçtiğiniz eşya o bölüm boyunca elde kalır.",
   "en": "The roasted chickpea bag is new: the yellow ball with a floating red label is gone, replaced by a paper bag with a rolled top, heaped with chickpeas and stamped \"Leblebi · Çorum\". Tolga no longer carries chickpeas in every chapter: he holds the item that matters there (tape when repairing the walls, the lighter when burning the tower, the thermos on night watch, chickpeas for the chickens). If nothing fits, he holds the Bureau's remote. Whatever you pick stays in hand for that chapter."
