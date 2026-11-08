@@ -1,4 +1,8 @@
 {
+ "0.99.83": {
+  "tr": "4. bölümde nöbetçiler sizi yakalayınca artık yürüyüp karşınıza geliyor, konuşma uzaktan değil yüz yüze. Koli bandını seçerseniz Tolga bandı eline alıp ikisini sırt sırta durduruyor ve etraflarında dönerek sarıyor; ikizler artık kendi kendine bağlanmıyor.",
+  "en": "In chapter 4 the guards now walk up to you when they catch you, so the talk happens face to face instead of from afar. If you pick the duct tape, Tolga takes it in hand, stands the twins back to back and walks around them wrapping it; they no longer tie themselves up."
+ },
  "0.99.82": {
   "tr": "0.99.70'ten beri indirilen sürümlerde oyun açılınca müzik çalıp pencerenin gri kalması düzeltildi: oyunun içine girmeyen bir test dosyası yüzünden oyun başlayamıyordu. Bu sürümü indirip kurmanız yeterli.",
   "en": "Fixed the grey window with music playing in every download since 0.99.70: a test file that is not shipped with the game stopped it from starting. Just download and install this version."
