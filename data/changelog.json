@@ -1,5 +1,5 @@
 {
- "0.99.87": {
+ "0.99.88": {
   "tr": "Konuşmalarda arka plan sesi artık kesilmiyor: iç mekânlarda ve samimi anlarda replikler boşlukta çalmıyor, kısık bir oda tonu ya da kilise uğultusu sürüyor. Hikâyede seçtiğiniz yola uymayan 80'i aşkın replik düzeltildi; örneğin tutuklanan Tolga artık finalde '1453'te kaldı' sayılmıyor, Osmanlı tarafında Ayasofya ayini anılmıyor, kaçmaya oy verdiyseniz kaptan 'biz döndük' demiyor. Ayrıca Hasan ile Hüseyin son ustayı omuzlarında indiriyor, İmparator termostan içiyor, eşyalar elden ele geçiyor.",
   "en": "Background sound no longer drops out during conversations: indoors and in quiet moments the lines don't play in a void any more, a soft room tone or church hum carries on. Over 80 lines that didn't fit the path you chose are fixed; for example an arrested Tolga is no longer listed as 'stayed in 1453' in the finale, the Ottoman side no longer recalls the Hagia Sophia liturgy, and if you voted to flee the captain no longer says 'we went back'. Hasan and Hüseyin also carry the last carpenter down on their shoulders, the Emperor drinks from the thermos, and items change hands properly."
  },
