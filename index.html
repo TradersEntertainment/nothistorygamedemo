@@ -571,7 +571,10 @@ Promise.all([
     const n = notes[v];
     const sub = n ? `<div class="vs"><span data-tr>${n.tr}</span><span data-en>${n.en}</span></div>` : "";
     const d = rel.published_at ? `<span class="vd"><span data-tr>${fmtDate(rel.published_at, "tr-TR")}</span><span data-en>${fmtDate(rel.published_at, "en-GB")}</span></span>` : "";
-    return `<div class="vrow"><div class="vt"><span class="vn">v${v}</span>${d}${sub}</div>`
+    // Sürümün indirilmesi: dosyaların toplamı, her dosyanın ilk indirmesi (otomatik tarama) sayılmaz (üstteki sayaçla aynı)
+    const dl = (rel.assets || []).reduce((t, a) => t + Math.max(0, (a.download_count || 0) - 1), 0);
+    const dc = `<span class="vd">· <span data-tr>⬇ ${dl.toLocaleString("tr-TR")} kez indirildi</span><span data-en>⬇ downloaded ${dl.toLocaleString("en-US")} ${dl === 1 ? "time" : "times"}</span></span>`;
+    return `<div class="vrow"><div class="vt"><span class="vn">v${v}</span>${d}${dc}${sub}</div>`
       + `<a href="${href}"><span data-tr>İndir</span><span data-en>Download</span></a></div>`;
   });
   rows.push(`<div class="vrow"><div class="vt vs"><a style="background:none;padding:0;color:var(--gold)" href="https://github.com/${REPO}/releases"><span data-tr>Bütün sürümler →</span><span data-en>All releases →</span></a></div></div>`);
