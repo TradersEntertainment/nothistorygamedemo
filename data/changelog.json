@@ -1,5 +1,5 @@
 {
- "0.99.81": {
+ "0.99.82": {
   "tr": "0.99.70'ten beri indirilen sürümlerde oyun açılınca müzik çalıp pencerenin gri kalması düzeltildi: oyunun içine girmeyen bir test dosyası yüzünden oyun başlayamıyordu. Bu sürümü indirip kurmanız yeterli.",
   "en": "Fixed the grey window with music playing in every download since 0.99.70: a test file that is not shipped with the game stopped it from starting. Just download and install this version."
  },
