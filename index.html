@@ -272,7 +272,7 @@ footer em{color:var(--ink)}
         <button type="button"><img loading="lazy" src="img/shots/tufekci.jpg" alt=""><span class="cap"><span data-tr>"TÜFEKÇİ! Yer değiştir ya da siper al!"</span><span data-en>"GUNNER! Move or take cover!"</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/mazgal.jpg" alt=""><span class="cap"><span data-tr>Osmanlı tarafı: mazgaldaki savunucuları düşür, merdivende daha az taş yağsın</span><span data-en>Ottoman side: drop the defenders at the battlements so fewer stones rain on the ladder</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/merdiven_tas.jpg" alt=""><span class="cap"><span data-tr>Hücum merdiveni: taş düşerken dur, sonra tırman</span><span data-en>The assault ladder: stop while the stone falls, then climb</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/sur_yolu.jpg" alt=""><span class="cap"><span data-tr>Sur yolunda Cenevizliler, arkada sancak kulesi</span><span data-en>Genoese on the wall-walk, the banner tower behind</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/sur_yolu.jpg" alt=""><span class="cap"><span data-tr>Sur yolunda: "Bu dün burada yoktu. Bir gecede kule mi dikmişler?"</span><span data-en>On the wall-walk: "That wasn't here yesterday. They built a tower overnight?"</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/catilar.jpg" alt=""><span class="cap"><span data-tr>Konstantinopolis'in çatıları: seyir noktası ve Ayasofya</span><span data-en>The rooftops of Constantinople: a viewpoint and Hagia Sophia</span></span></button>
       </div>
     </div>
@@ -302,7 +302,7 @@ footer em{color:var(--ink)}
     <div class="wrap">
       <h2><span data-tr>Oyundan kareler</span><span data-en>Screenshots</span></h2>
       <div class="gal" id="gal">
-        <button type="button"><img loading="lazy" src="img/shots/kosu.jpg" alt=""><span class="cap"><span data-tr>29 Mayıs 1453, gece 01.30: kalkanın altında ok yağmuru</span><span data-en>29 May 1453, 1:30 AM: arrows raining on a borrowed shield</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/kosu.jpg" alt=""><span class="cap"><span data-tr>29 Mayıs 1453, gece 01.30: "Bu işi her gece mi yapıyorsunuz?"</span><span data-en>29 May 1453, 1:30 AM: "Do you do this every night?"</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/gozcu.jpg" alt=""><span class="cap"><span data-tr>Surda gözcü: "Duman! Büyük top! Siper!"</span><span data-en>A lookout on the wall: "Smoke! The great gun! Take cover!"</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/donan_kare.jpg" alt=""><span class="cap"><span data-tr>Kare donar. Evet, bu benim. Nasıl buraya geldiğimi merak ediyorsunuzdur.</span><span data-en>Freeze frame. Yep, that's me. You're probably wondering how I got here.</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/yatak_oda.jpg" alt=""><span class="cap"><span data-tr>Gece 03.00. Telefon çalıyor. Arayan Hikmet Amca.</span><span data-en>3 AM. The phone rings. It's Uncle Hikmet.</span></span></button>
@@ -314,7 +314,7 @@ footer em{color:var(--ink)}
         <button type="button"><img loading="lazy" src="img/shots/is_lekesi.jpg" alt=""><span class="cap"><span data-tr>Sultan kıpırdamadı bile. Yüzünde birkaç is lekesi.</span><span data-en>The Sultan didn't even flinch. A few soot marks on his face.</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/ordugah.jpg" alt=""><span class="cap"><span data-tr>Surların önünde Osmanlı ordugâhı: çadırlar, pazar, toplar</span><span data-en>The Ottoman camp before the walls: tents, market, cannons</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/ayasofya.jpg" alt=""><span class="cap"><span data-tr>Ayasofya ve Konstantinopolis'in çatıları</span><span data-en>Hagia Sophia and the rooftops of Constantinople</span></span></button>
-        <button type="button"><img loading="lazy" src="img/shots/hucum.jpg" alt=""><span class="cap"><span data-tr>Son hücum: gedikte top ateşi, yeniçeriler hendek önünde</span><span data-en>The final assault: cannon fire at the breach, janissaries at the moat</span></span></button>
+        <button type="button"><img loading="lazy" src="img/shots/hucum.jpg" alt=""><span class="cap"><span data-tr>Bir gecede kuruldu, bir gecede yandı: Osmanlı kuşatma kulesi</span><span data-en>Built in one night, burned in one night: the Ottoman siege tower</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/urban_top.jpg" alt=""><span class="cap"><span data-tr>Urban'ın büyük topuna gülle sür, nişan al</span><span data-en>Load Urban's great gun and take aim</span></span></button>
         <button type="button"><img loading="lazy" src="img/shots/keci_tavuk.jpg" alt=""><span class="cap"><span data-tr>Ordugâhta bir gün: Hasan, Hüseyin ve her zamanki tavuk</span><span data-en>A day in the camp: Hasan, Hüseyin and the usual chicken</span></span></button>
       </div>
@@ -400,7 +400,9 @@ footer em{color:var(--ink)}
 </div>
 
 <script>
-// Fragman: YouTube video kimliği. Boşsa bölüm gizli kalır.
+// Fragman: sitede barındırılan video (oyunun güncel sürümünden kesit). Yoksa YouTube kimliğine düşülür; o da boşsa
+// bölüm gizli kalır.
+const TRAILER = "video/fragman.mp4";
 const YOUTUBE_ID = "Q5apIK1dYms";
 
 const REPO = "TradersEntertainment/nothistorygamedemo";
@@ -460,7 +462,11 @@ const onScroll = () => nav.classList.toggle("solid", scrollY > innerHeight * 0.6
 addEventListener("scroll", onScroll, {passive: true}); onScroll();
 
 // Fragman
-if (YOUTUBE_ID) {
+if (TRAILER) {
+  document.getElementById("trailer").hidden = false;
+  document.getElementById("video").innerHTML =
+    `<video src="${TRAILER}" poster="img/poster.jpg" controls preload="metadata" playsinline style="width:100%;height:100%;display:block;background:#000"></video>`;
+} else if (YOUTUBE_ID) {
   document.getElementById("trailer").hidden = false;
   document.getElementById("video").innerHTML =
     `<iframe src="https://www.youtube-nocookie.com/embed/${YOUTUBE_ID}" title="Trailer" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
