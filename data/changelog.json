@@ -1,4 +1,8 @@
 {
+ "0.99.113": {
+  "tr": "Daha az izle, daha çok oyna: on yedi bölümün açılışında artık konuşma sürerken yürüyebiliyor, etrafa bakabiliyor, işe başlayabiliyorsunuz (Zaman Bürosu'ndaki ilk konuşma dahil). Replikler aynı; yalnızca sizi yerinizde tutmuyor. Menüde artık sürüm numarası ve bir Künye sayfası var. Ayarlara ana ses kaydırıcısı eklendi. Oyun penceresinden çıkınca oyun kendiliğinden duraklıyor.",
+  "en": "Less watching, more playing: in seventeen chapter openings you can now walk, look around and start working while the conversation goes on (including the first talk in the Time Bureau). The lines are the same; they just no longer hold you in place. The menu now shows the version number and has a Credits page. Settings gained a master volume slider. The game pauses by itself when its window loses focus."
+ },
  "0.99.112": {
   "tr": "Akıcılık: oyun artık her karede yaklaşık beşte bir daha az çizim yapıyor (kalabalık sur sahnelerinde dörtte bire yakın). Görüntü aynı; karakterlerin ve eşyaların dış çizgileri yerinde. Kalabalık sayıları, gölgeler ve görüş mesafesi değişmedi.",
   "en": "Smoothness: the game now issues about a fifth fewer draw calls per frame (close to a quarter in the crowded wall scenes). The picture is the same; the outlines on characters and props are still there. Crowd sizes, shadows and view distance are unchanged."
