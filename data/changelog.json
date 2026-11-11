@@ -1,4 +1,8 @@
 {
+ "0.99.117": {
+  "tr": "İkinci acil düzeltme: pencere odağı bir an için gidip gelirse (bildirim balonu, arka plandaki bir program) oyun artık duraklamıyor; pencere gerçekten odaksız kalırsa duraklatma menüsü açılıyor. Oyun bu yüzden duraklarsa günlük dosyasına nedeni yazılıyor.",
+  "en": "Second hotfix: a momentary loss of window focus (a notification toast, a background program) no longer pauses the game; if the window really stays unfocused, the pause menu opens. When the game pauses for this reason, the cause is written to the log file."
+ },
  "0.99.116": {
   "tr": "Acil düzeltme: oyun penceresi odağı kaybettiğinde (Alt+Tab, bir bildirim, başka pencereye tıklama) oyun duraklıyor ama duraklatma menüsü açılamıyordu; oyun çıkışsız kalıyor, bölüm açılırken olursa ekran siyah görünüyordu. Artık menü açılıyor ve \"devam\" ile oyun sürüyor.",
   "en": "Hotfix: when the game window lost focus (Alt+Tab, a notification, clicking another window) the game paused but the pause menu failed to open, leaving it stuck; if this happened while a chapter was opening, the screen stayed black. The menu now opens and \"resume\" continues the game."
